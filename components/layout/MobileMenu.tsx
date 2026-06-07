@@ -74,14 +74,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         <div className="flex-1 overflow-y-auto p-5">
-          <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
+          <nav className="flex flex-col gap-6" aria-label="Mobile navigation">
             {mainNav.map((item) => (
               <div key={item.titleKey} className="flex flex-col">
                 {item.href ? (
                   <Link
                     href={item.href}
+                    onClick={onClose}
                     className={cn(
-                      'text-base font-semibold transition-colors py-1',
+                      'text-base font-semibold transition-colors py-3',
                       isActivePath(pathname, item.href)
                         ? 'text-surface-brand-alt'
                         : 'text-content-secondary hover:text-content',
@@ -95,7 +96,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <button
                     type="button"
                     onClick={() => toggleExpanded(item.titleKey)}
-                    className="flex items-center justify-between text-base font-semibold text-content-secondary py-1"
+                    className="flex items-center justify-between text-base font-semibold text-content-secondary py-3"
                     aria-expanded={expandedItems.includes(item.titleKey)}
                   >
                     <span>
@@ -113,14 +114,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 )}
 
                 {item.children && (item.href || expandedItems.includes(item.titleKey)) && (
-                  <div className="flex flex-col gap-3 ps-4 border-s-2 border-edge-subtle mt-2">
+                  <div className="flex flex-col gap-4 ps-4 border-s-2 border-edge-subtle mt-2">
                     {item.children.map((child) => (
                       <div key={child.titleKey}>
                         {child.href ? (
                           <Link
                             href={child.href}
+                            onClick={onClose}
                             className={cn(
-                              'text-sm transition-colors',
+                              'text-sm transition-colors py-2 block',
                               isActivePath(pathname, child.href)
                                 ? 'text-surface-brand-alt font-semibold'
                                 : 'text-content-secondary hover:text-content',
@@ -134,7 +136,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                           <button
                             type="button"
                             onClick={() => toggleExpanded(child.titleKey)}
-                            className="flex items-center justify-between w-full text-sm font-semibold text-content-secondary py-0.5"
+                            className="flex items-center justify-between w-full text-sm font-semibold text-content-secondary py-2"
                             aria-expanded={expandedItems.includes(child.titleKey)}
                           >
                             <span>
@@ -152,15 +154,16 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         )}
 
                         {child.children && expandedItems.includes(child.titleKey) && (
-                          <div className="flex flex-col gap-2 ps-4 mt-2">
+                          <div className="flex flex-col gap-3 ps-4 mt-2">
                             {child.children.map(
                               (subchild) =>
                                 subchild.href && (
                                   <Link
                                     key={subchild.titleKey}
                                     href={subchild.href}
+                                    onClick={onClose}
                                     className={cn(
-                                      'text-sm transition-colors',
+                                      'text-sm transition-colors py-2 block',
                                       isActivePath(pathname, subchild.href)
                                         ? 'text-surface-brand-alt font-semibold'
                                         : 'text-content-secondary hover:text-content',

@@ -1,5 +1,6 @@
 import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
@@ -7,11 +8,11 @@ export function Subjects() {
   const t = useTranslations('subjectsWeCover');
 
   const subjects = [
-    { key: 'maths' },
-    { key: 'english' },
-    { key: 'science' },
-    { key: 'arabic' },
-    { key: 'examPrep' },
+    { key: 'maths', href: '/subjects/maths-tutoring' },
+    { key: 'english', href: '/subjects/english-tutoring' },
+    { key: 'science', href: '/subjects/science-tutoring' },
+    { key: 'arabic', href: '/subjects/arabic-tutoring' },
+    { key: 'examPrep', href: '/subjects/exam-preparation' },
   ];
 
   return (
@@ -24,8 +25,9 @@ export function Subjects() {
 
         <div className="flex overflow-x-auto gap-4 mb-16 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {subjects.map((subject) => (
-            <div
+            <Link
               key={subject.key}
+              href={subject.href}
               className="bg-surface-base rounded-3xl p-6 border border-edge-subtle flex flex-col group cursor-pointer hover:border-content/20 transition-colors text-start min-w-[280px] sm:min-w-[320px] lg:min-w-0 lg:flex-1 snap-start"
             >
               <div className="flex justify-end mb-12">
@@ -39,7 +41,7 @@ export function Subjects() {
                 </h3>
                 <p className="text-base text-content-secondary">{t(`cards.${subject.key}.desc`)}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
