@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help Centre — Hello Tutor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf7f2; --warm: #f3ede3; --sand: #e8dfd0; --clay: #c9a882;
+      --rust: #c05c2e; --forest: #2b4a3f; --ink: #1a1a1a; --muted: #6b6058; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; min-height: 100vh; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--sand); display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(1.5rem,5vw,4rem); height: 68px; }
+    .logo { font-family: 'Fraunces', serif; font-size: 1.55rem; font-weight: 700; color: var(--forest); letter-spacing: -0.02em; text-decoration: none; }
+    .logo span { color: var(--rust); }
+    nav a.btn-nav { background: var(--forest); color: var(--white); padding: 0.5rem 1.25rem; border-radius: 100px; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+    nav a.btn-nav:hover { background: var(--rust); }
+
+    /* HERO */
+    .hero { text-align: center; padding: clamp(3.5rem,8vw,6rem) clamp(1.5rem,5vw,4rem) 2.5rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(192,92,46,0.09) 0%, transparent 70%); pointer-events: none; }
+    .pill { display: inline-block; background: var(--warm); border: 1px solid var(--sand); color: var(--rust); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 500; line-height: 1.1; color: var(--ink); letter-spacing: -0.03em; max-width: 660px; margin: 0 auto 1.2rem; }
+    .hero h1 em { font-style: italic; color: var(--rust); }
+    .hero > p { max-width: 500px; margin: 0 auto 2.25rem; color: var(--muted); font-size: 1.05rem; }
+
+    /* SEARCH */
+    .search-wrap { max-width: 520px; margin: 0 auto; position: relative; }
+    .search-wrap input { width: 100%; padding: 1rem 3.5rem 1rem 1.4rem; border: 1.5px solid var(--sand); border-radius: 100px; background: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink); outline: none; transition: border-color 0.2s, box-shadow 0.2s; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .search-wrap input::placeholder { color: #b0a89e; }
+    .search-wrap input:focus { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,92,46,0.12); }
+    .search-wrap svg { position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+
+    /* TAB BAR */
+    .tab-bar { max-width: 1100px; margin: 2.5rem auto 0; padding: 0 clamp(1.5rem,5vw,3rem); display: flex; gap: 0.5rem; border-bottom: 1.5px solid var(--sand); }
+    .tab-btn { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--muted); background: none; border: none; padding: 0.7rem 1.4rem 0.8rem; border-radius: 10px 10px 0 0; cursor: pointer; position: relative; bottom: -1.5px; border: 1.5px solid transparent; border-bottom: none; transition: color 0.15s, background 0.15s; letter-spacing: 0.01em; }
+    .tab-btn:hover { color: var(--forest); background: var(--warm); }
+    .tab-btn.active { color: var(--forest); background: var(--cream); border-color: var(--sand); border-bottom-color: var(--cream); }
+
+    /* LAYOUT */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(1.5rem,5vw,3rem) 6rem; display: grid; grid-template-columns: 210px 1fr; gap: 3.5rem; align-items: start; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: contents; }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 88px; }
+    .sidebar-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clay); font-weight: 500; margin-bottom: 0.75rem; }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li { margin-bottom: 0.05rem; }
+    .sidebar ul li a { display: block; padding: 0.4rem 0.75rem; border-radius: 6px; color: var(--muted); text-decoration: none; font-size: 0.86rem; transition: background 0.15s, color 0.15s; }
+    .sidebar ul li a:hover, .sidebar ul li a.active { background: var(--warm); color: var(--forest); font-weight: 500; }
+
+    /* SECTION HEADERS */
+    .section-head { margin: 3rem 0 1rem; padding-bottom: 0.65rem; border-bottom: 1.5px solid var(--sand); }
+    .section-head:first-of-type { margin-top: 0; }
+    .section-head h2 { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; color: var(--ink); letter-spacing: -0.02em; }
+
+    /* ACCORDION */
+    details { background: var(--white); border: 1.5px solid var(--sand); border-radius: 12px; overflow: hidden; margin-bottom: 0.5rem; transition: border-color 0.2s, box-shadow 0.2s; }
+    details:hover { border-color: var(--clay); }
+    details[open] { border-color: var(--rust); box-shadow: 0 3px 16px rgba(192,92,46,0.07); }
+    summary { padding: 1rem 1.25rem; font-weight: 500; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); user-select: none; }
+    summary::-webkit-details-marker { display: none; }
+    .summary-text { flex: 1; }
+    .chevron { width: 20px; height: 20px; border-radius: 50%; background: var(--warm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+    .chevron svg { transition: transform 0.3s; }
+    details[open] .chevron { background: var(--rust); }
+    details[open] .chevron svg { transform: rotate(180deg); }
+    details[open] .chevron svg path { stroke: white; }
+    .answer { padding: 0 1.25rem 1.15rem; color: var(--muted); font-size: 0.92rem; line-height: 1.8; animation: fadeSlide 0.2s ease; }
+    @keyframes fadeSlide { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    .answer a { color: var(--rust); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+    .answer ul { margin: 0.6rem 0 0.6rem 1.2rem; }
+    .answer ul li { margin-bottom: 0.3rem; }
+    .answer strong { color: var(--ink); font-weight: 500; }
+    .answer p + p { margin-top: 0.55rem; }
+
+    /* BOXES */
+    .box { border-radius: 8px; padding: 0.85rem 1rem; margin-top: 0.75rem; font-size: 0.87rem; line-height: 1.65; }
+    .box-info { background: var(--warm); border: 1px solid var(--sand); color: var(--muted); }
+    .box-info strong { color: var(--forest); }
+    .box-warn { background: #fff8ec; border: 1px solid #f0d080; color: #5e4400; }
+    .box-warn strong { color: #6b4e00; }
+
+    /* TAGS */
+    .tag { display: inline-block; font-size: 0.69rem; font-weight: 500; padding: 0.15rem 0.5rem; border-radius: 100px; margin-left: 0.4rem; vertical-align: middle; letter-spacing: 0.04em; white-space: nowrap; }
+    .tag-key { background: #fdeee6; color: var(--rust); }
+    .tag-imp { background: #fff3cd; color: #7a5c00; }
+
+    /* NO RESULTS */
+    .no-results { display: none; text-align: center; padding: 3rem 1rem; color: var(--muted); }
+    .no-results p { font-size: 0.95rem; }
+    .no-results p + p { margin-top: 0.35rem; font-size: 0.85rem; }
+
+    /* HELP STRIP */
+    .help-strip { margin-top: 2rem; padding: 1.4rem 1.75rem; background: var(--warm); border: 1px solid var(--sand); border-radius: 14px; }
+    .help-strip h4 { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.3rem; color: var(--ink); }
+    .help-strip p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .contacts { display: flex; flex-wrap: wrap; gap: 0.35rem 1.2rem; }
+    .contacts a { color: var(--rust); font-size: 0.85rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(192,92,46,0.3); transition: border-color 0.15s; }
+    .contacts a:hover { border-color: var(--rust); }
+
+    /* CTA */
+    .cta-card { background: var(--forest); color: var(--white); border-radius: 18px; padding: 2.5rem; text-align: center; margin-top: 3.5rem; }
+    .cta-card h3 { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 500; margin-bottom: 0.6rem; letter-spacing: -0.02em; }
+    .cta-card p { opacity: 0.72; margin-bottom: 1.5rem; font-size: 0.93rem; }
+    .cta-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--rust); color: white; border: none; padding: 0.72rem 1.65rem; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-ghost { background: rgba(255,255,255,0.11); color: white; border: 1.5px solid rgba(255,255,255,0.25); padding: 0.72rem 1.65rem; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.19); }
+
+    @media (max-width: 760px) {
+      .container { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://hellotutor.me" class="logo">Hello<span>Tutor</span></a>
+  <a href="https://app.hellotutor.me" class="btn-nav">Get Started</a>
+</nav>
+
+<section class="hero">
+  <div class="pill">Help Centre</div>
+  <h1>Questions? We've got <em>answers.</em></h1>
+  <p>Hello Tutor handles everything. Find out how it works, what to expect, and how we support you every step of the way.</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search your question..." autocomplete="off" />
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </div>
+</section>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="students">Students</button>
+  <button class="tab-btn" data-tab="parents">Parents</button>
+  <button class="tab-btn" data-tab="tutors">Tutors</button>
+</div>
+
+<div class="container">
+
+<!-- ══════════════ STUDENTS ══════════════ -->
+<div class="tab-panel active" data-panel="students">
+  <aside class="sidebar">
+    <p class="sidebar-label">Jump to</p>
+    <ul>
+      <li><a href="#s-start">Getting Started</a></li>
+      <li><a href="#s-match">How Matching Works</a></li>
+      <li><a href="#s-lessons">Lessons and Bookings</a></li>
+      <li><a href="#s-pay">Subscriptions and Payment</a></li>
+      <li><a href="#s-cancel">Cancellations and Refunds</a></li>
+      <li><a href="#s-class">Online Classroom</a></li>
+      <li><a href="#s-safe">Safety and Safeguarding</a></li>
+      <li><a href="#s-resp">Your Responsibilities</a></li>
+      <li><a href="#s-group">Group Classes</a></li>
+      <li><a href="#s-acct">My Account</a></li>
+    </ul>
+  </aside>
+  <main>
+    <div class="no-results" id="s-no-results">
+      <p>No results found.</p>
+      <p>Try a different keyword or <a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edc5c8c1c1c2d9d8d9c2df83c0c8" style="color:var(--rust)">contact our team</a>.</p>
+    </div>
+
+    <div class="faq-section" id="s-start">
+      <div class="section-head"><h2>Getting Started</h2></div>
+      <details><summary><span class="summary-text">What is Hello Tutor and how does it work?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor handles everything. You tell us what you need, and we find the right tutor for you, arrange your lessons, and manage payment — all through the platform at <a href="https://app.hellotutor.me">app.hellotutor.me</a>. There is no browsing, no negotiating, and no admin on your part. You just show up and learn.</div></details>
+
+      <details><summary><span class="summary-text">Is Hello Tutor a marketplace where I choose my own tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. Hello Tutor is not a marketplace. You share your requirements with us, and we find the right tutor, arrange your bookings, and handle payment on your behalf.</div></details>
+
+      <details><summary><span class="summary-text">Is it free to register?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Creating an account is free and there is no obligation to book once you have registered. You only pay once you subscribe and confirm your first lesson.</div></details>
+
+      <details><summary><span class="summary-text">Who can register on the platform?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You must be <strong>at least 18 years old</strong> to register and book lessons. If the student is under 18, a parent or legal guardian must create the account and provide consent for the child to receive tuition.</div></details>
+
+      <details><summary><span class="summary-text">Where is Hello Tutor based?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor is owned and operated by Hello Tutor LLC, registered and operating in Dubai, United Arab Emirates. The platform is at <a href="https://app.hellotutor.me">app.hellotutor.me</a>. Our Terms and Conditions and Safeguarding Policy are governed by UAE law.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-match">
+      <div class="section-head"><h2>How Matching Works</h2></div>
+      <details><summary><span class="summary-text">How does Hello Tutor match me with a tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">When you register, we gather information about your learning needs, subject, level, and availability. From there, Hello Tutor takes care of everything — finding the right tutor, arranging your bookings, and handling payment on your behalf. You do not need to negotiate scheduling or rates with anyone.</div></details>
+
+      <details><summary><span class="summary-text">What if the match does not feel right?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">While we take care to match you with the right tutor from the outset, if a match does not work out as expected, please get in touch and we will work to find a tutor who is a stronger fit for your needs. Reach us at <a href="mailto:support@hellotutor.me">support@hellotutor.me</a>.</div></details>
+
+      <details><summary><span class="summary-text">How are tutors vetted before being approved?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Before any tutor's profile goes live, Hello Tutor carries out a thorough verification process:<ul><li><strong>Identity verification:</strong> government-issued photo ID and relevant qualifications are reviewed.</li><li><strong>Background check:</strong> all tutors must hold a valid background check dated within the last three years. Tutors whose checks lapse are suspended until the requirement is met.</li><li><strong>Written references:</strong> two written references from non-family members are required.</li><li><strong>UAE work or freelance permit:</strong> non-UAE national tutors must hold a valid MOHRE permit or equivalent free zone authority permit.</li></ul>If you have a concern about a tutor, contact us before proceeding with a lesson.</div></details>
+
+      <details><summary><span class="summary-text">Are tutors employed by Hello Tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. Tutors on Hello Tutor are <strong>independent contractors</strong>, not Hello Tutor employees. When you confirm your first booking, you enter into a direct contract with your tutor for the delivery of lessons. Hello Tutor facilitates the match and provides the booking and payment infrastructure.</div></details>
+
+      <details><summary><span class="summary-text">Should I also verify my tutor's credentials myself?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">While Hello Tutor carries out checks on all tutors before approving them, you are also responsible for using your own judgement about a tutor's suitability. We recommend verifying any qualifications or experience claims before or at the start of your first lesson.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-lessons">
+      <div class="section-head"><h2>Lessons and Bookings</h2></div>
+      <details><summary><span class="summary-text">How do I confirm my first booking?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Once Hello Tutor has matched you with a tutor, you will confirm your first booking through the platform. You must have valid payment details saved on your account to do so.</div></details>
+
+      <details><summary><span class="summary-text">What happens after I confirm my first booking?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">By confirming your first booking, you authorise Hello Tutor to <strong>arrange further bookings on your behalf automatically</strong> and to take payment for each lesson. You will be notified of every booking by email and through the platform. Please always check that bookings are correct.</div></details>
+
+      <details><summary><span class="summary-text">Do I arrange lessons directly with my tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. All bookings are arranged by Hello Tutor on your behalf. You must not contact tutors to arrange lessons outside the platform, and all communication must go through Hello Tutor's messaging system.</div></details>
+
+      <details><summary><span class="summary-text">What do I need to have ready before each lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Before each lesson, make sure you have shared any relevant learning objectives with Hello Tutor, your device, webcam, microphone, and internet connection are working, your payment details are up to date, and your lesson environment is appropriate and free from distraction.</div></details>
+
+      <details><summary><span class="summary-text">Are lessons recorded?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. All lessons are recorded by Hello Tutor for <strong>safeguarding and quality purposes</strong>. Recordings are stored for a minimum of 28 days and a maximum of one year, and remain Hello Tutor's property. They may be reviewed internally, shared with UAE law enforcement if required, or shared with students where appropriate.<p>Students must not independently record lessons by any means outside Hello Tutor's own recording system.</p></div></details>
+
+      <details><summary><span class="summary-text">What if my tutor does not show up?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If your tutor does not join the Online Classroom within the <strong>first 15 minutes</strong> of the scheduled start time, you will not be charged. If your tutor cancels a confirmed booking, you will receive a full refund. Please raise a complaint within 96 hours of the scheduled lesson end time.</div></details>
+
+      <details><summary><span class="summary-text">What if I miss my lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If you do not attend a lesson, <strong>the full lesson fee will still be charged</strong>. Bookings cannot be cancelled once a lesson has started. If you are unable to attend due to exceptional circumstances, contact us and a refund may be considered at Hello Tutor's sole discretion.</div></details>
+
+      <details><summary><span class="summary-text">Can my tutor complete my coursework or essays for me?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. Tutors are <strong>strictly prohibited</strong> from completing or intending to complete coursework, essays, assignments, or similar academic work on a student's behalf. Any tutor found in breach of this may be removed from the platform.</div></details>
+
+      <details><summary><span class="summary-text">Can I leave a review for my tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. After your lessons you can leave a review, comment, or rating for your tutor through the platform. Reviews are from verified students only, help maintain quality across the platform, and contribute to how tutors are ranked in our system.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-pay">
+      <div class="section-head"><h2>Subscriptions and Payment</h2></div>
+      <details><summary><span class="summary-text">How is pricing structured?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor operates on a <strong>subscription model</strong>. Your lesson fee is determined by the subject, education level, and number of lessons included in your subscription. All fees are displayed before you subscribe and include any applicable UAE taxes.</div></details>
+
+      <details><summary><span class="summary-text">What does the lesson fee include?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Your lesson fee is made up of the <strong>Tutor Fee</strong> (the portion paid to your tutor) and Hello Tutor's <strong>Service Fee</strong> (which covers matching, booking, and platform services). The Service Fee is included within the lesson fee and is not an additional charge.</div></details>
+
+      <details><summary><span class="summary-text">When am I charged for a lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Payment is taken <strong>at the point of subscribing</strong>. All fees are displayed clearly before you confirm your subscription.</div></details>
+
+      <details><summary><span class="summary-text">What payment methods are accepted?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">We accept major debit and credit cards. Payments are processed securely by our third-party payment provider. Hello Tutor does not store your full card details on its own servers.</div></details>
+
+      <details><summary><span class="summary-text">What happens if a payment fails?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">A failed payment occurs when our payment provider cannot charge your registered card.<ul><li><strong>48 and 72 hours after the lesson:</strong> payment is automatically retried.</li><li><strong>96 hours after the lesson:</strong> all future bookings are cancelled until the outstanding amount is cleared.</li></ul>Hello Tutor may pursue outstanding amounts for up to 90 days and reserves the right to refer unpaid debts to a third-party collection service, which may affect your credit record.</div></details>
+
+      <details><summary><span class="summary-text">Does Hello Tutor have a referral programme?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. If you refer a friend, you will earn platform credit once they attend their first paid lesson. Credit is valid for <strong>3 months</strong> from the date of award, cannot be exchanged for cash, and is only earned for paid lessons. Hello Tutor may cancel credit if fraudulent activity is suspected.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-cancel">
+      <div class="section-head"><h2>Cancellations and Refunds</h2></div>
+      <details><summary><span class="summary-text">Can I cancel a lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You can cancel a booking at any point before the lesson starts, but cancellation charges apply:<ul><li><strong>More than 24 hours before the lesson:</strong> 50% of the lesson fee is charged.</li><li><strong>Within 24 hours of the lesson:</strong> 100% of the lesson fee is charged.</li></ul>Cancellations must be made through the platform. Once a lesson has started it cannot be cancelled.<div class="box box-warn"><strong>Missed lessons:</strong> if you do not attend without cancelling beforehand, the full lesson fee is charged.</div></div></details>
+
+      <details><summary><span class="summary-text">What if my tutor cancels?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">On rare occasions, a tutor may need to cancel due to unforeseen circumstances. If this happens, Hello Tutor will be in touch to reschedule your lesson as soon as possible. If rescheduling is not possible, you will receive a <strong>full refund</strong>.</div></details>
+
+      <details><summary><span class="summary-text">How do I raise a complaint about a lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">A complaint covers situations where the tutor's service fell below the standard you reasonably expected, or where your lesson did not take place as booked.<ul><li>Contact Hello Tutor by <strong>chat or email within 96 hours</strong> of the scheduled lesson end time.</li><li>We will contact your tutor within 72 hours of receiving your complaint.</li><li>If the tutor does not dispute the complaint within 48 hours of being notified, a full refund of the tutor fee will be processed.</li></ul>Complaints raised after 96 hours will still be reviewed, but the outcome is at Hello Tutor's discretion. Email us at <a href="/cdn-cgi/l/email-protection#1d6e686d6d726f695d7578717172696869726f337078"><span class="__cf_email__" data-cfemail="dfacaaafafb0adab9fb7bab3b3b0abaaabb0adf1b2ba">[email&#160;protected]</span></a>.</div></details>
+
+      <details><summary><span class="summary-text">Can I get a refund if I was unhappy with lesson quality?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. If you believe the quality of your lesson fell below a reasonable standard, raise a complaint within 96 hours of the lesson ending. Hello Tutor will review the situation and process a refund where appropriate.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-class">
+      <div class="section-head"><h2>Online Classroom</h2></div>
+      <details><summary><span class="summary-text">What is the Hello Tutor Online Classroom?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">The Online Classroom is Hello Tutor's own built-in lesson space, available directly through the platform at <a href="https://app.hellotutor.me">app.hellotutor.me</a>. All lessons take place here.</div></details>
+
+      <details><summary><span class="summary-text">What equipment do I need?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You will need a laptop, tablet, or desktop computer (recommended over mobile), a stable internet connection, and a working webcam and microphone. It is your responsibility to ensure everything is working before your lesson. <strong>No refund will be given</strong> if you cannot access the Online Classroom due to issues within your own control.</div></details>
+
+      <details><summary><span class="summary-text">What if there is a technical problem during my lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If the issue is caused by something within your control, such as your internet connection or device, no refund will be given. If Hello Tutor's platform itself fails and this prevents a lesson from taking place, Hello Tutor will refund the <strong>Service Fee</strong> for that lesson. In either case, please report the issue to us at <a href="/cdn-cgi/l/email-protection#daa9afaaaab5a8ae9ab2bfb6b6b5aeafaeb5a8f4b7bf"><span class="__cf_email__" data-cfemail="ea999f9a9a85989eaa828f8686859e9f9e8598c4878f">[email&#160;protected]</span></a>.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-safe">
+      <div class="section-head"><h2>Safety and Safeguarding</h2></div>
+      <details><summary><span class="summary-text">How does Hello Tutor keep students safe?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">The safety and wellbeing of all students, especially children, is our highest priority. Our safeguarding measures include:<ul><li><strong>Identity verification:</strong> government-issued photo ID and qualifications reviewed for every tutor.</li><li><strong>Background checks:</strong> mandatory for all tutors, valid within the last three years.</li><li><strong>Written references:</strong> two non-family references required for all tutors.</li><li><strong>Lesson recording:</strong> all lessons are recorded and retained for safeguarding review.</li><li><strong>Platform monitoring:</strong> messages and activity are monitored to prevent misuse.</li><li><strong>Designated Safeguarding Officer:</strong> a named officer handles all concerns raised through the platform.</li></ul>Hello Tutor cooperates fully with UAE law enforcement in connection with any safeguarding concern.</div></details>
+
+      <details><summary><span class="summary-text">My child is under 18. What do I need to know?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">A parent or legal guardian must register the account and provide consent for any student under 18. As the responsible adult, you must not leave a child in the unsupervised sole care of a tutor during a lesson, must remain available so your child can report concerns without delay, and must ensure the lesson environment is appropriate and free from risk. By booking, you consent on the student's behalf to their lessons being recorded for safeguarding and quality purposes.</div></details>
+
+      <details><summary><span class="summary-text">Can a parent or guardian sit in on a lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Parents are welcome to observe any lesson. Please let us know in advance so the tutor can plan accordingly.</div></details>
+
+      <details><summary><span class="summary-text">Can a tutor cancel a lesson if no parent is present?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Where a student is under 18 and no parent or legal guardian is available, a tutor may cancel the lesson if either the tutor or the student does not feel comfortable continuing. We strongly recommend that a parent or guardian is always reachable during lessons involving students under 18.</div></details>
+
+      <details><summary><span class="summary-text">What happens when a safeguarding concern is reported?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Any user reported for a safeguarding breach is <strong>immediately suspended</strong> pending investigation. Where suspected illegal activity is involved, the user may be permanently barred and reported to UAE law enforcement. Where a concern relates to a child, Hello Tutor will <strong>always prioritise that child's immediate safety and welfare</strong> above all other considerations.</div></details>
+
+      <details><summary><span class="summary-text">How do I report a safeguarding concern?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Contact Hello Tutor immediately at <a href="/cdn-cgi/l/email-protection#dcafbdbab9bba9bdaeb8b5b2bb9cb4b9b0b0b3a8a9a8b3aef2b1b9"><span class="__cf_email__" data-cfemail="1a697b7c7f7d6f7b687e73747d5a727f7676756e6f6e756834777f">[email&#160;protected]</span></a> if you have any concern about the safety or welfare of a student, or if you encounter anything inappropriate or illegal on the platform. All reports are handled by our Safeguarding Officer and treated as a priority.</div></details>
+
+      <details><summary><span class="summary-text">What should I do if a tutor contacts me outside the platform?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">All communication between students and tutors must take place within Hello Tutor's platform. Tutors are not permitted to contact students or parents using personal details obtained through the platform. If you receive any unsolicited contact from a tutor outside the platform, report it immediately at <a href="/cdn-cgi/l/email-protection#7c0f1d1a191b091d0e1815121b3c1419101013080908130e521119"><span class="__cf_email__" data-cfemail="40332126252735213224292e270028252c2c2f3435342f326e2d25">[email&#160;protected]</span></a>.</div></details>
+
+      <details><summary><span class="summary-text">How is my personal data protected?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor protects your personal information in accordance with our Privacy Policy and UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data. For privacy-related queries or to exercise your data rights, contact <a href="/cdn-cgi/l/email-protection#4c3c3e253a2d2f350c2429202023383938233e622129"><span class="__cf_email__" data-cfemail="a3d3d1cad5c2c0dae3cbc6cfcfccd7d6d7ccd18dcec6">[email&#160;protected]</span></a>.</div></details>
+    </div>
+
+    <div class="faq-section" id="s-resp">
+      <div class="section-head"><h2>Your Responsibilities</h2></div>
+      <details><summary><span class="summary-text">How should I behave toward my tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Students are expected to treat tutors with respect at all times — this means not subjecting tutors to abusive, offensive, or discriminatory behaviour or language, and not making any improper suggestions. If you are booking on behalf of a child, you are also responsible for ensuring the student behaves appropriately.<p>Any student who fails to meet these standards may be suspended from the platform.</p></div></details>
+
+      <details><summary><span class="summary-text">What am I responsible for in terms of content and communications?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You are solely responsible for all content you post or send on the platform. You must not share anything that is defamatory, offensive, misleading, illegal, or that infringes a third party's intellectual property rights, and must not send unsolicited commercial messages to other users.<p>If you encounter any inappropriate or illegal content from another user, report it immediately at <a href="/cdn-cgi/l/email-protection#ed9e989d9d829f99ad8588818182999899829fc38088"><span class="__cf_email__" data-cfemail="4f3c3a3f3f203d3b0f272a2323203b3a3b203d61222a">[email&#160;protected]</span></a>.</p></div></details>
+    </div>
+
+    <div class="faq-section" id="s-group">
+      <div class="section-head"><h2>Group Classes</h2></div>
+      <details><summary><span class="summary-text">Does Hello Tutor offer group classes as well as 1-to-1 lessons?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. In addition to one-to-one lessons, Hello Tutor offers group classes delivered through the Online Classroom. They are recorded for safeguarding purposes and follow the same rules as individual lessons. You must be at least 18 to enrol. For students under 18, a parent or legal guardian must book and provide consent.</div></details>
+
+      <details><summary><span class="summary-text">Can I cancel a group class enrolment?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You can cancel without charge if you give more than <strong>72 hours' notice</strong> before the first lesson. Cancellations within that window are not eligible for a refund.<div class="box box-warn"><strong>Missed lessons:</strong> no partial refunds are given for individual lessons within a class that you are unable to attend.</div></div></details>
+    </div>
+
+    <div class="faq-section" id="s-acct">
+      <div class="section-head"><h2>My Account</h2></div>
+      <details><summary><span class="summary-text">How do I update my personal or payment details?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You can update your name, email address, password, notification preferences, and payment details at any time through your account settings. Please keep your contact details accurate, as Hello Tutor communicates with you by email and through the platform.</div></details>
+
+      <details><summary><span class="summary-text">What if I think my account has been compromised?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Contact Hello Tutor immediately at <a href="/cdn-cgi/l/email-protection#bccfc9ccccd3cec8fcd4d9d0d0d3c8c9c8d3ce92d1d9"><span class="__cf_email__" data-cfemail="4e3d3b3e3e213c3a0e262b2222213a3b3a213c60232b">[email&#160;protected]</span></a> if you believe your login credentials have been compromised. You remain responsible for any activity on your account until Hello Tutor has been notified.</div></details>
+
+      <details><summary><span class="summary-text">Can Hello Tutor use images or content I upload to the platform?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">When you submit content to Hello Tutor, you grant us a licence to use that material for the purposes of operating and promoting the platform. Any <strong>images you independently create and upload</strong> may be used for marketing purposes without prior notice or compensation. Please bear this in mind when uploading images to your profile.</div></details>
+
+      <details><summary><span class="summary-text">How will I be notified if the Terms or policies change?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor will notify you of any changes to our Terms and Conditions at least <strong>14 days before</strong> they take effect, via a notice on the platform or by email. Continued use of the platform after the effective date constitutes acceptance of the updated terms.</div></details>
+
+      <details><summary><span class="summary-text">What happens to my data when I stop using Hello Tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You can stop using Hello Tutor at any time, subject to paying for any lessons already used. Hello Tutor retains certain data after your account is closed to meet its legal and safeguarding obligations, including lesson recordings stored for up to one year. To submit a data rights request, contact <a href="/cdn-cgi/l/email-protection#c8b8baa1bea9abb188a0ada4a4a7bcbdbca7bae6a5ad"><span class="__cf_email__" data-cfemail="e292908b9483819ba28a878e8e8d9697968d90cc8f87">[email&#160;protected]</span></a>.</div></details>
+
+      <details><summary><span class="summary-text">How do I get in touch with Hello Tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Reach us through the support section of the platform or by email:<ul><li><strong>General enquiries:</strong> <a href="/cdn-cgi/l/email-protection#9feceaefeff0edebdff7faf3f3f0ebeaebf0edb1f2fa"><span class="__cf_email__" data-cfemail="e794929797889593a78f828b8b889392938895c98a82">[email&#160;protected]</span></a></li><li><strong>Privacy and data rights:</strong> <a href="/cdn-cgi/l/email-protection#2b5b59425d4a48526b434e4747445f5e5f445905464e"><span class="__cf_email__" data-cfemail="c3b3b1aab5a2a0ba83aba6afafacb7b6b7acb1edaea6">[email&#160;protected]</span></a></li><li><strong>Safeguarding concerns:</strong> <a href="/cdn-cgi/l/email-protection#d6a5b7b0b3b1a3b7a4b2bfb8b196beb3babab9a2a3a2b9a4f8bbb3"><span class="__cf_email__" data-cfemail="e69587808381938794828f8881a68e838a8a899293928994c88b83">[email&#160;protected]</span></a></li></ul>We acknowledge safeguarding reports immediately and aim to respond to general enquiries within 2 working days.</div></details>
+    </div>
+
+    <div class="help-strip">
+      <h4>Still have a question?</h4>
+      <p>Our team is here to help. Reach us through the platform or by email.</p>
+      <div class="contacts">
+        <a href="/cdn-cgi/l/email-protection#f784828787988583b79f929b9b988382839885d99a92"><span class="__cf_email__" data-cfemail="35464045455a4741755d5059595a4140415a471b5850">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#235042454644564251474a4d44634b464f4f4c5756574c510d4e46"><span class="__cf_email__" data-cfemail="334052555654465241575a5d54735b565f5f5c4746475c411d5e56">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#bdcdcfd4cbdcdec4fdd5d8d1d1d2c9c8c9d2cf93d0d8"><span class="__cf_email__" data-cfemail="6616140f1007051f260e030a0a091213120914480b03">[email&#160;protected]</span></a>
+      </div>
+    </div>
+    <div class="cta-card">
+      <h3>Ready to get started?</h3>
+      <p>Tell us what you need and we handle the rest. No searching, no admin, no guesswork.</p>
+      <div class="cta-btns"><a href="https://app.hellotutor.me" class="btn-primary">Get Started</a><a href="https://hellotutor.me" class="btn-ghost">Learn more</a></div>
+    </div>
+  </main>
+</div><!-- /students -->
+
+<!-- ══════════════ PARENTS ══════════════ -->
+<div class="tab-panel" data-panel="parents">
+  <aside class="sidebar">
+    <p class="sidebar-label">Jump to</p>
+    <ul>
+      <li><a href="#p-start">Getting Started</a></li>
+      <li><a href="#p-lessons">Your Child's Lessons</a></li>
+      <li><a href="#p-pay">Payment and Cancellations</a></li>
+      <li><a href="#p-safe">Safety and Your Role</a></li>
+    </ul>
+  </aside>
+  <main>
+    <div class="no-results" id="p-no-results">
+      <p>No results found.</p>
+      <p>Try a different keyword or <a href="/cdn-cgi/l/email-protection#790a0c0909160b0d39111c1515160d0c0d160b57141c" style="color:var(--rust)">contact our team</a>.</p>
+    </div>
+
+    <div class="faq-section" id="p-start">
+      <div class="section-head"><h2>Getting Started</h2></div>
+      <details><summary><span class="summary-text">How does Hello Tutor work for parents?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor handles everything on your behalf. You register, tell us about your child's learning needs, subject, level, and availability, and we find the right tutor, arrange the lessons, and manage payment. You are notified of every booking by email and through the platform.</div></details>
+
+      <details><summary><span class="summary-text">How do I register on behalf of my child?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You must be <strong>at least 18 years old</strong> to register an account. If the student is under 18, you register and manage the account as the parent or legal guardian, providing consent on your child's behalf for them to receive tuition. You remain the account holder responsible for all bookings and payments.</div></details>
+
+      <details><summary><span class="summary-text">What should my child and I know before we start?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Before using the platform, we recommend reading Hello Tutor's Safeguarding Policy with your child so they understand what appropriate behaviour looks like from both their tutor and themselves. Make sure your child knows they can come to you immediately if anything ever feels wrong during or after a lesson.</div></details>
+
+      <details><summary><span class="summary-text">How are tutors vetted?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Before any tutor's profile goes live, Hello Tutor carries out thorough checks:<ul><li><strong>Identity verification:</strong> government-issued photo ID and qualifications are reviewed.</li><li><strong>Background check:</strong> all tutors must hold a valid background check dated within the last three years. Tutors whose checks lapse are suspended immediately until the requirement is met.</li><li><strong>Written references:</strong> two written references from non-family members are required.</li><li><strong>UAE work or freelance permit:</strong> non-UAE national tutors must hold a valid permit from MOHRE or an equivalent free zone authority.</li></ul>If you have a concern about a tutor, contact us before proceeding with a lesson.</div></details>
+
+      <details><summary><span class="summary-text">Are tutors employed by Hello Tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. Tutors on Hello Tutor are <strong>independent contractors</strong>, not Hello Tutor employees. When you confirm your first booking, you enter into a direct contract with the tutor for the delivery of lessons. Hello Tutor facilitates the match and provides the booking and payment infrastructure.</div></details>
+
+      <details><summary><span class="summary-text">Should I also check my child's tutor myself?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">While Hello Tutor carries out checks on all tutors before approving them, you are also responsible for using your own judgement about a tutor's suitability. We recommend verifying any qualifications or experience claims before or at the start of your child's first lesson.</div></details>
+    </div>
+
+    <div class="faq-section" id="p-lessons">
+      <div class="section-head"><h2>Your Child's Lessons</h2></div>
+      <details><summary><span class="summary-text">How are lessons booked for my child?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Once you have confirmed your first booking, Hello Tutor will <strong>automatically arrange further lessons on your behalf</strong>. You will be notified by email and through the platform for every booking. Please always check that bookings are correct and share any relevant learning objectives or updates with Hello Tutor to keep lessons on track.</div></details>
+
+      <details><summary><span class="summary-text">Can I sit in on my child's lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Parents are welcome to observe any lesson. Please let us know in advance so the tutor can plan accordingly.</div></details>
+
+      <details><summary><span class="summary-text">Do I need to be available during my child's lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You must <strong>not leave a child under 18 in the unsupervised sole care of a tutor</strong> during any lesson. You do not need to sit in for the entire lesson, but you must remain close enough that your child can reach you immediately if they have any concerns.</div></details>
+
+      <details><summary><span class="summary-text">Can a tutor cancel my child's lesson if I am not available?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Where a student is under 18 and no parent or legal guardian is present or reachable, a tutor may cancel the lesson if either the tutor or the student does not feel comfortable continuing. Please always ensure you are reachable during your child's lessons.</div></details>
+
+      <details><summary><span class="summary-text">Are my child's lessons recorded?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. All lessons are recorded by Hello Tutor for <strong>safeguarding and quality purposes</strong>. By booking and using the platform, you consent on your child's behalf to this recording. Recordings are stored for a minimum of 28 days and a maximum of one year, remain Hello Tutor's property, and may be reviewed by our safeguarding team or shared with UAE law enforcement if required.</div></details>
+
+      <details><summary><span class="summary-text">Can my child contact their tutor outside the platform?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. All communication between students and tutors must take place through Hello Tutor's platform. You must ensure your child has no contact with their tutor outside the platform. Tutors are equally prohibited from contacting students or parents using personal details obtained through the platform.</div></details>
+
+      <details><summary><span class="summary-text">What if my child's tutor does not show up?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If the tutor does not join the Online Classroom within the <strong>first 15 minutes</strong> of the scheduled start time, you will not be charged. If the tutor cancels a confirmed booking, you will receive a full refund. Please raise a complaint within 96 hours of the scheduled lesson end time.</div></details>
+
+      <details><summary><span class="summary-text">Can my child's tutor complete schoolwork or assignments for them?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. Tutors are <strong>strictly prohibited</strong> from completing or intending to complete coursework, essays, assignments, or similar academic work on a student's behalf. Any tutor found in breach of this may be removed from the platform.</div></details>
+    </div>
+
+    <div class="faq-section" id="p-pay">
+      <div class="section-head"><h2>Payment and Cancellations</h2></div>
+      <details><summary><span class="summary-text">How does payment work?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor operates on a <strong>subscription model</strong>. Your lesson fee is set by the subject, education level, and number of lessons in your subscription. All fees are shown before you subscribe and include any applicable UAE taxes. Payment is taken <strong>at the point of subscribing</strong>. All fees are displayed clearly before you confirm your subscription.</div></details>
+
+      <details><summary><span class="summary-text">What does the lesson fee cover?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Your lesson fee includes the <strong>Tutor Fee</strong> (paid to your child's tutor) and Hello Tutor's <strong>Service Fee</strong> (which covers matching, booking, and platform services). The Service Fee is included within the lesson fee and is not an additional charge.</div></details>
+
+      <details><summary><span class="summary-text">Can I cancel a lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You can cancel a booking at any point before the lesson starts, but cancellation charges apply:<ul><li><strong>More than 24 hours before the lesson:</strong> 50% of the lesson fee is charged.</li><li><strong>Within 24 hours of the lesson:</strong> 100% of the lesson fee is charged.</li></ul>Cancellations must be made through the platform. Once a lesson has started it cannot be cancelled. If your child does not attend without cancellation, the full fee is charged.</div></details>
+
+      <details><summary><span class="summary-text">What if the tutor cancels?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">On rare occasions, a tutor may need to cancel due to unforeseen circumstances. If this happens, Hello Tutor will be in touch to reschedule the lesson as soon as possible. If rescheduling is not possible, you will receive a <strong>full refund</strong>.</div></details>
+
+      <details><summary><span class="summary-text">How do I raise a complaint?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Contact Hello Tutor by <strong>chat or email within 96 hours</strong> of the scheduled lesson end time. We will contact the tutor within 72 hours. If the tutor does not dispute the complaint within 48 hours of being notified, a full refund of the tutor fee will be processed. Email us at <a href="/cdn-cgi/l/email-protection#d1a2a4a1a1bea3a591b9b4bdbdbea5a4a5bea3ffbcb4"><span class="__cf_email__" data-cfemail="03707673736c7177436b666f6f6c7776776c712d6e66">[email&#160;protected]</span></a>.</div></details>
+
+      <details><summary><span class="summary-text">Are group classes available?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Hello Tutor offers group classes as well as one-to-one lessons. For students under 18, you as the parent or guardian must book and provide consent. You can cancel enrolment <strong>without charge</strong> by giving more than <strong>72 hours' notice</strong> before the first lesson. Cancellations within that window are not eligible for a refund, and no partial refunds are given for individual lessons missed within a class.</div></details>
+    </div>
+
+    <div class="faq-section" id="p-safe">
+      <div class="section-head"><h2>Safety and Your Role</h2></div>
+      <details><summary><span class="summary-text">What are my safeguarding responsibilities as a parent?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">As the parent or legal guardian of a student under 18, you have important safeguarding duties:<ul><li>You are responsible for your child's welfare at all times during any lesson.</li><li>You must not leave your child in the unsupervised sole care of a tutor during a lesson.</li><li>You should remain available throughout lessons so your child can report any concerns to you without delay.</li><li>You are responsible for ensuring the lesson environment is appropriate and free from risk.</li><li>You must ensure your child treats their tutor with respect and is not subject to, or subjects the tutor to, abusive or inappropriate behaviour.</li><li>You must ensure your child has no communication with their tutor outside of the Hello Tutor platform.</li><li>We recommend reading Hello Tutor's Safeguarding Policy with your child before they start using the platform.</li></ul></div></details>
+
+      <details><summary><span class="summary-text">How does Hello Tutor safeguard my child?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor takes the safety of all students, especially children, very seriously. Our safeguarding measures include identity verification, background checks (valid within the last three years), and two written references for every tutor before approval; recording of all lessons for safeguarding review, stored for up to one year; monitoring of platform messages and activity; a designated Safeguarding Officer for all concerns; and full cooperation with UAE law enforcement where required.</div></details>
+
+      <details><summary><span class="summary-text">What should I do if a tutor contacts my child outside the platform?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Tutors are not permitted to contact students or parents using personal details obtained through the platform. If you become aware of any unsolicited contact between a tutor and your child outside the platform, report it immediately at <a href="/cdn-cgi/l/email-protection#ec9f8d8a898b998d9e8885828bac8489808083989998839ec28189"><span class="__cf_email__" data-cfemail="6d1e0c0b080a180c1f0904030a2d0508010102191819021f430008">[email&#160;protected]</span></a>.</div></details>
+
+      <details><summary><span class="summary-text">How do I report a safeguarding concern?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Contact Hello Tutor immediately at <a href="/cdn-cgi/l/email-protection#aeddcfc8cbc9dbcfdccac7c0c9eec6cbc2c2c1dadbdac1dc80c3cb"><span class="__cf_email__" data-cfemail="9fecfef9faf8eafeedfbf6f1f8dff7faf3f3f0ebeaebf0edb1f2fa">[email&#160;protected]</span></a>. All reports are handled by our designated Safeguarding Officer. Where a concern relates to a child, Hello Tutor will always prioritise that child's immediate safety and welfare above all other considerations.</div></details>
+
+      <details><summary><span class="summary-text">What happens when a safeguarding concern is reported?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Any user reported for a safeguarding breach is <strong>immediately suspended</strong> from the platform pending investigation. Where suspected illegal activity is involved, the user may be permanently barred and reported to UAE law enforcement. Hello Tutor cooperates fully with any official investigation, including sharing lesson recordings and communications as required by law.</div></details>
+
+      <details><summary><span class="summary-text">How is my family's data protected?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor protects all personal information in accordance with our Privacy Policy and UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data. For privacy-related queries or to exercise data rights, contact <a href="/cdn-cgi/l/email-protection#4a3a38233c2b29330a222f2626253e3f3e253864272f"><span class="__cf_email__" data-cfemail="ef9f9d86998e8c96af878a8383809b9a9b809dc1828a">[email&#160;protected]</span></a>.</div></details>
+    </div>
+
+    <div class="help-strip">
+      <h4>Still have a question?</h4>
+      <p>Our team is here to help. Reach us through the platform or by email.</p>
+      <div class="contacts">
+        <a href="/cdn-cgi/l/email-protection#691a1c1919061b1d29010c0505061d1c1d061b47040c"><span class="__cf_email__" data-cfemail="0675737676697472466e636a6a697273726974286b63">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#136072757674667261777a7d74537b767f7f7c6766677c613d7e76"><span class="__cf_email__" data-cfemail="1a697b7c7f7d6f7b687e73747d5a727f7676756e6f6e756834777f">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#afdfddc6d9ceccd6efc7cac3c3c0dbdadbc0dd81c2ca"><span class="__cf_email__" data-cfemail="5626243f2037352f163e333a3a392223223924783b33">[email&#160;protected]</span></a>
+      </div>
+    </div>
+    <div class="cta-card">
+      <h3>Set your child up for success.</h3>
+      <p>We find the right tutor, arrange every lesson, and handle all the admin. You just watch them grow.</p>
+      <div class="cta-btns"><a href="https://app.hellotutor.me" class="btn-primary">Get Started</a><a href="https://hellotutor.me" class="btn-ghost">Learn more</a></div>
+    </div>
+  </main>
+</div><!-- /parents -->
+<!-- ══════════════ TUTORS ══════════════ -->
+<div class="tab-panel" data-panel="tutors">
+  <aside class="sidebar">
+    <p class="sidebar-label">Jump to</p>
+    <ul>
+      <li><a href="#t-join">Joining Hello Tutor</a></li>
+      <li><a href="#t-book">How Bookings Work</a></li>
+      <li><a href="#t-pay">Fees and Payment</a></li>
+      <li><a href="#t-resp">Your Responsibilities</a></li>
+      <li><a href="#t-safe">Safeguarding and Your Account</a></li>
+    </ul>
+  </aside>
+  <main>
+    <div class="no-results" id="t-no-results">
+      <p>No results found.</p>
+      <p>Try a different keyword or <a href="/cdn-cgi/l/email-protection#a4d7d1d4d4cbd6d0e4ccc1c8c8cbd0d1d0cbd68ac9c1" style="color:var(--rust)">contact our team</a>.</p>
+    </div>
+
+    <div class="faq-section" id="t-join">
+      <div class="section-head"><h2>Joining Hello Tutor</h2></div>
+      <details><summary><span class="summary-text">How do I join Hello Tutor as a tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You apply through the tutor onboarding process at <a href="https://app.hellotutor.me">app.hellotutor.me</a>. Hello Tutor will review your application, verify your identity and credentials, and carry out the required checks before deciding whether to approve your profile. Your profile only goes live once Hello Tutor determines it is sufficiently complete and verified.</div></details>
+
+      <details><summary><span class="summary-text">What checks are required before I can start tutoring?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Before your profile goes live, you must provide:<ul><li><strong>Government-issued identity document</strong> and evidence of relevant qualifications.</li><li><strong>A valid background check</strong> dated within the last three years. If your check lapses while you are a registered tutor, your profile will be suspended immediately until you provide an updated one.</li><li><strong>Two written references</strong> from individuals who are not family members, confirming their relationship to you and consenting to the reference being shared.</li><li><strong>UAE work or freelance permit</strong> (non-UAE nationals only): a valid permit from MOHRE or an equivalent free zone authority. Failure to hold or maintain this permit will result in immediate suspension of your profile.</li></ul>You must also disclose any criminal convictions or cautions at registration and notify Hello Tutor of any received afterwards for as long as you remain a registered tutor.</div></details>
+
+      <details><summary><span class="summary-text">Am I employed by Hello Tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. You are an <strong>independent contractor</strong>, not a Hello Tutor employee. You are solely responsible for your own tax obligations, professional insurance, and UAE permits. When a student confirms their first booking with you, they enter into a direct contract with you for the delivery of lessons.</div></details>
+
+      <details><summary><span class="summary-text">Do I need to keep my profile information up to date?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. All information on your profile — including qualifications, subjects, rates, and personal statement — must be accurate, complete, and not misleading. Update this information promptly whenever it changes. Hello Tutor may suspend or remove profiles that contain inaccurate or misleading information.</div></details>
+
+      <details><summary><span class="summary-text">How am I ranked on the platform?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Tutor profiles are ranked based on profile completeness, student ratings, and number of lessons taught. Positive reviews, prompt responses to communications, and a higher volume of lessons delivered all contribute to a better ranking. Hello Tutor reserves the right to change the ranking methodology at any time.</div></details>
+    </div>
+
+    <div class="faq-section" id="t-book">
+      <div class="section-head"><h2>How Bookings Work</h2></div>
+      <details><summary><span class="summary-text">How are my lessons booked?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor arranges all bookings on behalf of students. Once a student confirms their first lesson with you, Hello Tutor will automatically arrange further lessons going forward. You will be notified of every booking through the platform. You must not attempt to arrange lessons directly with students outside the platform.</div></details>
+
+      <details><summary><span class="summary-text">Can I arrange lessons directly with a student?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. All bookings must go through Hello Tutor. You must not use personal contact details obtained through the platform to arrange lessons outside of it.</div></details>
+
+      <details><summary><span class="summary-text">What do I need to do before each lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Before each lesson, ensure you have reviewed any learning objectives or materials shared by Hello Tutor, your device, webcam, microphone, and internet connection are all working, and your lesson environment does not display any inappropriate images, materials, or documents that could be visible to students.</div></details>
+
+      <details><summary><span class="summary-text">Where do lessons take place?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">All lessons are delivered through Hello Tutor's built-in Online Classroom at <a href="https://app.hellotutor.me">app.hellotutor.me</a>.</div></details>
+
+      <details><summary><span class="summary-text">Are lessons recorded?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Hello Tutor records all lessons for safeguarding and quality purposes. Recordings are stored for a minimum of 28 days and a maximum of one year, and remain Hello Tutor's property. They may be reviewed where a complaint or safeguarding report has been made, and may be shared with UAE law enforcement if required. You must not independently record lessons by any means outside Hello Tutor's own recording system.</div></details>
+
+      <details><summary><span class="summary-text">Can I cancel a confirmed lesson?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes, but only where absolutely necessary. If you cancel a confirmed booking, the student will receive a full refund and the cancellation will be noted on your profile. Repeated cancellations may affect your ranking and Hello Tutor's willingness to continue matching students to you. Cancellations must be made through the platform.</div></details>
+
+      <details><summary><span class="summary-text">Can I cancel a lesson if no parent is present for an under-18 student?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Where a student is under 18 and no parent or legal guardian is available, you may cancel the lesson if either you or the student does not feel comfortable continuing. You are never obligated to proceed with a lesson involving a minor if appropriate supervision is not in place. Please notify Hello Tutor immediately if you cancel for this reason.</div></details>
+
+      <details><summary><span class="summary-text">What if a student does not attend?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If a student does not join the Online Classroom within the first 15 minutes of the scheduled start time, you will still be paid the Tutor Fee provided you were present and ready. Please remain in the Online Classroom for at least 15 minutes and notify Hello Tutor if the student does not appear.</div></details>
+
+      <details><summary><span class="summary-text">Can I complete a student's coursework or essays for them?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">No. You are <strong>strictly prohibited</strong> from completing or intending to complete coursework, essays, assignments, or similar academic work on a student's behalf. Breach of this rule may result in immediate removal from the platform.</div></details>
+    </div>
+
+    <div class="faq-section" id="t-pay">
+      <div class="section-head"><h2>Fees and Payment</h2></div>
+      <details><summary><span class="summary-text">How is my fee determined?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor sets all lesson fees based on the subject, education level, and the student's subscription. The total lesson fee is made up of the <strong>Tutor Fee</strong> (the portion you receive) and Hello Tutor's <strong>Service Fee</strong> (which covers the platform, matching, and payment infrastructure). Your Tutor Fee will be agreed with you as part of the onboarding process.</div></details>
+
+      <details><summary><span class="summary-text">When do I receive payment?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor collects payment from the student <strong>24 hours after the scheduled end time</strong> of each lesson. Your Tutor Fee is then processed and paid to you on a schedule agreed during onboarding. Please ensure your payment details on your account are accurate and kept up to date.</div></details>
+
+      <details><summary><span class="summary-text">What happens if a student's payment fails?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If a student's payment fails, Hello Tutor will retry automatically at 48 and 72 hours after the lesson. If the payment remains outstanding at 96 hours, all future bookings for that student are cancelled. Hello Tutor manages the recovery process and will keep you informed where this affects your upcoming lessons.</div></details>
+
+      <details><summary><span class="summary-text">Am I responsible for my own tax and insurance?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. As an independent contractor, you are solely responsible for meeting all applicable tax obligations arising from your earnings through Hello Tutor, and for taking out and maintaining your own professional insurance. Hello Tutor does not withhold tax on your behalf and is not responsible for your insurance arrangements.</div></details>
+
+      <details><summary><span class="summary-text">Can Hello Tutor use images or content I upload to my profile?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">When you submit content to Hello Tutor, you grant us a licence to use that material for the purposes of operating and promoting the platform. Any <strong>images you independently create and upload</strong> may be used for marketing purposes without prior notice or compensation. Please bear this in mind when uploading images to your profile.</div></details>
+    </div>
+
+    <div class="faq-section" id="t-resp">
+      <div class="section-head"><h2>Your Responsibilities</h2></div>
+      <details><summary><span class="summary-text">How must I conduct myself during lessons?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You must treat all students fairly and respectfully at all times. During lessons you must:<ul><li>Use appropriate, professional language in all communications.</li><li>Confine lessons to the subject area for which you have been engaged.</li><li>Not make any improper or inappropriate suggestions to students.</li><li>Ensure your lesson environment is appropriate and free from any visible inappropriate material.</li></ul></div></details>
+
+      <details><summary><span class="summary-text">What are my responsibilities when teaching under-18 students?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">When teaching students under 18, you must work in partnership with their parent or legal guardian. You must ensure the parent or guardian has given consent for the student to receive tuition, and you may cancel a lesson if no parent or guardian is available and either you or the student does not feel comfortable continuing. You must take every reasonable precaution to protect younger students from harm.</div></details>
+
+      <details><summary><span class="summary-text">What communication restrictions apply to me?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">All contact with students and parents must take place through Hello Tutor's platform. You must not contact students or parents using personal details obtained through the platform without their explicit consent and Hello Tutor's approval. Any unsolicited communication from a student outside the platform must be reported to Hello Tutor immediately.</div></details>
+
+      <details><summary><span class="summary-text">What content rules apply to my profile and communications?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You must not post, share, or transmit any defamatory, offensive, inappropriate, or illegal material through the platform, including in messages, profile content, or lesson communications. If you encounter any such material from another user, report it immediately at <a href="/cdn-cgi/l/email-protection#b6c5c3c6c6d9c4c2f6ded3dadad9c2c3c2d9c498dbd3"><span class="__cf_email__" data-cfemail="c0b3b5b0b0afb2b480a8a5acacafb4b5b4afb2eeada5">[email&#160;protected]</span></a>.</div></details>
+    </div>
+
+    <div class="faq-section" id="t-safe">
+      <div class="section-head"><h2>Safeguarding and Your Account</h2></div>
+      <details><summary><span class="summary-text">What are my safeguarding duties?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">You have a duty to protect the safety and welfare of all students, particularly those under 18. Your safeguarding responsibilities include:<ul><li>Disclosing any criminal convictions or cautions at registration and at any point afterwards.</li><li>Disclosing any other relevant information that may lead Hello Tutor to determine you are not suitable to provide tutoring services.</li><li>Reporting immediately to Hello Tutor any concerns you have about a student's welfare or safety.</li><li>Ensuring all contact with students is appropriate to your role and confined to the subject area.</li><li>Reporting any inappropriate, offensive, or illegal material you encounter on the platform.</li></ul></div></details>
+
+      <details><summary><span class="summary-text">How do I report a safeguarding concern?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Contact Hello Tutor immediately at <a href="/cdn-cgi/l/email-protection#aeddcfc8cbc9dbcfdccac7c0c9eec6cbc2c2c1dadbdac1dc80c3cb"><span class="__cf_email__" data-cfemail="552634333032203427313c3b32153d3039393a2120213a277b3830">[email&#160;protected]</span></a> if you have any concern about the safety or welfare of a student, or if you encounter suspected illegal activity on the platform. All safeguarding reports are handled by our designated Safeguarding Officer and treated as a priority.</div></details>
+
+      <details><summary><span class="summary-text">What happens if a complaint or safeguarding concern is raised about me?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">If a complaint is raised, Hello Tutor will notify you within 72 hours of receiving it. You will have <strong>48 hours</strong> to dispute it. If you do not respond within that time, Hello Tutor may process a full refund of the tutor fee to the student.<p>If a safeguarding concern or suspected illegal activity is reported, you will be <strong>immediately suspended</strong> from the platform pending investigation. Where illegal activity is involved, you may be permanently barred and reported to UAE law enforcement. Hello Tutor will cooperate fully with any official investigation, including providing access to lesson recordings.</p></div></details>
+
+      <details><summary><span class="summary-text">Do I need to renew my background check?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Yes. Your background check must have been issued within the last three years at all times. If it expires, your profile will be suspended immediately until you provide an updated one. It is your responsibility to renew before it lapses. Hello Tutor may request evidence of your background check status at any time.</div></details>
+
+      <details><summary><span class="summary-text">How will I be notified if the Terms or policies change?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Hello Tutor will notify you of any changes to our Terms and Conditions at least <strong>14 days before</strong> they take effect, via a notice on the platform or by email. Continued use of the platform after the effective date constitutes acceptance of the updated terms.</div></details>
+
+      <details><summary><span class="summary-text">How do I get in touch with Hello Tutor?</span><div class="chevron"><svg width="11" height="11" fill="none" stroke="#6b6058" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></summary><div class="answer">Reach us through the support section of the platform or by email:<ul><li><strong>General enquiries:</strong> <a href="/cdn-cgi/l/email-protection#deadabaeaeb1acaa9eb6bbb2b2b1aaabaab1acf0b3bb"><span class="__cf_email__" data-cfemail="b5c6c0c5c5dac7c1f5ddd0d9d9dac1c0c1dac79bd8d0">[email&#160;protected]</span></a></li><li><strong>Privacy and data rights:</strong> <a href="/cdn-cgi/l/email-protection#4d3d3f243b2c2e340d2528212122393839223f632028"><span class="__cf_email__" data-cfemail="6414160d1205071d240c0108080b1011100b164a0901">[email&#160;protected]</span></a></li><li><strong>Safeguarding concerns:</strong> <a href="/cdn-cgi/l/email-protection#e1928087848694809385888f86a189safeguarding@hellotutor.me"></li></ul>We acknowledge safeguarding reports immediately and aim to respond to general enquiries within 2 working days.</div></details>
+    </div>
+
+    <div class="help-strip">
+      <h4>Still have a question?</h4>
+      <p>Our team is here to help. Reach us through the platform or by email.</p>
+      <div class="contacts">
+        <a href="mailto:support@hellotutor.me">support@hellotutor.me</a>
+        <a href="mailto:safeguarding@hellotutor.me">safeguarding@hellotutor.me</a>
+        <a href="mailto:privacy@hellotutor.me">privacy@hellotutor.me</a>
+      </div>
+    </div>
+    <div class="cta-card">
+      <h3>Ready to start teaching?</h3>
+      <p>Hello Tutor handles all the bookings, payment, and admin. You focus on the lessons.</p>
+      <div class="cta-btns"><a href="https://app.hellotutor.me" class="btn-primary">Apply to Tutor</a><a href="https://hellotutor.me" class="btn-ghost">Learn more</a></div>
+    </div>
+  </main>
+</div><!-- /tutors -->
+
+</div><!-- /container -->
+
+<script>
+  const tabBtns   = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector('.tab-panel[data-panel="' + target + '"]').classList.add('active');
+      document.getElementById('searchInput').value = '';
+      document.querySelectorAll('.faq-section').forEach(s => s.style.display = '');
+      document.querySelectorAll('details').forEach(d => d.style.display = '');
+      document.querySelectorAll('.no-results').forEach(nr => nr.style.display = 'none');
+    });
+  });
+
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const q = this.value.toLowerCase().trim();
+    const activePanel = document.querySelector('.tab-panel.active');
+    const sections    = activePanel.querySelectorAll('.faq-section');
+    const noResults   = activePanel.querySelector('.no-results');
+    let anyVisible = false;
+    sections.forEach(section => {
+      const items = section.querySelectorAll('details');
+      let sectionVisible = false;
+      items.forEach(item => {
+        const match = !q || item.innerText.toLowerCase().includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) sectionVisible = true;
+      });
+      section.style.display = sectionVisible ? '' : 'none';
+      if (sectionVisible) anyVisible = true;
+    });
+    noResults.style.display = anyVisible || !q ? 'none' : 'block';
+  });
+
+  function initObserver() {
+    const activePanel  = document.querySelector('.tab-panel.active');
+    const sectionEls   = activePanel.querySelectorAll('.faq-section[id]');
+    const sidebarLinks = activePanel.querySelectorAll('.sidebar a[href^="#"]');
+    if (!sectionEls.length) return;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          sidebarLinks.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -65% 0px' });
+    sectionEls.forEach(s => obs.observe(s));
+    return obs;
+  }
+  let observer = initObserver();
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (observer) observer.disconnect();
+      observer = initObserver();
+    });
+  });
+
+  document.addEventListener('toggle', e => {
+    if (e.target.tagName === 'DETAILS' && e.target.open) {
+      document.querySelectorAll('details[open]').forEach(d => {
+        if (d !== e.target) d.removeAttribute('open');
+      });
+    }
+  }, true);
+</script>
+</body>
+</html>
