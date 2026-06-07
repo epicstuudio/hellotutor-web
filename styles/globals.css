@@ -1,0 +1,806 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   PP Mori — self-hosted from /styles/fonts/
+   ========================================================================== */
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-SemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   HelloTutor Design System — mapped from design.md
+   All tokens below correspond 1:1 with the design.md specification.
+   ========================================================================== */
+
+@theme inline {
+  /* -----------------------------------------------------------------------
+     FONTS
+     ----------------------------------------------------------------------- */
+  --font-sans: 'PP Mori', 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Values section colors */
+  --color-value-human: #9c4d9e;
+  --color-value-quality: var(--color-purple-600);
+  --color-value-calm: #b85c2e;
+
+  --animate-marquee: marquee 120s linear infinite;
+  --animate-marquee-rtl: marquee-rtl 120s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-rtl {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  --animate-aurora: aurora 60s linear infinite;
+
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  /* -----------------------------------------------------------------------
+     COLOR PRIMITIVES — from design.md colors.primitives
+     ----------------------------------------------------------------------- */
+
+  /* Parrot (brand green) */
+  --color-parrot-50: #f2fee7;
+  --color-parrot-100: #e1fbcc;
+  --color-parrot-200: #c4f89e;
+  --color-parrot-300: #9df066;
+  --color-parrot-400: #87e64b;
+  --color-parrot-500: #5ac919;
+  --color-parrot-600: #42a10f;
+  --color-parrot-700: #347a11;
+  --color-parrot-800: #2d6113;
+  --color-parrot-900: #285215;
+  --color-parrot-950: #112d06;
+
+  /* Purple */
+  --color-purple-50: #eef4ff;
+  --color-purple-100: #e0ebff;
+  --color-purple-200: #c6d9ff;
+  --color-purple-300: #a4c0fd;
+  --color-purple-400: #809cf9;
+  --color-purple-500: #6279f2;
+  --color-purple-600: #4f5ce8;
+  --color-purple-700: #3741cb;
+  --color-purple-800: #2f38a4;
+  --color-purple-900: #2d3682;
+  --color-purple-950: #1b1f4b;
+
+  /* Gray (warm) */
+  --color-gray-0: #ffffff;
+  --color-gray-50: #fff5ed;
+  --color-gray-100: #faf0e8;
+  --color-gray-200: #ece3db;
+  --color-gray-300: #b2aca6;
+  --color-gray-400: #9a9490;
+  --color-gray-500: #827e7a;
+  --color-gray-600: #6b6865;
+  --color-gray-700: #555351;
+  --color-gray-800: #403e3d;
+  --color-gray-900: #2c2b2a;
+  --color-gray-950: #191919;
+
+  /* Green */
+  --color-green-50: #f4faf5;
+  --color-green-100: #d3f1d7;
+  --color-green-200: #b0e6ba;
+  --color-green-300: #8cdc9c;
+  --color-green-400: #62d17e;
+  --color-green-500: #22c55e;
+  --color-green-600: #199c49;
+  --color-green-700: #117535;
+  --color-green-800: #095023;
+  --color-green-900: #032e11;
+  --color-green-950: #010f04;
+
+  /* Red */
+  --color-red-50: #fff6f5;
+  --color-red-100: #ffd6d1;
+  --color-red-200: #ffb5ae;
+  --color-red-300: #fd938b;
+  --color-red-400: #f76f68;
+  --color-red-500: #ef4444;
+  --color-red-600: #bf3635;
+  --color-red-700: #912827;
+  --color-red-800: #661a1a;
+  --color-red-900: #3e0e0d;
+  --color-red-950: #190404;
+
+  /* Yellow */
+  --color-yellow-50: #fcf8f3;
+  --color-yellow-100: #fce7cf;
+  --color-yellow-200: #fbd5aa;
+  --color-yellow-300: #fac383;
+  --color-yellow-400: #f8b158;
+  --color-yellow-500: #f59e0b;
+  --color-yellow-600: #c27c06;
+  --color-yellow-700: #915c03;
+  --color-yellow-800: #643d01;
+  --color-yellow-900: #392100;
+  --color-yellow-950: #140800;
+
+  /* Blue */
+  --color-blue-50: #f5f9ff;
+  --color-blue-100: #d0e2ff;
+  --color-blue-200: #abcbff;
+  --color-blue-300: #87b4fd;
+  --color-blue-400: #629cfa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2e67c5;
+  --color-blue-700: #224e96;
+  --color-blue-800: #163669;
+  --color-blue-900: #0b1f40;
+  --color-blue-950: #030b1b;
+
+  /* -----------------------------------------------------------------------
+     BREAKPOINTS — mobile < 768, tablet 768-1279, desktop 1280+
+     ----------------------------------------------------------------------- */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  --white: #ffffff;
+  --black: #000000;
+  --transparent: transparent;
+  --blue-300: var(--color-blue-300);
+  --blue-400: var(--color-blue-400);
+  --blue-500: var(--color-blue-500);
+  --indigo-300: var(--color-indigo-300);
+  --violet-200: var(--color-violet-200);
+
+  /* -----------------------------------------------------------------------
+     TRANSITIONS
+     ----------------------------------------------------------------------- */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* -----------------------------------------------------------------------
+     SEMANTIC COLORS — Tailwind-native aliases for design.md tokens
+     Use: bg-surface, bg-surface-alt, text-content, etc.
+     ----------------------------------------------------------------------- */
+
+  /* Surfaces (backgrounds) */
+  --color-surface: var(--color-gray-50);
+  --color-surface-alt: var(--color-gray-100);
+  --color-surface-strong: var(--color-gray-200);
+  --color-surface-action: var(--color-parrot-400);
+  --color-surface-brand: var(--color-parrot-500);
+  --color-surface-brand-alt: var(--color-purple-600);
+  --color-surface-hover: rgba(0, 0, 0, 0.08);
+  --color-surface-base: var(--color-gray-0);
+
+  /* Content (text) */
+  --color-content: var(--color-gray-950);
+  --color-content-secondary: var(--color-gray-800);
+  --color-content-tertiary: var(--color-gray-600);
+  --color-content-disabled: var(--color-gray-400);
+  --color-content-invert: var(--color-gray-0);
+  --color-content-success: var(--color-green-600);
+  --color-content-danger: var(--color-red-600);
+  --color-content-info: var(--color-blue-600);
+  --color-content-warning: var(--color-yellow-600);
+
+  /* Borders */
+  --color-edge: var(--color-gray-200);
+  --color-edge-subtle: var(--color-gray-100);
+  --color-edge-focus: var(--color-parrot-400);
+  --color-edge-info: var(--color-blue-400);
+  --color-edge-success: var(--color-green-400);
+  --color-edge-warning: var(--color-yellow-400);
+  --color-edge-danger: var(--color-red-400);
+
+  /* Icon accents */
+  --color-icon-accent: var(--color-purple-600);
+  --color-icon-accent-bg: var(--color-purple-100);
+
+  /* Status Backgrounds */
+  --color-surface-info-light: var(--color-blue-50);
+  --color-surface-success-light: var(--color-green-50);
+  --color-surface-warning-light: var(--color-yellow-50);
+  --color-surface-danger-light: var(--color-red-50);
+  --color-surface-info: var(--color-blue-500);
+  --color-surface-success: var(--color-green-500);
+  --color-surface-warning: var(--color-yellow-500);
+  --color-surface-danger: var(--color-red-500);
+
+  /* Transition Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  /* Z-index Scale */
+  --z-dropdown: 50;
+  --z-sticky: 100;
+  --z-fixed: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* =========================================================================
+   BASE STYLES
+   ========================================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-content);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+/* Skip to content — accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-toast);
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-brand);
+  color: var(--text-invert);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top var(--duration-fast) ease;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+}
+
+/* =========================================================================
+   TYPOGRAPHY UTILITIES — from design.md typography
+   ========================================================================= */
+
+/* Titles (H1 - H6 Scale) */
+.text-h1 {
+  font-family: var(--font-sans);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -0.05em;
+}
+
+.text-h2 {
+  font-family: var(--font-sans);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -0.05em;
+}
+
+.text-h3 {
+  font-family: var(--font-sans);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.05em;
+}
+
+.text-h4 {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+}
+
+.text-h5 {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.05em;
+}
+
+.text-h6 {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.05em;
+}
+
+/* Body XL (web-specific) */
+.text-body-xl {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Body LG */
+.text-body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Body Base */
+.text-body-base {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Body SM */
+.text-body-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Body XS */
+.text-body-xs {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Labels & Caption */
+.text-label-sm {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.text-label-xsm {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.text-caption {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* Responsive display typography */
+@media (max-width: 1279px) {
+  .text-h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .text-h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .text-h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .text-h4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .text-h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .text-h6 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .text-h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .text-h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .text-h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .text-h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .text-h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .text-h6 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* =========================================================================
+   LAYOUT UTILITIES
+   ========================================================================= */
+.container-page {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
+
+.section-padding {
+  padding-block: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-block: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding-block: 6rem;
+  }
+}
+
+/* =========================================================================
+   MICRO-INTERACTIONS & ANIMATIONS
+   ========================================================================= */
+
+/* Fade in from below */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale in */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide down (for dropdowns) */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide in from right (for mobile menu) */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Utility classes for animations */
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s var(--transition-timing-function-smooth) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s var(--transition-timing-function-smooth) both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s var(--transition-timing-function-smooth) both;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.2s var(--transition-timing-function-smooth) both;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s var(--transition-timing-function-smooth) both;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: fade-in-up 0.5s var(--transition-timing-function-smooth) both;
+}
+
+.stagger-children > *:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.stagger-children > *:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.stagger-children > *:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.stagger-children > *:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+.stagger-children > *:nth-child(5) {
+  animation-delay: 320ms;
+}
+
+.stagger-children > *:nth-child(6) {
+  animation-delay: 400ms;
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition:
+    transform var(--duration-normal) var(--transition-timing-function-smooth),
+    box-shadow var(--duration-normal) var(--transition-timing-function-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover scale effect */
+.hover-scale {
+  transition: transform var(--duration-fast) var(--transition-timing-function-smooth);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* =========================================================================
+   BLOB BUTTON HOVER — gooey morph effect
+   ========================================================================= */
+
+.blob-btn {
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+
+/* Container sits above the button bg, below the text */
+.blob-btn__inner {
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* The goo filter merges the 4 blobs into one fluid shape */
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url('#goo');
+}
+
+/* Each blob — a circle that rises on hover */
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  border-radius: 100%;
+  background: var(--blob-color, var(--color-parrot-600));
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+
+@supports (filter: url('#goo')) {
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+
+/* Stagger each blob left-to-right */
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+
+/* On hover — blobs rise up */
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+
+@supports (filter: url('#goo')) {
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+/* ---- Variant blob colors ---- */
+.blob-btn--primary {
+  --blob-color: var(--color-parrot-600);
+}
+
+.blob-btn--secondary {
+  --blob-color: var(--color-parrot-500);
+}
+
+.blob-btn--outline {
+  --blob-color: var(--color-gray-950);
+}
+
+.blob-btn--ghost {
+  --blob-color: var(--color-parrot-400);
+}
+
+/* ---- Hover text color per variant ---- */
+.blob-btn--primary:hover {
+  color: var(--color-gray-0);
+}
+
+.blob-btn--secondary:hover {
+  color: var(--color-gray-0);
+}
+
+.blob-btn--outline:hover {
+  color: var(--color-content-invert);
+}
+
+.blob-btn--ghost:hover {
+  color: var(--color-gray-0);
+}
+
+/* =========================================================================
+   RTL SUPPORT
+   ========================================================================= */
+[dir='rtl'] {
+  text-align: right;
+  font-family: var(--font-noto-arabic), 'PP Neue Montreal', sans-serif;
+  --font-sans:
+    var(--font-noto-arabic), 'PP Neue Montreal', 'Inter', ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+}
