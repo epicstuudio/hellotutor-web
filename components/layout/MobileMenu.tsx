@@ -16,6 +16,10 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
+function isActivePath(pathname: string, href: string): boolean {
+  return pathname === href || pathname.endsWith(href);
+}
+
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const t = useTranslations();
   const pathname = usePathname();
@@ -78,7 +82,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     href={item.href}
                     className={cn(
                       'text-base font-semibold transition-colors py-1',
-                      pathname === item.href
+                      isActivePath(pathname, item.href)
                         ? 'text-content-brand-strong'
                         : 'text-content hover:text-content-brand-strong',
                     )}
@@ -117,7 +121,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             href={child.href}
                             className={cn(
                               'text-sm transition-colors',
-                              pathname === child.href
+                              isActivePath(pathname, child.href)
                                 ? 'text-content-brand-strong font-semibold'
                                 : 'text-content-tertiary hover:text-content-brand-strong',
                             )}
@@ -157,7 +161,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                     href={subchild.href}
                                     className={cn(
                                       'text-sm transition-colors',
-                                      pathname === subchild.href
+                                      isActivePath(pathname, subchild.href)
                                         ? 'text-content-brand-strong font-semibold'
                                         : 'text-content-tertiary hover:text-content-brand-strong',
                                     )}

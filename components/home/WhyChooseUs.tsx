@@ -1,7 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { EyeOff, BookOpen, MessageSquare, ShieldCheck, RefreshCw } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 
 export function WhyChooseUs() {
   const t = useTranslations('whyChooseUs');
-  const locale = useLocale();
 
   const features = [
     { key: 'noBrowsing', icon: EyeOff },
@@ -23,7 +22,6 @@ export function WhyChooseUs() {
     <section className="py-20 lg:py-32 bg-surface-brand-alt overflow-hidden relative">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
           {/* Left Column - Content */}
           <div className="flex flex-col">
             <motion.h2
@@ -71,7 +69,7 @@ export function WhyChooseUs() {
             </div>
 
             <div className="flex items-start mt-6">
-              <Button href={`/${locale}/about/for-parents`} variant="primary" size="lg" className="px-8">
+              <Button href="/about/for-parents" variant="primary" size="lg" className="px-8">
                 {t('cta')}
               </Button>
             </div>
@@ -103,15 +101,12 @@ export function WhyChooseUs() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="absolute -bottom-8 lg:bottom-12 lg:-start-20 end-4 lg:end-auto bg-surface-base p-6 md:p-8 rounded-3xl shadow-xl max-w-[90%] lg:max-w-[420px] mx-auto z-10 hover-lift"
             >
-              <p className="text-content-secondary leading-relaxed mb-6">
-                {t('testimonial.text')}
-              </p>
+              <p className="text-content-secondary leading-relaxed mb-6">{t('testimonial.text')}</p>
               <p className="text-content font-semibold text-sm md:text-base">
                 {t('testimonial.author')}
               </p>
             </motion.div>
           </motion.div>
-
         </div>
       </Container>
     </section>
