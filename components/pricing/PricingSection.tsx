@@ -78,13 +78,13 @@ export function PricingSection() {
           transition={{ delay: 0.2 }}
           className="flex justify-center mb-16"
         >
-          <div className="bg-surface-base rounded-full p-1 border border-edge inline-flex items-center">
+          <div className="bg-surface-base rounded-full p-1 border border-edge inline-flex items-center max-w-full overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {(['primary', 'secondary', 'alevel'] as TabType[]).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={twMerge(
-                  'px-6 py-2.5 rounded-full text-body-sm font-semibold transition-all duration-200 cursor-pointer',
+                  'px-5 sm:px-6 py-2.5 rounded-full text-body-sm font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap snap-center flex-shrink-0',
                   activeTab === tab
                     ? 'bg-content text-content-invert shadow-sm'
                     : 'text-content-secondary hover:text-content',

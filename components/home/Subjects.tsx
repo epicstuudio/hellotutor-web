@@ -1,11 +1,10 @@
 import { Container } from '@/components/layout/Container';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export function Subjects() {
   const t = useTranslations('subjectsWeCover');
-  const locale = useLocale();
 
   const subjects = [
     { key: 'maths' },
@@ -19,12 +18,8 @@ export function Subjects() {
     <section className="pt-10 pb-20 lg:pt-12 lg:pb-24 bg-surface-alt">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-h2 text-content tracking-tight">
-            {t('title')}
-          </h2>
-          <p className="text-body-xl text-content-secondary">
-            {t('subtitle')}
-          </p>
+          <h2 className="text-h2 text-content tracking-tight">{t('title')}</h2>
+          <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
         </div>
 
         <div className="flex overflow-x-auto gap-4 mb-16 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
@@ -42,19 +37,15 @@ export function Subjects() {
                 <h3 className="text-lg font-semibold text-content mb-1">
                   {t(`cards.${subject.key}.title`)}
                 </h3>
-                <p className="text-base text-content-secondary">
-                  {t(`cards.${subject.key}.desc`)}
-                </p>
+                <p className="text-base text-content-secondary">{t(`cards.${subject.key}.desc`)}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center flex flex-col items-center gap-6">
-          <p className="text-body-base text-content-secondary">
-            {t('footerText')}
-          </p>
-          <Button href={`/${locale}/subjects`} variant="outline" size="lg" className="hover:text-white group">
+          <p className="text-body-base text-content-secondary">{t('footerText')}</p>
+          <Button href="/subjects" variant="outline" size="lg" className="hover:text-white group">
             {t('browseButton')}
           </Button>
         </div>

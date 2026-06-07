@@ -13,6 +13,10 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { ChevronDown, ChevronRight, Menu } from 'lucide-react';
 
+function isActivePath(pathname: string, href: string): boolean {
+  return pathname === href || pathname.endsWith(href);
+}
+
 export function Header() {
   const t = useTranslations();
   const pathname = usePathname();
@@ -42,7 +46,7 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
           {mainNav.map((item) => {
-            const isActive = item.href ? pathname === item.href : false;
+            const isActive = item.href ? isActivePath(pathname, item.href) : false;
 
             if (item.children) {
               return (
@@ -72,7 +76,7 @@ export function Header() {
                               href={child.href}
                               className={cn(
                                 'px-3 py-2 text-sm text-content-secondary hover:text-content-brand-strong hover:bg-surface-hover rounded-md transition-colors',
-                                pathname === child.href
+                                isActivePath(pathname, child.href)
                                   ? 'text-content-brand-strong bg-surface-hover font-medium'
                                   : '',
                               )}
@@ -106,7 +110,7 @@ export function Header() {
                                             href={subChild.href}
                                             className={cn(
                                               'px-3 py-2 text-sm text-content-secondary hover:text-content-brand-strong hover:bg-surface-hover rounded-md transition-colors',
-                                              pathname === subChild.href
+                                              isActivePath(pathname, subChild.href)
                                                 ? 'text-content-brand-strong bg-surface-hover font-medium'
                                                 : '',
                                             )}
