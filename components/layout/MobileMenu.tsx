@@ -61,12 +61,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-hidden="true"
       />
 
-      <div className="absolute top-0 end-0 bottom-0 w-full max-w-sm bg-surface shadow-xl animate-slide-in-right flex flex-col">
+      <div className="absolute top-0 end-0 h-[100dvh] w-full max-w-sm bg-surface shadow-xl animate-slide-in-right flex flex-col pb-[env(safe-area-inset-bottom)]">
         <div className="p-5 flex items-center justify-between border-b border-edge-subtle">
           <Logo />
           <button
             onClick={onClose}
-            className="p-2 text-content-tertiary hover:text-content transition-colors rounded-sm hover:bg-surface-hover"
+            className="p-2 text-content-tertiary hover:text-content transition-colors rounded-lg hover:bg-surface-hover"
             aria-label="Close menu"
           >
             <X className="h-6 w-6" />
@@ -83,8 +83,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     className={cn(
                       'text-base font-semibold transition-colors py-1',
                       isActivePath(pathname, item.href)
-                        ? 'text-content-brand-strong'
-                        : 'text-content hover:text-content-brand-strong',
+                        ? 'text-surface-brand-alt'
+                        : 'text-content-secondary hover:text-content',
                     )}
                   >
                     {item.titleKey.includes('.')
@@ -95,7 +95,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <button
                     type="button"
                     onClick={() => toggleExpanded(item.titleKey)}
-                    className="flex items-center justify-between text-base font-semibold text-content py-1"
+                    className="flex items-center justify-between text-base font-semibold text-content-secondary py-1"
                     aria-expanded={expandedItems.includes(item.titleKey)}
                   >
                     <span>
@@ -122,8 +122,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             className={cn(
                               'text-sm transition-colors',
                               isActivePath(pathname, child.href)
-                                ? 'text-content-brand-strong font-semibold'
-                                : 'text-content-tertiary hover:text-content-brand-strong',
+                                ? 'text-surface-brand-alt font-semibold'
+                                : 'text-content-secondary hover:text-content',
                             )}
                           >
                             {child.titleKey.includes('.')
@@ -162,8 +162,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                     className={cn(
                                       'text-sm transition-colors',
                                       isActivePath(pathname, subchild.href)
-                                        ? 'text-content-brand-strong font-semibold'
-                                        : 'text-content-tertiary hover:text-content-brand-strong',
+                                        ? 'text-surface-brand-alt font-semibold'
+                                        : 'text-content-secondary hover:text-content',
                                     )}
                                   >
                                     {subchild.titleKey.includes('.')

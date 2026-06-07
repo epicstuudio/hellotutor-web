@@ -34,9 +34,9 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 start-0 end-0 z-[100] transition-all duration-normal backdrop-blur-md border-b',
+        'fixed top-0 start-0 end-0 z-[100] transition-all duration-normal border-b',
         isScrolled
-          ? 'bg-surface/90 border-edge shadow-sm py-3'
+          ? 'bg-surface/90 border-edge shadow-sm py-3 backdrop-blur-md'
           : 'bg-transparent border-transparent py-5',
       )}
     >
@@ -75,9 +75,9 @@ export function Header() {
                             <Link
                               href={child.href}
                               className={cn(
-                                'px-3 py-2 text-sm text-content-secondary hover:text-content-brand-strong hover:bg-surface-hover rounded-md transition-colors',
+                                'px-3 py-2 text-sm text-content-secondary hover:text-surface-brand-alt hover:bg-surface-hover rounded-md transition-colors',
                                 isActivePath(pathname, child.href)
-                                  ? 'text-content-brand-strong bg-surface-hover font-medium'
+                                  ? 'text-surface-brand-alt bg-surface-hover font-medium'
                                   : '',
                               )}
                             >
@@ -109,9 +109,9 @@ export function Header() {
                                             key={subChild.titleKey}
                                             href={subChild.href}
                                             className={cn(
-                                              'px-3 py-2 text-sm text-content-secondary hover:text-content-brand-strong hover:bg-surface-hover rounded-md transition-colors',
+                                              'px-3 py-2 text-sm text-content-secondary hover:text-surface-brand-alt hover:bg-surface-hover rounded-md transition-colors',
                                               isActivePath(pathname, subChild.href)
-                                                ? 'text-content-brand-strong bg-surface-hover font-medium'
+                                                ? 'text-surface-brand-alt bg-surface-hover font-medium'
                                                 : '',
                                             )}
                                           >
@@ -139,8 +139,8 @@ export function Header() {
                 key={item.titleKey}
                 href={item.href || '/'}
                 className={cn(
-                  'px-3 py-2 text-sm font-medium transition-colors hover:text-content-brand-strong',
-                  isActive ? 'text-content-brand-strong' : 'text-content-secondary',
+                  'px-3 py-2 text-sm font-medium transition-colors hover:text-surface-brand-alt',
+                  isActive ? 'text-surface-brand-alt' : 'text-content-secondary',
                 )}
               >
                 {item.titleKey.includes('.')
