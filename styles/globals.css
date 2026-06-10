@@ -1,6 +1,42 @@
 @import 'tailwindcss';
 
 /* ==========================================================================
+   PP Mori — self-hosted from /styles/fonts/
+   ========================================================================== */
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('./fonts/PPMori-SemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ==========================================================================
    HelloTutor Design System — mapped from design.md
    All tokens below correspond 1:1 with the design.md specification.
    ========================================================================== */
@@ -9,8 +45,7 @@
   /* -----------------------------------------------------------------------
      FONTS
      ----------------------------------------------------------------------- */
-  --font-sans:
-    var(--font-google-sans-flex), 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: 'PP Mori', 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* Values section colors */
   --color-value-human: #9c4d9e;
@@ -764,13 +799,8 @@ body {
    ========================================================================= */
 [dir='rtl'] {
   text-align: right;
-  font-family:
-    var(--font-noto-arabic),
-    'Inter',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: var(--font-noto-arabic), 'PP Neue Montreal', sans-serif;
   --font-sans:
-    var(--font-noto-arabic), 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    var(--font-noto-arabic), 'PP Neue Montreal', 'Inter', ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
 }

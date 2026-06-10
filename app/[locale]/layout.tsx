@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Noto_Sans_Arabic, Google_Sans_Flex } from 'next/font/google';
+import { Noto_Sans_Arabic } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -13,13 +13,6 @@ const notoSansArabic = Noto_Sans_Arabic({
   subsets: ['arabic'],
   variable: '--font-noto-arabic',
   display: 'swap',
-});
-
-const googleSansFlex = Google_Sans_Flex({
-  subsets: ['latin'],
-  variable: '--font-google-sans-flex',
-  display: 'swap',
-  weight: 'variable',
 });
 
 export function generateMetadata() {
@@ -57,12 +50,7 @@ export default async function LocaleLayout({
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <html
-      lang={locale}
-      dir={dir}
-      suppressHydrationWarning
-      className={`${notoSansArabic.variable} ${googleSansFlex.variable}`}
-    >
+    <html lang={locale} dir={dir} suppressHydrationWarning className={notoSansArabic.variable}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
