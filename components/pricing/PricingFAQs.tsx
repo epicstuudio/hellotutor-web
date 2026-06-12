@@ -19,9 +19,9 @@ export function PricingFAQs() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-surface">
+    <section className="py-12 lg:py-20 bg-surface">
       <Container className="max-w-4xl">
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-12 lg:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

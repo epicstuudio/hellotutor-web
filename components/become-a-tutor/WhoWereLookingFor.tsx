@@ -15,10 +15,10 @@ export function WhoWereLookingFor() {
   }[];
 
   return (
-    <section className="py-20 lg:py-24 bg-purple-600">
+    <section className="py-16 lg:py-20 bg-purple-600">
       <Container>
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

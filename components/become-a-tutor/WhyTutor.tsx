@@ -32,7 +32,7 @@ export function WhyTutor() {
   }));
 
   return (
-    <section className="py-20 lg:py-24 bg-surface">
+    <section className="py-16 lg:py-20 bg-surface">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-16">
           <motion.h2

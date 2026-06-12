@@ -28,7 +28,7 @@ export function CTASection({ title, subtitle, buttonText, buttonHref }: CTASecti
   const t = useTranslations();
 
   return (
-    <section className="py-20 lg:py-24 bg-surface-strong">
+    <section className="py-16 lg:py-20 bg-surface-strong">
       <Container className="max-w-3xl text-center relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

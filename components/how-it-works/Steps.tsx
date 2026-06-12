@@ -58,7 +58,7 @@ export function Steps() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-surface py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-surface py-12 lg:py-20">
       <Container className="relative z-10 w-full max-w-[1091px] mx-auto">
         <div className="text-center flex flex-col pb-32">
           <motion.h2

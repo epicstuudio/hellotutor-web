@@ -16,9 +16,9 @@ export function FAQs() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-surface-alt">
+    <section className="py-12 lg:py-20 bg-surface-alt">
       <Container className="max-w-4xl">
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-h2 text-content tracking-tight mb-2">{t('title')}</h2>
           <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
         </div>

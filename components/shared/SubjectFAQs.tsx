@@ -20,9 +20,9 @@ export function SubjectFAQs({ translationKey, className }: SubjectFAQsProps) {
   }[];
 
   return (
-    <section className={cn('py-20 lg:py-32 bg-surface-alt', className)}>
+    <section className={cn('py-12 lg:py-20 bg-surface-alt', className)}>
       <Container className="max-w-4xl">
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-h2 text-content tracking-tight mb-4">{t('title')}</h2>
           <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
         </div>

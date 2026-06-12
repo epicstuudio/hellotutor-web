@@ -17,7 +17,7 @@ export function SubjectHowItWorks({ translationKey, imageSrc, className }: Subje
   const steps = (Array.isArray(stepsRaw) ? stepsRaw : Object.values(stepsRaw || {})) as { title: string; desc: string }[];
 
   return (
-    <section className={cn("py-20 lg:py-32 bg-surface", className)}>
+    <section className={cn("py-12 lg:py-20 bg-surface", className)}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 

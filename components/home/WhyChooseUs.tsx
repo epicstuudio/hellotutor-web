@@ -19,7 +19,7 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-surface-brand-alt overflow-hidden relative">
+    <section className="py-12 lg:py-20 bg-surface-brand-alt overflow-hidden relative">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Column - Content */}

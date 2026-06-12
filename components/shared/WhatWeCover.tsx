@@ -45,9 +45,9 @@ export function WhatWeCover({ translationKey, images, className }: WhatWeCoverPr
   }>;
 
   return (
-    <section className={cn('py-16 lg:py-24 bg-surface', className)}>
+    <section className={cn('py-12 lg:py-20 bg-surface', className)}>
       <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-h2 text-content mb-4 tracking-tight">{t('title')}</h2>
           <p className="text-body-lg text-content-secondary">{t('subtitle')}</p>
         </div>

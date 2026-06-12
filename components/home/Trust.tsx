@@ -20,7 +20,7 @@ export function Trust() {
   const t = useTranslations('trust');
 
   return (
-    <section className="py-20 lg:py-24 bg-surface overflow-hidden">
+    <section className="py-16 lg:py-20 bg-surface overflow-hidden">
       <Container>
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-16">
           <h2 className="text-h2 text-content max-w-xl leading-tight tracking-tight">

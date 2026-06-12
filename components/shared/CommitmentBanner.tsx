@@ -53,7 +53,7 @@ export function CommitmentBanner({ translationKey }: CommitmentBannerProps) {
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   return (
-    <section ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-surface-brand-alt">
+    <section ref={ref} className="relative py-12 lg:py-20 overflow-hidden bg-surface-brand-alt">
       {/* Radial glow background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

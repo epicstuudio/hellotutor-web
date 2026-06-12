@@ -18,10 +18,10 @@ export function MeetOurTutors({ translationKey, imageSrc, className }: MeetOurTu
   const standards = (Array.isArray(standardsRaw) ? standardsRaw : Object.values(standardsRaw || {})) as string[];
 
   return (
-    <section className={cn("py-20 lg:py-32 bg-surface-brand-alt text-content-invert", className)}>
+    <section className={cn("py-12 lg:py-20 bg-surface-brand-alt text-content-invert", className)}>
       <Container>
         {/* Header section */}
-        <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24">
+        <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-h2 mb-6 tracking-tight text-content-invert">
             {t('title')}
           </h2>

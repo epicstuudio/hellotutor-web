@@ -31,7 +31,7 @@ export function ValuesSection({ translationKey }: ValuesSectionProps) {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-surface overflow-hidden">
+    <section className="py-12 lg:py-20 bg-surface overflow-hidden">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <motion.h2

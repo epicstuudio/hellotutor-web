@@ -20,9 +20,9 @@ export function BenefitsList({ translationKey, imageSrc }: BenefitsListProps) {
   }[];
 
   return (
-    <section className="bg-surface py-16 lg:py-24">
+    <section className="bg-surface py-12 lg:py-20">
       <Container>
-        <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
