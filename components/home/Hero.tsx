@@ -58,7 +58,7 @@ export function Hero() {
                   href="/book-consultation"
                   variant="primary"
                   size="lg"
-                  className="w-full sm:w-auto transition-transform hover:scale-105"
+                  className="w-full sm:w-auto"
                 >
                   <WhatsAppIcon className="w-5 h-5" />
                   {t('common.bookConsultation')}
@@ -67,7 +67,7 @@ export function Hero() {
                   href={siteConfig.loginUrl}
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto transition-transform hover:scale-105"
+                  className="w-full sm:w-auto"
                 >
                   {t('common.getStarted')}
                 </Button>
