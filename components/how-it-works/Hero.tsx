@@ -43,11 +43,12 @@ export function Hero() {
             {t('common.bookConsultation')}
           </Button>
           <Button
+            href="/how-it-works"
             size="lg"
             variant="outline"
             className="w-full sm:w-auto bg-white hover:bg-surface-alt border-edge text-content"
           >
-            {t('common.getStarted')}
+            {t('common.howItWorks')}
           </Button>
         </motion.div>
 

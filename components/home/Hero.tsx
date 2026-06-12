@@ -2,7 +2,6 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
-import { siteConfig } from '@/config/site';
 import { Check, TrendingUp, BookOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -64,12 +63,12 @@ export function Hero() {
                   {t('common.bookConsultation')}
                 </Button>
                 <Button
-                  href={siteConfig.loginUrl}
+                  href="/how-it-works"
                   variant="outline"
                   size="lg"
                   className="w-full sm:w-auto"
                 >
-                  {t('common.getStarted')}
+                  {t('common.howItWorks')}
                 </Button>
               </motion.div>
 

@@ -149,12 +149,12 @@ export function CommitmentBanner({ translationKey }: CommitmentBannerProps) {
               {tCommon('common.bookConsultation')}
             </Button>
             <Button
-              href={siteConfig.loginUrl}
+              href="/how-it-works"
               variant="outline"
               size="lg"
               className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent"
             >
-              {tCommon('common.getStarted')}
+              {tCommon('common.howItWorks')}
             </Button>
           </motion.div>
 

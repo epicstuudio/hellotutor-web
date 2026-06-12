@@ -59,8 +59,8 @@ export function ContactHero() {
               <WhatsAppIcon className="w-5 h-5" />
               <span>{t('common.bookConsultation')}</span>
             </Button>
-            <Button href={siteConfig.loginUrl} variant="outline" size="lg">
-              {t('common.getStarted')}
+            <Button href="/how-it-works" variant="outline" size="lg">
+              {t('common.howItWorks')}
             </Button>
           </motion.div>
           <motion.p

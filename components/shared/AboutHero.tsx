@@ -2,7 +2,6 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
-import { siteConfig } from '@/config/site';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -87,12 +86,12 @@ export function AboutHero({ title, subtitle }: AboutHeroProps) {
               {t('common.bookConsultation')}
             </Button>
             <Button
-              href={siteConfig.loginUrl}
+              href="/how-it-works"
               variant="outline"
               size="lg"
               className="w-full sm:w-auto bg-white"
             >
-              {t('common.getStarted')}
+              {t('common.howItWorks')}
             </Button>
           </motion.div>
 
