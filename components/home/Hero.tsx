@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/config/site';
 import { Check, TrendingUp, BookOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { AuroraBackground } from '@/components/ui/aurora-background';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -25,7 +24,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-surface">
-      <AuroraBackground className="pt-[calc(72px+8rem)] xl:pt-[calc(88px+8rem)] pb-0">
+      <div className="pt-[calc(72px+8rem)] xl:pt-[calc(88px+8rem)] pb-0">
         <Container className="relative z-10 w-full h-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-stretch h-full">
             {/* Left Column - Content */}
@@ -223,7 +222,7 @@ export function Hero() {
             </div>
           </div>
         </Container>
-      </AuroraBackground>
+      </div>
     </section>
   );
 }
