@@ -14,13 +14,13 @@ export function Logo({ className, variant = 'black' }: LogoProps) {
       className={`inline-flex items-center transition-opacity hover:opacity-80 ${className || ''}`}
       aria-label="HelloTutor — Home"
     >
-      <Image 
-        src={src} 
-        alt="HelloTutor" 
-        width={149} 
-        height={32}
+      <Image
+        src={src}
+        alt="HelloTutor"
+        width={164}
+        height={26}
         priority
-        className="w-auto h-7 sm:h-8" 
+        className="w-auto h-6 sm:h-7"
       />
     </Link>
   );
