@@ -55,7 +55,7 @@ export function PricingSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-h3 md:text-h2 text-content mb-4 tracking-tight"
+            className="text-h2 text-content mb-4 tracking-tight"
           >
             {t('pricingSection.title')}
           </motion.h2>
