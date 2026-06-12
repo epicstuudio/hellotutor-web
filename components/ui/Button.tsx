@@ -20,16 +20,14 @@ type ButtonAsLink = ButtonBaseProps &
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
-/**
- * Button variants — hover is handled by the blob goo animation (see globals.css).
- * Tailwind hover classes removed; CSS `.blob-btn--*:hover` drives the text color change.
- */
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: 'bg-surface-action text-content active:opacity-85 blob-btn--primary',
-  secondary: 'bg-surface-alt text-content border border-edge active:opacity-90 blob-btn--secondary',
+  primary: 'bg-surface-action text-content hover:brightness-95 active:opacity-85',
+  secondary:
+    'bg-surface-alt text-content border border-edge hover:bg-surface-hover active:opacity-90',
   outline:
-    'bg-surface-base text-content border border-edge active:bg-surface-strong blob-btn--outline',
-  ghost: 'bg-transparent text-content-secondary active:bg-surface-strong blob-btn--ghost',
+    'bg-surface-base text-content border border-edge hover:bg-surface-hover active:bg-surface-strong',
+  ghost:
+    'bg-transparent text-content-secondary hover:bg-surface-hover hover:text-content active:bg-surface-strong',
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -37,37 +35,6 @@ const sizeClasses: Record<ButtonSize, string> = {
   md: 'h-12 px-6 text-sm font-semibold rounded-xl',
   lg: 'h-14 px-8 text-base font-semibold rounded-xl',
 };
-
-/** SVG goo filter + 4 animated blobs that rise on hover */
-const BlobInner = () => (
-  <span className="blob-btn__inner" aria-hidden="true">
-    <span className="blob-btn__blobs">
-      <span className="blob-btn__blob" />
-      <span className="blob-btn__blob" />
-      <span className="blob-btn__blob" />
-      <span className="blob-btn__blob" />
-    </span>
-    {/* Inline SVG filter — avoids cross-document URL issues in Next.js SPA routing */}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      style={{ position: 'absolute', width: 0, height: 0 }}
-    >
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
-            result="goo"
-          />
-          <feBlend in2="goo" in="SourceGraphic" result="mix" />
-        </filter>
-      </defs>
-    </svg>
-  </span>
-);
 
 export function Button({
   variant = 'primary',
@@ -77,8 +44,8 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    'blob-btn inline-flex items-center justify-center whitespace-nowrap select-none cursor-pointer',
-    'transition-colors duration-normal ease-smooth',
+    'inline-flex items-center justify-center whitespace-nowrap select-none cursor-pointer',
+    'transition-all duration-normal ease-smooth',
     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-edge-focus',
     'disabled:opacity-50 disabled:pointer-events-none',
     variantClasses[variant],
@@ -93,24 +60,21 @@ export function Button({
     if (isExternal) {
       return (
         <a href={href} className={classes} target="_blank" rel="noopener noreferrer" {...rest}>
-          <span className="relative z-[2] inline-flex items-center gap-2">{children}</span>
-          <BlobInner />
+          <span className="inline-flex items-center gap-2">{children}</span>
         </a>
       );
     }
 
     return (
       <Link href={href} className={classes} {...rest}>
-        <span className="relative z-[2] inline-flex items-center gap-2">{children}</span>
-        <BlobInner />
+        <span className="inline-flex items-center gap-2">{children}</span>
       </Link>
     );
   }
 
   return (
     <button type="button" className={classes} {...(props as ButtonAsButton)}>
-      <span className="relative z-[2] inline-flex items-center gap-2">{children}</span>
-      <BlobInner />
+      <span className="inline-flex items-center gap-2">{children}</span>
     </button>
   );
 }
