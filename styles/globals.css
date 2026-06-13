@@ -37,6 +37,26 @@
 }
 
 /* ==========================================================================
+   AwesomeSerif — self-hosted from /styles/fonts/
+   ========================================================================== */
+
+@font-face {
+  font-family: 'AwesomeSerif';
+  src: url('./fonts/AwesomeSerif-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AwesomeSerif';
+  src: url('./fonts/AwesomeSerifItalic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ==========================================================================
    HelloTutor Design System — mapped from design.md
    All tokens below correspond 1:1 with the design.md specification.
    ========================================================================== */
@@ -335,51 +355,51 @@ body {
 
 /* Titles (H1 - H6 Scale) */
 .text-h1 {
-  font-family: var(--font-sans);
+  font-family: 'AwesomeSerif', var(--font-sans);
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 64px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 
 .text-h2 {
-  font-family: var(--font-sans);
+  font-family: 'AwesomeSerif', var(--font-sans);
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 56px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 
 .text-h3 {
-  font-family: var(--font-sans);
+  font-family: 'AwesomeSerif', var(--font-sans);
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 48px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 
 .text-h4 {
-  font-family: var(--font-sans);
+  font-family: 'AwesomeSerif', var(--font-sans);
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 40px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 
 .text-h5 {
-  font-family: var(--font-sans);
+  font-family: 'AwesomeSerif', var(--font-sans);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 32px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 
 .text-h6 {
-  font-family: var(--font-sans);
+  font-family: 'AwesomeSerif', var(--font-sans);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 28px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 
 /* Body XL (web-specific) */
