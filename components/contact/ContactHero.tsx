@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site';
 import { motion } from 'framer-motion';
@@ -31,7 +32,7 @@ export function ContactHero() {
             transition={{ duration: 0.5 }}
             className="text-h2 text-content mb-6 tracking-tight"
           >
-            {t('contactPage.hero.title')}
+            <HighlightText words="Touch">{t('contactPage.hero.title')}</HighlightText>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

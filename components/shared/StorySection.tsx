@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PenTool, MessageSquare, Lightbulb } from 'lucide-react';
@@ -43,7 +44,7 @@ export function StorySection({ translationKey, imageSrc }: StorySectionProps) {
             viewport={{ once: true }}
             className="text-h2 text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words="Story">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

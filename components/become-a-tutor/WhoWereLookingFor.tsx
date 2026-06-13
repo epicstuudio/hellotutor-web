@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -26,7 +27,7 @@ export function WhoWereLookingFor() {
             transition={{ duration: 0.5 }}
             className="text-h2 text-white mb-4"
           >
-            {t('title')}
+            <HighlightText words="Looking">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

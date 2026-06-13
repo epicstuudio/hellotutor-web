@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { siteConfig } from '@/config/site';
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -119,7 +120,7 @@ export function CommitmentBanner({ translationKey }: CommitmentBannerProps) {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-h1 text-white mb-6 tracking-tight"
           >
-            {t('title')}
+            <HighlightText words="Commitment">{t('title')}</HighlightText>
           </motion.h2>
 
           <motion.p

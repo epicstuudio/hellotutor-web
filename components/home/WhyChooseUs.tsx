@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { EyeOff, BookOpen, MessageSquare, ShieldCheck, RefreshCw } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 
 export function WhyChooseUs() {
@@ -31,7 +32,7 @@ export function WhyChooseUs() {
               transition={{ duration: 0.5 }}
               className="text-h2 text-white mb-4 tracking-tight"
             >
-              {t('title')}
+              <HighlightText words="Hello Tutor">{t('title')}</HighlightText>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

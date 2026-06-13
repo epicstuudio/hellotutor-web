@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -51,7 +52,7 @@ export function HowLessonsWork() {
             viewport={{ once: true }}
             className="text-h2 text-content tracking-tight"
           >
-            {t('title')}
+            <HighlightText words="lessons">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

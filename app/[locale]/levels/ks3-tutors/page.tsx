@@ -26,11 +26,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function Ks3TutorsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function Ks3TutorsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
@@ -43,23 +39,16 @@ export default async function Ks3TutorsPage({
         subtitle={t('levelPages.ks3Tutors.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/KS3-Tutors/KS3Hero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="KS3"
       />
       <LevelChallenges
         translationKey="levelPages.ks3Tutors.challenges"
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/KS3-Tutors/KS3Students.jpg"
       />
-      <CommonChallenges
-        translationKey="levelPages.ks3Tutors.howWeSupport"
-      />
-      <PopularSubjects
-        translationKey="levelPages.ks3Tutors.popularSubjects"
-      />
-      <Testimonials
-        translationKey="levelPages.ks3Tutors.testimonials"
-      />
-      <SubjectFAQs
-        translationKey="levelPages.ks3Tutors.faqs"
-      />
+      <CommonChallenges translationKey="levelPages.ks3Tutors.howWeSupport" />
+      <PopularSubjects translationKey="levelPages.ks3Tutors.popularSubjects" />
+      <Testimonials translationKey="levelPages.ks3Tutors.testimonials" />
+      <SubjectFAQs translationKey="levelPages.ks3Tutors.faqs" />
       <CTASection />
     </>
   );

@@ -43,16 +43,17 @@ export default async function ExamPreparationPage({
         subtitle={t('subjectPages.examPreparation.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/exam-preparation/hero-image.webp"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="Exam"
       />
       <CommonChallenges translationKey="subjectPages.examPreparation.challenges" />
       <Testimonials translationKey="subjectPages.examPreparation.testimonials" />
       <WhatWeCover
         translationKey="subjectPages.examPreparation.whatWeCover"
         images={[
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/KS3%20%3A%20Years%207%2C%208%20and%209.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/GCSE%20%3A%20Foundation%20and%20Higher.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/A-Level%20%3A%20Core%2C%20Statistics%20and%20Mechanics.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/IB%20%3A%20Analysis%20and%20Approaches%2C%20Applications%20and%20Interpretation.avif"
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/KS3%20%3A%20Years%207%2C%208%20and%209.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/GCSE%20%3A%20Foundation%20and%20Higher.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/A-Level%20%3A%20Core%2C%20Statistics%20and%20Mechanics.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/IB%20%3A%20Analysis%20and%20Approaches%2C%20Applications%20and%20Interpretation.avif',
         ]}
       />
       <SubjectHowItWorks

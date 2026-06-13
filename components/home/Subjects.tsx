@@ -1,6 +1,7 @@
 import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
@@ -19,7 +20,9 @@ export function Subjects() {
     <section className="pt-10 pb-20 lg:pt-12 lg:pb-24 bg-surface-alt">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-h2 text-content tracking-tight">{t('title')}</h2>
+          <h2 className="text-h2 text-content tracking-tight">
+            <HighlightText words="Subjects">{t('title')}</HighlightText>
+          </h2>
           <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
         </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -48,7 +49,9 @@ export function WhatWeCover({ translationKey, images, className }: WhatWeCoverPr
     <section className={cn('py-12 lg:py-20 bg-surface', className)}>
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="text-h2 text-content mb-4 tracking-tight">{t('title')}</h2>
+          <h2 className="text-h2 text-content mb-4 tracking-tight">
+            <HighlightText words="Cover">{t('title')}</HighlightText>
+          </h2>
           <p className="text-body-lg text-content-secondary">{t('subtitle')}</p>
         </div>
 

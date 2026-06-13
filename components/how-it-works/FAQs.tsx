@@ -2,6 +2,7 @@ import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
 import { Accordion } from '@/components/ui/Accordion';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 
 export function FAQs() {
   const t = useTranslations('howItWorksFaqs');
@@ -19,7 +20,9 @@ export function FAQs() {
     <section className="py-12 lg:py-20 bg-surface-alt">
       <Container className="max-w-4xl">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-h2 text-content tracking-tight mb-2">{t('title')}</h2>
+          <h2 className="text-h2 text-content tracking-tight mb-2">
+            <HighlightText words="questions">{t('title')}</HighlightText>
+          </h2>
           <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
         </div>
 

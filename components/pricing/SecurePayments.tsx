@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { ShieldCheck, CreditCard, EyeOff, CheckCircle2, MoreHorizontal } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -38,7 +39,7 @@ export function SecurePayments() {
             viewport={{ once: true }}
             className="text-h2 md:text-h1 font-bold text-content mb-4"
           >
-            {t('pricingSection.securePayments.title')}
+            <HighlightText words="simple">{t('pricingSection.securePayments.title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -67,12 +68,8 @@ export function SecurePayments() {
                     <feature.icon className="w-6 h-6 text-content-info" />
                   </div>
                   <div className="flex flex-col gap-1 mt-1">
-                    <span className="text-body-md font-bold text-content">
-                      {feature.title}
-                    </span>
-                    <span className="text-body-sm text-content-secondary">
-                      {feature.desc}
-                    </span>
+                    <span className="text-body-md font-bold text-content">{feature.title}</span>
+                    <span className="text-body-sm text-content-secondary">{feature.desc}</span>
                   </div>
                 </div>
               ))}
@@ -125,9 +122,7 @@ export function SecurePayments() {
 
               <div className="flex justify-between items-end">
                 <div className="flex flex-col">
-                  <span className="text-xs text-content-secondary font-medium mb-1">
-                    Amount
-                  </span>
+                  <span className="text-xs text-content-secondary font-medium mb-1">Amount</span>
                   <span className="text-lg font-bold text-content">
                     265.00 <span className="text-sm font-semibold">AED</span>
                   </span>

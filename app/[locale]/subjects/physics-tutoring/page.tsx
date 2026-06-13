@@ -43,16 +43,17 @@ export default async function PhysicsTutoringPage({
         title={t('subjectPages.physicsTutoring.heroTitle')}
         subtitle={t('subjectPages.physicsTutoring.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/physics-tutoring/hero-image.png"
+        highlightWord="Physics"
       />
       <CommonChallenges translationKey="subjectPages.physicsTutoring.challenges" />
       <Testimonials translationKey="subjectPages.physicsTutoring.testimonials" />
       <WhatWeCover
         translationKey="subjectPages.physicsTutoring.whatWeCover"
         images={[
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/KS3%20%3A%20Years%207%2C%208%20and%209.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/GCSE%20%3A%20Foundation%20and%20Higher.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/A-Level%20%3A%20Core%2C%20Statistics%20and%20Mechanics.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/IB%20%3A%20Analysis%20and%20Approaches%2C%20Applications%20and%20Interpretation.avif"
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/KS3%20%3A%20Years%207%2C%208%20and%209.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/GCSE%20%3A%20Foundation%20and%20Higher.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/A-Level%20%3A%20Core%2C%20Statistics%20and%20Mechanics.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/IB%20%3A%20Analysis%20and%20Approaches%2C%20Applications%20and%20Interpretation.avif',
         ]}
       />
       <MeetOurTutors

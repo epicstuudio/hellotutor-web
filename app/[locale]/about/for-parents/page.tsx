@@ -39,6 +39,7 @@ export default async function ForParentsPage({ params }: { params: Promise<{ loc
         subtitle={t('aboutPages.forParents.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/for-parents/parentsHero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="Tutoring"
       />
       <FeatureGrid translationKey="aboutPages.forParents.whyChoose" />
       <BenefitsList

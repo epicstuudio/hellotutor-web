@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -29,7 +30,7 @@ export function BenefitsList({ translationKey, imageSrc }: BenefitsListProps) {
             viewport={{ once: true }}
             className="text-h2 md:text-h1 font-bold text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words="Parents">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,14 +56,10 @@ export function BenefitsList({ translationKey, imageSrc }: BenefitsListProps) {
               {itemsArray.map((item, i) => (
                 <div key={i} className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-xl bg-surface-base flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-body-md font-bold text-content-info">
-                      {`0${i + 1}`}
-                    </span>
+                    <span className="text-body-md font-bold text-content-info">{`0${i + 1}`}</span>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <h3 className="text-body-lg font-semibold text-content">
-                      {item.title}
-                    </h3>
+                    <h3 className="text-body-lg font-semibold text-content">{item.title}</h3>
                     <p className="text-body-base text-content-secondary leading-relaxed">
                       {item.desc}
                     </p>
@@ -87,12 +84,7 @@ export function BenefitsList({ translationKey, imageSrc }: BenefitsListProps) {
             transition={{ delay: 0.3 }}
             className="relative rounded-[2rem] overflow-hidden bg-edge aspect-[4/5] lg:aspect-square"
           >
-            <Image
-              src={imageSrc}
-              alt={t('title')}
-              fill
-              className="object-cover"
-            />
+            <Image src={imageSrc} alt={t('title')} fill className="object-cover" />
           </motion.div>
         </div>
       </Container>

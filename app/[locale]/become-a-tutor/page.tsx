@@ -42,7 +42,12 @@ export default async function BecomeATutorPage({
       <WhoWereLookingFor />
       <StepsTimeline translationKey="becomeATutorPage.applicationProcess" />
       <SubjectFAQs translationKey="becomeATutorPage.faqs" />
-      <CTASection title={t('title')} subtitle={t('subtitle')} buttonText={t('buttonText')} />
+      <CTASection
+        title={t('title')}
+        subtitle={t('subtitle')}
+        buttonText={t('buttonText')}
+        highlightWord="teaching"
+      />
     </>
   );
 }

@@ -43,6 +43,7 @@ export default async function MathsTutoringPage({
         title={t('subjectPages.mathsTutoring.heroTitle')}
         subtitle={t('subjectPages.mathsTutoring.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/maths-tutoring/hero-image.png"
+        highlightWord="Maths"
       />
       <CommonChallenges translationKey="subjectPages.mathsTutoring.challenges" />
       <Testimonials translationKey="subjectPages.mathsTutoring.testimonials" />

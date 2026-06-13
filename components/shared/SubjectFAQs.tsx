@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { Accordion } from '@/components/ui/Accordion';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
@@ -23,7 +24,9 @@ export function SubjectFAQs({ translationKey, className }: SubjectFAQsProps) {
     <section className={cn('py-12 lg:py-20 bg-surface-alt', className)}>
       <Container className="max-w-4xl">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-h2 text-content tracking-tight mb-4">{t('title')}</h2>
+          <h2 className="text-h2 text-content tracking-tight mb-4">
+            <HighlightText words="asked">{t('title')}</HighlightText>
+          </h2>
           <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
         </div>
 

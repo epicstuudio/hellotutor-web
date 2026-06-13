@@ -2,6 +2,7 @@ import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
 import { Sparkle } from 'lucide-react';
 import { TestimonialCard } from '@/components/ui/TestimonialCard';
+import { HighlightText } from '@/components/ui/HighlightText';
 
 interface TestimonialsProps {
   translationKey?: string;
@@ -11,17 +12,13 @@ export function Testimonials({ translationKey = 'testimonials' }: TestimonialsPr
   const t = useTranslations(translationKey);
 
   const reviewIds = ['1', '2', '3'];
-  const stats = [
-    t('stats.0'),
-    t('stats.1'),
-    t('stats.2'),
-  ];
+  const stats = [t('stats.0'), t('stats.1'), t('stats.2')];
 
   return (
     <section className="py-10 lg:py-12 bg-surface overflow-hidden flex flex-col">
       <Container className="pb-16 lg:pb-24">
         <h2 className="text-h2 text-content text-center mb-16 tracking-tight">
-          {t('title')}
+          <HighlightText words="parents">{t('title')}</HighlightText>
         </h2>
 
         {/* Desktop Grid */}
@@ -51,24 +48,33 @@ export function Testimonials({ translationKey = 'testimonials' }: TestimonialsPr
       {/* Ribbon */}
       <div className="bg-surface-alt py-4 lg:py-5 border-y border-content/5 relative group flex overflow-x-hidden">
         <div className="flex gap-8 md:gap-16 pe-8 md:pe-16 min-w-max shrink-0 animate-marquee rtl:animate-marquee-rtl group-hover:[animation-play-state:paused] items-center">
-          {stats.concat(stats).concat(stats).map((stat, i) => (
-            <div key={`first-${i}`} className="flex items-center gap-8 md:gap-16">
-              <span className="text-content font-medium text-sm md:text-base whitespace-nowrap">
-                {stat}
-              </span>
-              <Sparkle className="w-5 h-5 text-content fill-content shrink-0" />
-            </div>
-          ))}
+          {stats
+            .concat(stats)
+            .concat(stats)
+            .map((stat, i) => (
+              <div key={`first-${i}`} className="flex items-center gap-8 md:gap-16">
+                <span className="text-content font-medium text-sm md:text-base whitespace-nowrap">
+                  {stat}
+                </span>
+                <Sparkle className="w-5 h-5 text-content fill-content shrink-0" />
+              </div>
+            ))}
         </div>
-        <div className="flex gap-8 md:gap-16 pe-8 md:pe-16 min-w-max shrink-0 animate-marquee rtl:animate-marquee-rtl group-hover:[animation-play-state:paused] items-center" aria-hidden="true">
-          {stats.concat(stats).concat(stats).map((stat, i) => (
-            <div key={`second-${i}`} className="flex items-center gap-8 md:gap-16">
-              <span className="text-content font-medium text-sm md:text-base whitespace-nowrap">
-                {stat}
-              </span>
-              <Sparkle className="w-5 h-5 text-content fill-content shrink-0" />
-            </div>
-          ))}
+        <div
+          className="flex gap-8 md:gap-16 pe-8 md:pe-16 min-w-max shrink-0 animate-marquee rtl:animate-marquee-rtl group-hover:[animation-play-state:paused] items-center"
+          aria-hidden="true"
+        >
+          {stats
+            .concat(stats)
+            .concat(stats)
+            .map((stat, i) => (
+              <div key={`second-${i}`} className="flex items-center gap-8 md:gap-16">
+                <span className="text-content font-medium text-sm md:text-base whitespace-nowrap">
+                  {stat}
+                </span>
+                <Sparkle className="w-5 h-5 text-content fill-content shrink-0" />
+              </div>
+            ))}
         </div>
       </div>
     </section>

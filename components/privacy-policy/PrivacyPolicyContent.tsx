@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Container } from '@/components/layout/Container';
 import { CTASection } from '@/components/shared/CTASection';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import {
@@ -259,7 +260,7 @@ export function PrivacyPolicyContent() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-h1 text-content mb-5 tracking-tight"
           >
-            {t('heroTitle')}
+            <HighlightText words="Privacy">{t('heroTitle')}</HighlightText>
           </motion.h1>
 
           <motion.p

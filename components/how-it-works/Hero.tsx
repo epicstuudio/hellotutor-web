@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -18,7 +19,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="text-h1 text-content mb-6 tracking-tighter"
         >
-          {t('howItWorksPageHero.title')}
+          <HighlightText words="expert">{t('howItWorksPageHero.title')}</HighlightText>
         </motion.h1>
 
         <motion.p

@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -27,7 +28,7 @@ export function StepsTimeline({ translationKey }: StepsTimelineProps) {
             viewport={{ once: true }}
             className="text-h2 text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words={['Works', 'Process', 'Application']}>{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

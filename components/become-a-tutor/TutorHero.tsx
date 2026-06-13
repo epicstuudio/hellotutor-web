@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { siteConfig } from '@/config/site';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -31,7 +32,7 @@ export function TutorHero() {
             transition={{ duration: 0.5 }}
             className="text-h1 text-content mb-6 tracking-tight"
           >
-            {t('becomeATutorPage.hero.title')}
+            <HighlightText words="Expert">{t('becomeATutorPage.hero.title')}</HighlightText>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

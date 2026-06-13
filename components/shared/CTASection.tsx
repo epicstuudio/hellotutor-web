@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site';
 import { motion } from 'framer-motion';
@@ -22,9 +23,16 @@ interface CTASectionProps {
   subtitle?: string;
   buttonText?: string;
   buttonHref?: string;
+  highlightWord?: string;
 }
 
-export function CTASection({ title, subtitle, buttonText, buttonHref }: CTASectionProps) {
+export function CTASection({
+  title,
+  subtitle,
+  buttonText,
+  buttonHref,
+  highlightWord = 'tutor',
+}: CTASectionProps) {
   const t = useTranslations();
 
   return (
@@ -37,7 +45,11 @@ export function CTASection({ title, subtitle, buttonText, buttonHref }: CTASecti
           transition={{ duration: 0.5 }}
           className="text-h2 text-content mb-6 tracking-tight"
         >
-          {title || t('ctaSection.title')}
+          {highlightWord ? (
+            <HighlightText words={highlightWord}>{title || t('ctaSection.title')}</HighlightText>
+          ) : (
+            title || t('ctaSection.title')
+          )}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

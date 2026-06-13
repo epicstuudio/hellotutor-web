@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import {
@@ -54,7 +55,9 @@ export function FeatureGrid({ translationKey }: FeatureGridProps) {
             transition={{ duration: 0.5 }}
             className="text-h2 text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words={['Different', 'Parents', 'Choose', 'Hello']}>
+              {t('title')}
+            </HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

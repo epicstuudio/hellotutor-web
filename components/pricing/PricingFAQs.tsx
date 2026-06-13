@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
 import { Accordion } from '@/components/ui/Accordion';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 
 export function PricingFAQs() {
@@ -28,7 +29,7 @@ export function PricingFAQs() {
             viewport={{ once: true }}
             className="text-h2 text-content tracking-tight mb-2"
           >
-            {t('title')}
+            <HighlightText words="questions">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

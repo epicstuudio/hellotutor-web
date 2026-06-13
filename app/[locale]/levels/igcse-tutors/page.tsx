@@ -39,6 +39,7 @@ export default async function IgcseTutorsPage({ params }: { params: Promise<{ lo
         subtitle={t('levelPages.igcseTutors.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/IGCSE-Tutors/IGCSEHero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="IGCSE"
       />
       <LevelChallenges
         translationKey="levelPages.igcseTutors.challenges"

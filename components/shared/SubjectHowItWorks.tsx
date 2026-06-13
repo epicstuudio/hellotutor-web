@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -14,22 +15,22 @@ interface SubjectHowItWorksProps {
 export function SubjectHowItWorks({ translationKey, imageSrc, className }: SubjectHowItWorksProps) {
   const t = useTranslations(translationKey);
   const stepsRaw = t.raw('steps');
-  const steps = (Array.isArray(stepsRaw) ? stepsRaw : Object.values(stepsRaw || {})) as { title: string; desc: string }[];
+  const steps = (Array.isArray(stepsRaw) ? stepsRaw : Object.values(stepsRaw || {})) as {
+    title: string;
+    desc: string;
+  }[];
 
   return (
-    <section className={cn("py-12 lg:py-20 bg-surface", className)}>
+    <section className={cn('py-12 lg:py-20 bg-surface', className)}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-
           {/* Left Column - Header & Image */}
           <div className="flex flex-col gap-10 lg:col-span-4">
             <div>
               <h2 className="text-h2 mb-4 tracking-tight text-content">
-                {t('title')}
+                <HighlightText words="Works">{t('title')}</HighlightText>
               </h2>
-              <p className="text-body-lg text-content-secondary">
-                {t('subtitle')}
-              </p>
+              <p className="text-body-lg text-content-secondary">{t('subtitle')}</p>
             </div>
 
             <div className="relative w-full aspect-square lg:aspect-[4/3] rounded-4xl overflow-hidden shadow-sm">
@@ -59,17 +60,14 @@ export function SubjectHowItWorks({ translationKey, imageSrc, className }: Subje
                   </div>
 
                   {/* Content */}
-                  <div className={cn("pb-12", index === steps.length - 1 ? "pb-0" : "")}>
+                  <div className={cn('pb-12', index === steps.length - 1 ? 'pb-0' : '')}>
                     <h4 className="text-h5 text-content mb-3">{step.title}</h4>
-                    <p className="text-body text-content-secondary leading-relaxed">
-                      {step.desc}
-                    </p>
+                    <p className="text-body text-content-secondary leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </Container>
     </section>

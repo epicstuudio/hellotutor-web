@@ -23,11 +23,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function SubjectsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function SubjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
@@ -40,15 +36,16 @@ export default async function SubjectsPage({
         subtitle={t('subjectPages.allSubjects.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/hero-image.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="subject"
       />
       <WhatWeCover
         translationKey="subjectPages.allSubjects.whatWeCover"
         images={[
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Maths%20Tutoring.jpg",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/English%20Tutoring.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Science%20Tutoring.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Arabic%20Tutoring.webp",
-          "https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Exam%20Preparation.webp"
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Maths%20Tutoring.jpg',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/English%20Tutoring.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Science%20Tutoring.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Arabic%20Tutoring.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/all-subjects/Exam%20Preparation.webp',
         ]}
       />
       <SubjectFAQs translationKey="subjectPages.allSubjects.faqs" />

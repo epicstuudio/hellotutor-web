@@ -38,6 +38,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <AboutHero
         title={t('aboutPages.aboutUs.heroTitle')}
         subtitle={t('aboutPages.aboutUs.heroSubtitle')}
+        highlightWord="believe"
       />
       <StorySection
         translationKey="aboutPages.aboutUs.story"

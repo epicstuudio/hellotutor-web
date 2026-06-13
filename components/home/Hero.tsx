@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { Check, TrendingUp, BookOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -34,8 +35,9 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-h1 text-content mb-6 tracking-tighter"
               >
-                {t('hero.titleLine1')} <br className="hidden lg:block" />
-                {t('hero.titleLine2')}
+                <HighlightText words="grades">{t('hero.titleLine1')}</HighlightText>{' '}
+                <br className="hidden lg:block" />
+                <HighlightText words="confidence">{t('hero.titleLine2')}</HighlightText>
               </motion.h1>
 
               <motion.p

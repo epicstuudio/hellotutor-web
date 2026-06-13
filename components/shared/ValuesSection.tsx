@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { Heart, BadgeCheck, Layers } from 'lucide-react';
 
@@ -40,7 +41,7 @@ export function ValuesSection({ translationKey }: ValuesSectionProps) {
             viewport={{ once: true }}
             className="text-h2 text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words="Values">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

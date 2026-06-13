@@ -3,6 +3,7 @@
 import { useState, useMemo, useCallback, useEffect, useLayoutEffect } from 'react';
 import { Container } from '@/components/layout/Container';
 import { CTASection } from '@/components/shared/CTASection';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -196,7 +197,7 @@ export function AllFAQs() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-h1 text-content mb-4 tracking-tight"
           >
-            {t('heroTitle')}
+            <HighlightText words="answers">{t('heroTitle')}</HighlightText>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

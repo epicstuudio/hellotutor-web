@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -37,7 +38,9 @@ export function LevelChallenges({ translationKey, imageSrc }: LevelChallengesPro
             viewport={{ once: true }}
             className="text-h2 md:text-h1 font-bold text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words={['Primary', 'KS3', 'GCSE', 'IGCSE', 'A-Level', 'Students']}>
+              {t('title')}
+            </HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

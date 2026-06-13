@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -436,7 +437,7 @@ export function ContactForm() {
                     <CheckCircle2 className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-h4 text-content mb-3">
-                    {t('contactPage.form.successTitle')}
+                    <HighlightText words="Sent">{t('contactPage.form.successTitle')}</HighlightText>
                   </h3>
                   <p className="text-body-base text-content-secondary max-w-sm">
                     {t('contactPage.form.successBody')}
@@ -739,7 +740,9 @@ function ContactWays() {
       className="flex flex-col"
     >
       <div className="mb-8">
-        <h2 className="text-h3 text-content mb-3 tracking-tight">{t('contactPage.ways.title')}</h2>
+        <h2 className="text-h3 text-content mb-3 tracking-tight">
+          <HighlightText words="Reach">{t('contactPage.ways.title')}</HighlightText>
+        </h2>
         <p className="text-body-lg text-content-secondary">{t('contactPage.ways.subtitle')}</p>
       </div>
 

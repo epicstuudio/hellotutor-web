@@ -43,6 +43,7 @@ export default async function ALevelTutorsPage({
         subtitle={t('levelPages.aLevelTutors.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/A-Level-Tutors/A-LevelHero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="A-Level"
       />
       <LevelChallenges
         translationKey="levelPages.aLevelTutors.challenges"

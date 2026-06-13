@@ -39,6 +39,7 @@ export default async function GcseTutorsPage({ params }: { params: Promise<{ loc
         subtitle={t('levelPages.gcseTutors.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/GCSE-Tutors/GCSEHero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        highlightWord="GCSE"
       />
       <LevelChallenges
         translationKey="levelPages.gcseTutors.challenges"

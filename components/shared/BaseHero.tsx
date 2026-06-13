@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -22,9 +23,16 @@ export interface BaseHeroProps {
   subtitle: string;
   imageSrc: string;
   imageClassName?: string;
+  highlightWord?: string;
 }
 
-export function BaseHero({ title, subtitle, imageSrc, imageClassName }: BaseHeroProps) {
+export function BaseHero({
+  title,
+  subtitle,
+  imageSrc,
+  imageClassName,
+  highlightWord,
+}: BaseHeroProps) {
   const t = useTranslations();
 
   return (
@@ -37,7 +45,11 @@ export function BaseHero({ title, subtitle, imageSrc, imageClassName }: BaseHero
             transition={{ duration: 0.5 }}
             className="text-h1 text-content mb-6 tracking-tight"
           >
-            {title}
+            {highlightWord && typeof title === 'string' ? (
+              <HighlightText words={highlightWord}>{title}</HighlightText>
+            ) : (
+              title
+            )}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

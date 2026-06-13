@@ -3,25 +3,30 @@
 import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 
 const steps = [
   {
     id: '1',
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Tell%20us%20about%20your%20child.jpg',
+    image:
+      'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Tell%20us%20about%20your%20child.jpg',
   },
   {
     id: '2',
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/We%20match%20the%20perfect%20tutor.jpg',
+    image:
+      'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/We%20match%20the%20perfect%20tutor.jpg',
   },
   {
     id: '3',
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Lessons%20begin.jpeg',
+    image:
+      'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Lessons%20begin.jpeg',
   },
   {
     id: '4',
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/You%20stay%20in%20the%20loop.jpg',
-  }
+    image:
+      'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/You%20stay%20in%20the%20loop.jpg',
+  },
 ];
 
 export function HowItWorks() {
@@ -38,7 +43,7 @@ export function HowItWorks() {
             transition={{ duration: 0.5 }}
             className="text-h2 text-content tracking-tight"
           >
-            {t('title')}
+            <HighlightText words="Works">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

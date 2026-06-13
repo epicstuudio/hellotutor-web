@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Users, Wallet, Monitor, Headphones, Globe, TrendingUp } from 'lucide-react';
@@ -42,7 +43,7 @@ export function WhyTutor() {
             transition={{ duration: 0.5 }}
             className="text-h2 text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words="HelloTutor">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Compass, Users, BookOpen, PartyPopper, Calendar, TrendingUp, Award } from 'lucide-react';
@@ -67,7 +68,7 @@ export function Steps() {
             viewport={{ once: true }}
             className="text-h2 text-content tracking-tight"
           >
-            {t('title')}
+            <HighlightText words="Works">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

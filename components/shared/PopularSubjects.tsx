@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { Compass, Type, FlaskConical, Languages, Globe } from 'lucide-react';
 
@@ -71,7 +72,7 @@ export function PopularSubjects({ translationKey }: PopularSubjectsProps) {
             viewport={{ once: true }}
             className="text-h2 md:text-h1 font-bold text-content mb-4"
           >
-            {t('title')}
+            <HighlightText words="Subjects">{t('title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

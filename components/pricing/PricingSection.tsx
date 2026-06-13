@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { siteConfig } from '@/config/site';
 import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -57,7 +58,7 @@ export function PricingSection() {
             viewport={{ once: true }}
             className="text-h2 text-content mb-4 tracking-tight"
           >
-            {t('pricingSection.title')}
+            <HighlightText words="Monthly">{t('pricingSection.title')}</HighlightText>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

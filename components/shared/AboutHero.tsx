@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { HighlightText } from '@/components/ui/HighlightText';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -20,9 +21,10 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 export interface AboutHeroProps {
   title: React.ReactNode;
   subtitle: string;
+  highlightWord?: string;
 }
 
-export function AboutHero({ title, subtitle }: AboutHeroProps) {
+export function AboutHero({ title, subtitle, highlightWord }: AboutHeroProps) {
   const t = useTranslations();
 
   const carouselItems = [
@@ -59,7 +61,11 @@ export function AboutHero({ title, subtitle }: AboutHeroProps) {
             transition={{ duration: 0.5 }}
             className="text-h1 text-content mb-6 tracking-tight"
           >
-            {title}
+            {highlightWord && typeof title === 'string' ? (
+              <HighlightText words={highlightWord}>{title}</HighlightText>
+            ) : (
+              title
+            )}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

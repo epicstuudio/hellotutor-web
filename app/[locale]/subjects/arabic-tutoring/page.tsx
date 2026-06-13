@@ -43,6 +43,7 @@ export default async function ArabicTutoringPage({
         title={t('subjectPages.arabicTutoring.heroTitle')}
         subtitle={t('subjectPages.arabicTutoring.heroSubtitle')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/arabic-tutoring/hero-image.png"
+        highlightWord="Arabic"
       />
       <CommonChallenges translationKey="subjectPages.arabicTutoring.challenges" />
       <Testimonials translationKey="subjectPages.arabicTutoring.testimonials" />

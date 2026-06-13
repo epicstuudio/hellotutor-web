@@ -1,5 +1,6 @@
 import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
+import { HighlightText } from '@/components/ui/HighlightText';
 
 export function USP() {
   const t = useTranslations('usp');
@@ -42,7 +43,9 @@ export function USP() {
               </svg>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="text-xl font-semibold text-content">{t('matchingTitle')}</h3>
+              <h3 className="text-xl font-semibold text-content">
+                <HighlightText words="matching">{t('matchingTitle')}</HighlightText>
+              </h3>
               <p className="text-body-base text-content-secondary leading-relaxed">
                 {t('matchingDesc')}
               </p>
@@ -79,7 +82,9 @@ export function USP() {
               </svg>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="text-xl font-semibold text-content">{t('schedulingTitle')}</h3>
+              <h3 className="text-xl font-semibold text-content">
+                <HighlightText words="Flexible">{t('schedulingTitle')}</HighlightText>
+              </h3>
               <p className="text-body-base text-content-secondary leading-relaxed">
                 {t('schedulingDesc')}
               </p>
@@ -120,7 +125,9 @@ export function USP() {
               </svg>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="text-xl font-semibold text-content">{t('supportTitle')}</h3>
+              <h3 className="text-xl font-semibold text-content">
+                <HighlightText words="tutoring">{t('supportTitle')}</HighlightText>
+              </h3>
               <p className="text-body-base text-content-secondary leading-relaxed">
                 {t('supportDesc')}
               </p>
