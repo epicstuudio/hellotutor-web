@@ -36,8 +36,8 @@ export function createMetadata({
     alternates: {
       canonical: url,
       languages: {
-        en: `${siteConfig.url}${path}`,
-        ar: `${siteConfig.url}/ar${path}`,
+        'ae-en': `${siteConfig.url}${path}`,
+        'ae-ar': `${siteConfig.url}/ae-ar${path}`,
       },
     },
     openGraph: {
@@ -45,7 +45,7 @@ export function createMetadata({
       description: description || undefined,
       url,
       siteName: siteConfig.name,
-      locale: locale === 'ar' ? 'ar_AE' : 'en_GB',
+      locale: locale === 'ae-ar' ? 'ar_AE' : 'en_GB',
       type: 'website',
       images: image
         ? [

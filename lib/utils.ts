@@ -19,7 +19,7 @@ export function absoluteUrl(path: string): string {
 /**
  * Format a date for display.
  */
-export function formatDate(date: Date | string, locale = 'en'): string {
+export function formatDate(date: Date | string, locale = 'ae-en'): string {
   return new Intl.DateTimeFormat(locale, {
     year: 'numeric',
     month: 'long',

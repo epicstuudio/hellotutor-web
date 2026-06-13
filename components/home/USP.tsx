@@ -44,7 +44,7 @@ export function USP() {
  </div>
  <div className="flex flex-col gap-3">
  <h3 className="text-xl font-semibold text-content">
- <HighlightText words="matching">{t('matchingTitle')}</HighlightText>
+ {t('matchingTitle')}
  </h3>
  <p className="text-body-base text-content-secondary leading-relaxed">
  {t('matchingDesc')}
@@ -83,7 +83,7 @@ export function USP() {
  </div>
  <div className="flex flex-col gap-3">
  <h3 className="text-xl font-semibold text-content">
- <HighlightText words="Flexible">{t('schedulingTitle')}</HighlightText>
+ {t('schedulingTitle')}
  </h3>
  <p className="text-body-base text-content-secondary leading-relaxed">
  {t('schedulingDesc')}
@@ -126,7 +126,7 @@ export function USP() {
  </div>
  <div className="flex flex-col gap-3">
  <h3 className="text-xl font-semibold text-content">
- <HighlightText words="tutoring">{t('supportTitle')}</HighlightText>
+ {t('supportTitle')}
  </h3>
  <p className="text-body-base text-content-secondary leading-relaxed">
  {t('supportDesc')}

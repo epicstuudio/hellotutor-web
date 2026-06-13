@@ -47,11 +47,20 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   // Determine direction for RTL support
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  const dir = locale === 'ae-ar' ? 'rtl' : 'ltr';
+  
+  // Convert custom URL locales to valid BCP-47 language tags for the browser
+  const htmlLang = locale === 'ae-ar' ? 'ar-AE' : 'en-AE';
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning className={notoSansArabic.variable}>
+    <html lang={htmlLang} dir={dir} suppressHydrationWarning className={notoSansArabic.variable}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
