@@ -336,7 +336,7 @@ body {
 /* Titles (H1 - H6 Scale) */
 .text-h1 {
   font-family: var(--font-sans);
-  font-size: 56px;
+  font-size: 60px;
   font-weight: 600;
   line-height: 64px;
   letter-spacing: -0.05em;
