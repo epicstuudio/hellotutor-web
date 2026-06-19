@@ -72,7 +72,7 @@ export function WhyTutor() {
  <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-6">
  {card.icon}
  </div>
- <h3 className="text-body-lg font-semibold text-content mb-3">{card.title}</h3>
+ <h3 className="text-h5 font-semibold text-content mb-3">{card.title}</h3>
  <p className="text-body-sm text-content-secondary leading-relaxed">{card.desc}</p>
  </motion.div>
  );

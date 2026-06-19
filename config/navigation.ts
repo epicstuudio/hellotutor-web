@@ -20,7 +20,7 @@ export const mainNav: NavItem[] = [
       {
         titleKey: 'subjects.scienceTutoring',
         children: [
-          { titleKey: 'subjects.scienceTutoring', href: '/subjects/science-tutoring' },
+          { titleKey: 'subjects.scienceCombined', href: '/subjects/science-tutoring' },
           { titleKey: 'subjects.physicsTutoring', href: '/subjects/physics-tutoring' },
           { titleKey: 'subjects.chemistryTutoring', href: '/subjects/chemistry-tutoring' },
           { titleKey: 'subjects.biologyTutoring', href: '/subjects/biology-tutoring' },

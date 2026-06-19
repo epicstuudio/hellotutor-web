@@ -3,7 +3,10 @@
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { HighlightText } from '@/components/ui/HighlightText';
+import { TrustBadge } from '@/components/shared/TrustBadge';
+import { AnimatedNumber } from '@/components/shared/AnimatedNumber';
 import { HeroVisual } from './HeroVisual';
+import { siteConfig } from '@/config/site';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
@@ -176,10 +179,12 @@ export function Hero() {
                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 mb-4"
               >
                 <Button
-                  href="/book-consultation"
+                  href={siteConfig.whatsappUrl}
                   variant="primary"
                   size="lg"
                   className="w-full sm:w-auto"
+                  hoverChildren="+971 585989768"
+                  hoverStartSlot={<WhatsAppIcon className="w-5 h-5" />}
                 >
                   <WhatsAppIcon className="w-5 h-5" />
                   {t('common.bookConsultation')}
@@ -212,23 +217,36 @@ export function Hero() {
               >
                 <div className="flex-1">
                   <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight flex items-baseline">
-                    {t('hero.stat1Value')}
+                    <AnimatedNumber value={t('hero.stat1Value')} duration={2} delay={0.6} />
                     <span className="text-3xl font-extralight text-content ms-1 font-sans">+</span>
                   </div>
                   <div className="text-body-sm text-content-secondary">{t('hero.stat1Label')}</div>
                 </div>
                 <div className="flex-1">
                   <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight">
-                    {t('hero.stat2Value')}
+                    <AnimatedNumber value={t('hero.stat2Value')} duration={2} delay={0.8} />
                   </div>
                   <div className="text-body-sm text-content-secondary">{t('hero.stat2Label')}</div>
                 </div>
                 <div className="flex-1">
-                  <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight">
-                    {t('hero.stat3Value')}
+                  <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight flex items-end gap-2">
+                    <AnimatedNumber value={t('hero.stat3Value')} duration={2} delay={1} />
+                    <svg className="w-6 h-6 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
                   </div>
                   <div className="text-body-sm text-content-secondary">{t('hero.stat3Label')}</div>
                 </div>
+              </motion.div>
+
+              {/* Trust Badges */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="flex flex-col items-center lg:items-start mt-12 lg:mt-16"
+              >
+                <TrustBadge />
               </motion.div>
             </div>
 

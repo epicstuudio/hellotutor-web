@@ -6,12 +6,13 @@
     "learnMore": "Learn More",
     "contactUs": "Contact Us",
     "copyright": "© {year} HelloTutor. All rights reserved.",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "trustBadge": "MoHRE Licensed & DBS Checked"
   },
   "hero": {
     "titleLine1": "The grades they need.",
     "titleLine2": "The confidence they deserve.",
-    "subtitle": "1:1 tutoring that fits around school and activities, boosts results, and takes the stress out of learning.",
+    "subtitle": "1:1 tutoring — online or at home — that fits around school and activities, boosts results, and takes the stress out of learning.",
     "noCommitment": "No commitment. Takes 5 minutes.",
     "stat1Value": "500",
     "stat1Label": "Tutors from top universities",
@@ -123,6 +124,7 @@
   "howItWorksPageDetailed": {
     "title": "How It Works",
     "subtitle": "Four simple steps to improved grades",
+    "stepLabel": "STEP {num}",
     "steps": {
       "1": {
         "badge": "Discovery",
@@ -191,6 +193,7 @@
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Four simple steps to improved grades",
+    "stepLabel": "STEP {num}",
     "steps": {
       "1": {
         "title": "Tell us about your child",
@@ -1986,7 +1989,7 @@
             "desc": "From times tables to calculus, we make numbers make sense by building confidence in problem-solving, strengthening exam technique, and bridging knowledge gaps.",
             "itemsLabel": "WHAT WE COVER",
             "learnMoreLabel": "Learn more",
-            "learnMoreHref": "/subjects/maths",
+            "learnMoreHref": "/subjects/maths-tutoring",
             "items": [
               {
                 "title": "KS2 & KS3 foundations",
@@ -2012,7 +2015,7 @@
             "desc": "From reading and writing to analysis and expression, we build English skills that last a lifetime, supporting essay structure, literature analysis, and exam confidence.",
             "itemsLabel": "WHAT WE COVER",
             "learnMoreLabel": "Learn more",
-            "learnMoreHref": "/subjects/english",
+            "learnMoreHref": "/subjects/english-tutoring",
             "items": [
               {
                 "title": "Reading comprehension & creative writing",
@@ -2038,7 +2041,7 @@
             "desc": "From Biology and Chemistry to Physics, we provide clear explanations that build confidence, helping students connect theory to practice, understand complex concepts, and prepare effectively for exams.",
             "itemsLabel": "WHAT WE COVER",
             "learnMoreLabel": "Learn more",
-            "learnMoreHref": "/subjects/science",
+            "learnMoreHref": "/subjects/science-tutoring",
             "items": [
               {
                 "title": "KS3 combined science",
@@ -2064,7 +2067,7 @@
             "desc": "For native speakers strengthening their skills and non-native speakers starting fresh, we build confidence in reading and writing, clarify grammar, and help students keep up with the school curriculum.",
             "itemsLabel": "WHAT WE COVER",
             "learnMoreLabel": "Learn more",
-            "learnMoreHref": "/subjects/arabic",
+            "learnMoreHref": "/subjects/arabic-tutoring",
             "items": [
               {
                 "title": "Arabic for non-native speakers (beginner to advanced)",
@@ -2193,6 +2196,7 @@
     "mathsTutoring": "Maths Tutoring",
     "englishTutoring": "English Tutoring",
     "scienceTutoring": "Science Tutoring",
+    "scienceCombined": "Science (Combined)",
     "physicsTutoring": "Physics Tutoring",
     "chemistryTutoring": "Chemistry Tutoring",
     "biologyTutoring": "Biology Tutoring",
@@ -2239,16 +2243,17 @@
       },
       "trial": {
         "q": "Do you offer a free trial?",
-        "a": "We want you to be happy with your first lesson. If something isn't right, get in touch within 96 hours and we'll make it right."
+        "a": "We want you to be happy with your first lesson. If something isn't right, get in touch and we'll make it right."
       },
       "subjects": {
         "q": "What subjects and levels do you cover?",
-        "a": "We cover all subjects including Maths, English, Science, Arabic, and Exam Preparation, from primary level through to A-Level and IB. If you need support with a subject that isn't listed, just get in touch and we'll let you know whether we can help."
+        "a": "We cover all subjects from primary through to A-Level and beyond. If you need support with a subject that isn't listed, just get in touch and we'll let you know whether we can help."
       }
     }
   },
   "footer": {
     "tagline": "We find the right tutor. You see the difference.",
+    "legalEntity": "Hello Tutor is a trading name of Northstar Connect FZ-LLC, registered in RAKEZ, UAE. Licence No: 47033173.",
     "helloTutor": "Hello Tutor",
     "resources": "Resources",
     "tutors": "Tutors",
@@ -3058,7 +3063,7 @@
             "label": "See Grade Improvement"
           },
           {
-            "value": "4.8",
+            "value": "4.9",
             "suffix": "/5",
             "label": "Average Parent Rating"
           }

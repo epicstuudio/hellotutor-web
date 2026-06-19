@@ -6,7 +6,7 @@ export const siteConfig = {
   locale: 'ae-en',
   loginUrl: 'https://app.hellotutor.me',
   whatsappUrl:
-    'https://api.whatsapp.com/send/?phone=971585817335&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=971585989768&text&type=phone_number&app_absent=0',
   links: {
     twitter: '',
     facebook: '',

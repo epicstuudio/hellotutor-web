@@ -46,10 +46,10 @@ export default async function SafetyAndTrustPage({
       <WhatWeCover
         translationKey="aboutPages.safetyAndTrust.howWeKeepSafe"
         images={[
-          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/TutorsYouCanTrust.jpg',
-          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/SecureOnline.jpg',
-          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/ClearPolicies.jpg',
-          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/ParentVisibility.jpg',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/safetytrust.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/safetysecure.avif',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/safetyclear.webp',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/safety-and-trust/safetyparent.webp',
         ]}
       />
       <CommitmentBanner translationKey="aboutPages.safetyAndTrust.commitment" />

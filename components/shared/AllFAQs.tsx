@@ -326,7 +326,7 @@ export function AllFAQs() {
  viewport={{ once: true }}
  className="mt-16 p-6 lg:p-8 rounded-3xl bg-surface-base border border-edge-subtle"
  >
- <h4 className="text-body-xl font-semibold text-content mb-2">
+ <h4 className="text-h5 font-semibold text-content mb-2">
  {t(`${activeTab}.helpStrip.title`)}
  </h4>
  <p className="text-body-base text-content-secondary mb-6">

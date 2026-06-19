@@ -21,7 +21,7 @@ export function HighlightText({ children, words, className, emClassName }: Highl
  const after = remaining.slice(idx + word.length);
  if (before) parts.push(<span key={`b-${wi}`}>{before}</span>);
  parts.push(
- <em key={`w-${wi}`} className={cn('italic', emClassName)}>
+ <em key={`w-${wi}`} className={cn('italic pr-3', emClassName)}>
  {word}
  </em>
  );

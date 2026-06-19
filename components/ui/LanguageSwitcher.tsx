@@ -24,13 +24,13 @@ export function LanguageSwitcher() {
     >
       {locale === 'ae-en' ? (
         <>
-          <FlagGB className="h-4 w-5 shrink-0" />
-          <span>EN</span>
+          <FlagAE className="h-4 w-5 shrink-0" />
+          <span>AR</span>
         </>
       ) : (
         <>
-          <FlagAE className="h-4 w-5 shrink-0" />
-          <span>AR</span>
+          <FlagGB className="h-4 w-5 shrink-0" />
+          <span>EN</span>
         </>
       )}
     </button>
