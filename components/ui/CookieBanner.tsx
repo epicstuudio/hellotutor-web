@@ -23,7 +23,7 @@ export function CookieBanner() {
         Cookie Consent
       </h2>
       <p className="text-sm leading-relaxed text-content-secondary">
-        Hi, we use cookies to ensure the website&apos;s proper operation, to analyze traffic and performance, and to provide social media features.{' '}
+        Hi, we use cookies to ensure the website&apos;s proper operation, to analyse traffic and performance, and to provide social media features.{' '}
         <button 
           onClick={openSettings}
           className="font-semibold underline underline-offset-2 transition-colors hover:opacity-80 text-surface-brand cursor-pointer"
