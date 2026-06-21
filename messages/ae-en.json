@@ -43,7 +43,7 @@
   },
   "pricingSection": {
     "title": "Choose Your Monthly Plan",
-    "subtitle": "Transparent pricing tailored to your child's level. Every plan includes the same matched tutor, lesson summaries, progress reviews, and access to our team. The only difference is how many lessons a week.",
+    "subtitle": "Transparent pricing tailored to your child's level. Every plan includes the same matched tutor, lesson summaries, progress reviews, and access to our team. Available online or in your home.",
     "tabs": {
       "primary": "Primary",
       "secondary": "Secondary",
@@ -68,13 +68,13 @@
       "f1": "MoHRE Licensed & DBS Checked",
       "f2": "Secure Platform",
       "f3": "Dedicated Tutor",
-      "f4": "Recorded Lessons",
+      "f4": "Online & Home Options",
       "f5": "Flexible Scheduling",
       "f6": "Dedicated Support"
     },
     "securePayments": {
       "title": "Secure payments, made simple",
-      "subtitle": "All payments go through our platform. No cash, no bank transfers, no surprises.",
+      "subtitle": "All payments go through our platform. No cash to hand the tutor at the door, no bank transfers, no surprises.",
       "f1": {
         "title": "In Platform Payments",
         "desc": "Pay securely through your Hello Tutor account. Simple as that."
@@ -100,11 +100,13 @@
         "q3": "Can I pause lessons?",
         "a3": "Get in touch and we'll have a chat about your situation. We'll always try to be as flexible as we can.",
         "q4": "What if I need to cancel a lesson?",
-        "a4": "You can cancel any lesson before it starts, but cancellation fees apply. If you cancel with more than 24 hours' notice, you'll be charged 50% of the lesson fee. If you cancel within 24 hours, the full fee applies. Cancellations need to be made through the platform.",
+        "a4": "You can cancel any lesson before it starts, but cancellation fees apply. If you cancel with more than 24 hours' notice, you'll be charged 50% of the lesson fee. If you cancel within 24 hours, the full fee applies.",
         "q5": "Do prices change if we need a different tutor?",
         "a5": "No. Rematching is free and your pricing stays exactly the same.",
         "q6": "Is there a minimum commitment?",
-        "a6": "There are no long-term contracts. We do recommend sticking with it for at least 8-10 weeks to give things a proper chance to work, but that's a recommendation, not a requirement."
+        "a6": "There are no long-term contracts. We do recommend sticking with it for at least 8-10 weeks to give things a proper chance to work, but that's a recommendation, not a requirement.",
+        "q7": "Do these prices include home tutoring?",
+        "a7": "Home tutoring is available across Dubai, Abu Dhabi, and Sharjah at a different rate, since your tutor travels to you. We'll walk you through both options during your free consultation."
       },
       "cta": "See all FAQs"
     },
@@ -129,17 +131,17 @@
       "1": {
         "badge": "Discovery",
         "title": "Understanding Needs",
-        "desc": "A short conversation about where they are, what they're finding difficult, and what they want to achieve. No forms. Just a chat."
+        "desc": "A short conversation about where they are, what they're finding difficult, and what they want to achieve. Online or at home, whichever suits your family. No forms. Just a chat."
       },
       "2": {
         "badge": "Matching",
         "title": "We find the right tutor",
-        "desc": "We match on subject expertise, curriculum knowledge, teaching style, and personality. Our tutors are graduates from top universities, selected through a rigorous process."
+        "desc": "We match on subject expertise, curriculum knowledge, teaching style, and personality. Our tutors are graduates from top universities with a minimum of 2 years teaching experience, selected through a rigorous process."
       },
       "3": {
         "badge": "Learning",
         "title": "Lessons begin",
-        "desc": "Regular 1:1 sessions with an interactive whiteboard, screen sharing, and lesson recordings your child can revisit. Because sometimes one explanation isn't quite enough."
+        "desc": "Regular 1:1 sessions, online or at home. Online lessons come with an interactive whiteboard, screen sharing, and recordings your child can revisit. Home lessons bring the same structure and quality, face to face. Because sometimes one explanation isn't quite enough."
       },
       "4": {
         "badge": "Celebration",
@@ -149,8 +151,10 @@
     }
   },
   "howLessonsWork": {
-    "title": "How lessons work",
+    "title": "How online lessons work",
     "subtitle": "Built for real learning",
+    "homeTutoringTitle": "Prefer face to face?",
+    "homeTutoringDesc": "We offer home tutoring across Dubai, Abu Dhabi, and Sharjah. Same vetted tutors, same structured lessons, same summaries after every session. Just at your dining table instead of a screen.",
     "features": {
       "1": {
         "title": "Live HD video",
@@ -418,7 +422,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Anna, English Tutor"
@@ -437,7 +441,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss English goals, current challenges, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss English goals, current challenges, and get started."
           },
           {
             "title": "Progress from day one",
@@ -470,8 +474,8 @@
             "answer": "Of course. Tell us what needs the most attention and we'll make sure the tutor focuses there."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. That gives enough time to work through material properly without losing focus."
+            "question": "Do you offer English tutoring at home?",
+            "answer": "Yes. We offer home English tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -625,7 +629,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Frederick, Science Tutor"
@@ -644,7 +648,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss science goals, current challenges, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss science goals, current challenges, and get started."
           },
           {
             "title": "Progress from day one",
@@ -677,8 +681,8 @@
             "answer": "Of course. Tell us what needs the most attention and we'll make sure the tutor focuses there."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. That gives enough time to work through material properly without losing focus."
+            "question": "Do you offer science tutoring at home?",
+            "answer": "Yes. We offer home science tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -832,7 +836,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the perfect tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Edward, A-Level Maths Tutor"
@@ -851,7 +855,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss maths goals, current challenges, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss maths goals, current challenges, and get started."
           },
           {
             "title": "Progress from day one",
@@ -884,8 +888,8 @@
             "answer": "Of course. Tell us what needs the most attention and we'll make sure the tutor focuses there."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. That gives enough time to work through material properly without losing focus."
+            "question": "Do you offer maths tutoring at home?",
+            "answer": "Yes. We offer home maths tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -1022,7 +1026,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Michael, Physics Tutor"
@@ -1041,7 +1045,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss Physics goals, current problem areas, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss Physics goals, current problem areas, and get started."
           },
           {
             "title": "Progress from day one",
@@ -1074,8 +1078,8 @@
             "answer": "Absolutely. If there’s one unit or question type that’s the problem, we focus there first. Your tutor will identify the gaps and structure lessons around what matters most right now."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. Long enough to make real progress, structured enough to stay focused."
+            "question": "Do you offer Physics tutoring at home?",
+            "answer": "Yes. We offer home Physics tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -1212,7 +1216,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Sara, Chemistry Tutor"
@@ -1231,7 +1235,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss Chemistry goals, current weak areas, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss Chemistry goals, current weak areas, and get started."
           },
           {
             "title": "Progress from day one",
@@ -1264,8 +1268,8 @@
             "answer": "Absolutely. If there’s one unit or question type that’s the problem, we focus there first. Your tutor will identify the gaps and structure lessons around what matters most right now."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. Long enough to make real progress, structured enough to stay focused."
+            "question": "Do you offer Chemistry tutoring at home?",
+            "answer": "Yes. We offer home Chemistry tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -1402,7 +1406,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— David, Biology Tutor"
@@ -1421,7 +1425,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss Biology goals, current weak spots, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss Biology goals, current weak spots, and get started."
           },
           {
             "title": "Progress from day one",
@@ -1454,8 +1458,8 @@
             "answer": "Absolutely. If there’s one unit or question type that’s the problem, we focus there first. Your tutor will identify the gaps and structure lessons around what matters most right now."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. Long enough to make real progress, structured enough to stay focused."
+            "question": "Do you offer Biology tutoring at home?",
+            "answer": "Yes. We offer home Biology tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -1609,7 +1613,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "imageTag": "— Fatima, GCSE Arabic Tutor",
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals."
@@ -1628,7 +1632,7 @@
           },
           {
             "title": "First lesson booked within days",
-            "desc": "Meet your tutor in our interactive online classroom. Discuss Arabic goals, current challenges, and get started."
+            "desc": "Meet your tutor online or at home, whichever you've chosen. Discuss Arabic goals, current challenges, and get started."
           },
           {
             "title": "Progress from day one",
@@ -1661,8 +1665,8 @@
             "answer": "Of course. Tell us what needs the most attention and we'll make sure the tutor focuses there."
           },
           {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. That gives enough time to work through material properly without losing focus."
+            "question": "Do you offer Arabic tutoring at home?",
+            "answer": "Yes. We offer home Arabic tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           }
         ],
         "cta": "See all FAQs"
@@ -1867,7 +1871,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Sara, Chemistry Tutor"
@@ -2119,7 +2123,7 @@
           "A degree from a leading university in the subject they teach",
           "Minimum 2 years of teaching or tutoring experience",
           "DBS-checked, MOHRE licensed and reference-verified",
-          "Trained in online teaching best practices"
+          "Trained to deliver structured 1:1 lessons, online or in your home"
         ],
         "matchingCardText": "We match your child with the right tutor based on their level and curriculum, learning style and personality, availability, and specific challenges and goals.",
         "imageTag": "— Sara, Chemistry Tutor"
@@ -2168,8 +2172,8 @@
             "answer": "We work with students from primary age all the way through to A-Level and IB. Whether your child is in Year 3 or Year 13, we'll find the right tutor for where they're at."
           },
           "5": {
-            "question": "How long are lessons?",
-            "answer": "All lessons are 60 minutes. It's long enough to make real progress and short enough to keep focus sharp."
+            "question": "Do you offer exam preparation tutoring at home?",
+            "answer": "Yes. We offer home exam preparation tutoring across Dubai, Abu Dhabi, and Sharjah, as well as online lessons. Same vetted tutors, same structured approach. Tell us your preference during the consultation."
           },
           "6": {
             "question": "Can you help with a subject that isn't listed here?",
@@ -2315,8 +2319,8 @@
     "cta": "See all FAQs",
     "items": {
       "1": {
-        "q": "What if my child has never done online tutoring before?",
-        "a": "Most students get comfortable within a lesson or two. Our tutors know how to make online sessions interactive and keep things moving. It quickly starts to feel completely normal."
+        "q": "What if my child has never had tutoring before?",
+        "a": "Most students settle in within a lesson or two. Online sessions are interactive and well paced, and home sessions feel like a natural extension of school. Either way, our tutors know how to put children at ease. It quickly starts to feel completely normal."
       },
       "2": {
         "q": "How do I know if the tutor you match is right?",
@@ -3087,7 +3091,7 @@
           },
           {
             "question": "Where is Hello Tutor based?",
-            "answer": "Hello Tutor is owned and operated by Hello Tutor LLC, registered and based in Dubai, United Arab Emirates. All lessons take place online through our platform at app.hellotutor.me."
+            "answer": "Hello Tutor is a trading name of Northstar Connect FZ-LLC, a company registered in RAKEZ, United Arab Emirates (Licence No. 47033173). We provide tutoring services delivered both online via our platform at app.hellotutor.me and in-person at the student’s home where applicable."
           },
           {
             "question": "Are tutors employed by Hello Tutor?",
@@ -3407,7 +3411,7 @@
             },
             {
               "question": "Where is Hello Tutor based?",
-              "answer": "<div class=\"answer\">Hello Tutor is owned and operated by Hello Tutor LLC, registered and operating in Dubai, United Arab Emirates. The platform is at <a href=\"https://app.hellotutor.me\">app.hellotutor.me</a>. Our Terms and Conditions and Safeguarding Policy are governed by UAE law.</div>"
+              "answer": "<div class=\"answer\">Hello Tutor is a trading name of Northstar Connect FZ-LLC, a company registered in RAKEZ, United Arab Emirates (Licence No. 47033173). We provide tutoring services delivered both online via our platform at <a href=\"https://app.hellotutor.me\">app.hellotutor.me</a> and in-person at the student’s home where applicable. Our Terms and Conditions and Safeguarding Policy are governed by UAE law.</div>"
             }
           ]
         },

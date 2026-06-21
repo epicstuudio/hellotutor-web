@@ -46,23 +46,24 @@ export function HowLessonsWork() {
  <section className="pb-20 lg:pb-32 bg-surface">
  <Container className="flex flex-col gap-16">
  <div className="text-center flex flex-col">
- <motion.h2
- initial={{ opacity: 0, y: 20 }}
- whileInView={{ opacity: 1, y: 0 }}
- viewport={{ once: true }}
- className="text-h2 text-content "
- >
- <HighlightText words="lessons">{t('title')}</HighlightText>
- </motion.h2>
- <motion.p
- initial={{ opacity: 0, y: 20 }}
- whileInView={{ opacity: 1, y: 0 }}
- viewport={{ once: true }}
- className="text-body-xl text-content-secondary"
- >
- {t('subtitle')}
- </motion.p>
- </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-h2 text-content "
+          >
+            <HighlightText words={['online lessons', 'الدروس الأونلاين']}>{t('title')}</HighlightText>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-body-xl text-content-secondary"
+          >
+            {t('subtitle')}
+          </motion.p>
+
+        </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
  {features.map((feature, index) => (
@@ -93,6 +94,20 @@ export function HowLessonsWork() {
  </motion.div>
  ))}
  </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-3xl flex flex-col items-center text-center gap-4 pt-12"
+        >
+          <div className="flex flex-col gap-2">
+            <h3 className="text-h5 text-content">{t('homeTutoringTitle')}</h3>
+            <p className="text-body-base text-content-secondary leading-relaxed max-w-2xl mx-auto">
+              {t('homeTutoringDesc')}
+            </p>
+          </div>
+        </motion.div>
  </Container>
  </section>
  );

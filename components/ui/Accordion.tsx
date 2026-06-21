@@ -27,7 +27,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
               onClick={() => toggle(index)}
               className="flex justify-between items-center w-full text-left focus:outline-none cursor-pointer group"
             >
-              <h3 className="text-h5 text-content pr-8 transition-colors group-hover:text-content-brand-strong">
+              <h3 className="text-xl lg:text-2xl font-medium text-content pr-8 transition-colors group-hover:text-content-brand-strong">
                 {item.question}
               </h3>
               <motion.div

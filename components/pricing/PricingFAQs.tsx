@@ -12,6 +12,7 @@ export function PricingFAQs() {
 
  const faqItems = [
  { question: t('items.q1'), answer: t('items.a1') },
+ { question: t('items.q7'), answer: t('items.a7') },
  { question: t('items.q2'), answer: t('items.a2') },
  { question: t('items.q3'), answer: t('items.a3') },
  { question: t('items.q4'), answer: t('items.a4') },
