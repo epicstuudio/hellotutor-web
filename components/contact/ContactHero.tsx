@@ -22,7 +22,7 @@ export function ContactHero() {
   const t = useTranslations();
 
   return (
-    <section className="bg-surface pt-[calc(72px+8rem)] xl:pt-[calc(88px+8rem)]">
+    <section className="bg-surface pt-[calc(40px+8rem)] xl:pt-[calc(48px+8rem)]">
       <Container>
         <div className="max-w-2xl">
           <motion.h1

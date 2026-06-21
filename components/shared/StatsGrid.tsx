@@ -36,9 +36,9 @@ function AnimatedStat({
       onUpdate: (latest) => {
         if (!ref.current) return;
         if (isDecimal) {
-          ref.current.textContent = latest.toFixed(1) + suffix;
+          ref.current.textContent = latest.toFixed(1);
         } else {
-          ref.current.textContent = Math.round(latest).toLocaleString() + suffix;
+          ref.current.textContent = Math.round(latest).toLocaleString();
         }
       },
     });
@@ -55,9 +55,14 @@ function AnimatedStat({
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
       className="bg-white rounded-3xl p-6 lg:p-8 border border-edge-subtle shrink-0 snap-start"
     >
-      <span ref={ref} className="text-h2 lg:text-h1 text-content block mb-2 tracking-tight">
-        {value + suffix}
-      </span>
+      <div className="text-h2 lg:text-h1 text-content flex items-baseline mb-2 tracking-tight">
+        <span ref={ref}>{value}</span>
+        {suffix === '+' ? (
+          <span className="text-3xl font-extralight text-content ms-1 font-sans">+</span>
+        ) : (
+          <span>{suffix}</span>
+        )}
+      </div>
       <span className="text-body-base text-content-secondary">{label}</span>
     </motion.div>
   );

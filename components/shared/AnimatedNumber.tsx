@@ -31,7 +31,11 @@ export function AnimatedNumber({ value, duration = 2, delay = 0 }: AnimatedNumbe
   return (
     <>
       <motion.span>{rounded}</motion.span>
-      {suffix}
+      {suffix === '+' ? (
+        <span className="text-3xl font-extralight text-content ms-1 font-sans">+</span>
+      ) : (
+        suffix
+      )}
     </>
   );
 }

@@ -147,7 +147,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-surface">
-      <div className="pt-[calc(72px+8rem)] xl:pt-[calc(88px+8rem)] pb-0">
+      <div className="pt-[calc(40px+8rem)] xl:pt-[calc(48px+8rem)] pb-0">
         <Container className="relative z-10 w-full h-full">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-8 items-stretch h-full">
             {/* Left Column - Content */}
@@ -343,11 +343,10 @@ function TutorDial({ rotation, matchedIndex }: TutorDialProps) {
                 transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
               >
                 <div
-                  className={`w-16 h-16 rounded-full border-2 overflow-hidden flex items-center justify-center transition-all duration-700 relative ${
-                    isMatched
+                  className={`w-16 h-16 rounded-full border-2 overflow-hidden flex items-center justify-center transition-all duration-700 relative ${isMatched
                       ? 'border-green-400 bg-surface-base shadow-[0_0_20px_var(--color-green-200)]'
                       : 'border-green-200 bg-surface-base'
-                  }`}
+                    }`}
                 >
                   {tutor.image ? (
                     <Image
@@ -360,9 +359,8 @@ function TutorDial({ rotation, matchedIndex }: TutorDialProps) {
                     />
                   ) : (
                     <span
-                      className={`font-semibold text-sm ${
-                        isMatched ? 'text-green-600' : 'text-content-success'
-                      }`}
+                      className={`font-semibold text-sm ${isMatched ? 'text-green-600' : 'text-content-success'
+                        }`}
                     >
                       {tutor.name[0]}
                     </span>

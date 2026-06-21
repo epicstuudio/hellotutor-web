@@ -22,7 +22,7 @@ export function Hero() {
   const t = useTranslations();
 
   return (
-    <section className="relative overflow-hidden bg-surface pt-[calc(72px+8rem)] xl:pt-[calc(88px+8rem)] pb-16 lg:pb-24">
+    <section className="relative overflow-hidden bg-surface pt-[calc(40px+8rem)] xl:pt-[calc(48px+8rem)] pb-16 lg:pb-24">
       <Container className="relative z-10 w-full h-full">
         <div className="flex flex-col justify-center z-10 max-w-3xl mx-auto lg:mx-0 text-center lg:text-start">
           <motion.h1

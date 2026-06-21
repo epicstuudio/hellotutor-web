@@ -23,7 +23,7 @@ export function TutorHero() {
   const t = useTranslations();
 
   return (
-    <section className="pt-[calc(72px+8rem)] xl:pt-[calc(88px+8rem)] bg-surface">
+    <section className="pt-[calc(40px+8rem)] xl:pt-[calc(48px+8rem)] bg-surface">
       <Container>
         <div className="max-w-3xl mb-12">
           <motion.h1
