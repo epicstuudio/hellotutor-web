@@ -6,6 +6,9 @@ import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Analytics } from '@/components/analytics/Analytics';
+import { CookieConsentProvider } from '@/components/providers/CookieConsentProvider';
+import { CookieBanner } from '@/components/ui/CookieBanner';
+import { CookieSettingsModal } from '@/components/ui/CookieSettingsModal';
 import { createMetadata } from '@/lib/metadata';
 import '@/styles/globals.css';
 
@@ -71,15 +74,19 @@ export default async function LocaleLayout({
           Skip to main content
         </a>
 
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <main id="main-content" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
+        <CookieConsentProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <Header />
+            <main id="main-content" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+            <CookieBanner />
+            <CookieSettingsModal />
+          </NextIntlClientProvider>
 
-        <Analytics />
+          <Analytics />
+        </CookieConsentProvider>
       </body>
     </html>
   );
