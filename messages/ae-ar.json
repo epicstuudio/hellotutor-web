@@ -2097,7 +2097,7 @@
             "desc": "نقدم دعماً مركزاً ومنظماً يقلل من التوتر ويعزز النتائج، مما يساعد الطلاب على إدارة وقتهم، وتفسير الأسئلة بدقة، والبقاء هادئين أثناء الامتحانات.",
             "itemsLabel": "ماذا نغطي",
             "learnMoreLabel": "اعرف المزيد",
-            "learnMoreHref": "/subjects/exam-preparation",
+            "learnMoreHref": "/exam-preparation",
             "items": [
               {
                 "title": "أساليب امتحان GCSE و A-Level",
@@ -2209,6 +2209,7 @@
   },
   "levels": {
     "primaryTutors": "معلمو المرحلة الابتدائية",
+    "secondaryTutors": "معلمو المرحلة الثانوية",
     "ks3Tutors": "معلمو المرحلة المتوسطة",
     "gcseTutors": "معلمو GCSE",
     "igcseTutors": "معلمو IGCSE",

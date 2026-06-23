@@ -28,9 +28,9 @@ const pages = [
     path: '/subjects/arabic-tutoring',
   },
   {
-    file: 'app/[locale]/subjects/exam-preparation/page.tsx',
+    file: 'app/[locale]/exam-preparation/page.tsx',
     namespace: 'subjectPages.examPreparation',
-    path: '/subjects/exam-preparation',
+    path: '/exam-preparation',
   },
   {
     file: 'app/[locale]/subjects/physics-tutoring/page.tsx',
@@ -53,24 +53,24 @@ const pages = [
     path: '/levels/primary-tutors',
   },
   {
-    file: 'app/[locale]/levels/ks3-tutors/page.tsx',
+    file: 'app/[locale]/levels/secondary-tutors/ks3/page.tsx',
     namespace: 'levelPages.ks3Tutors',
-    path: '/levels/ks3-tutors',
+    path: '/levels/secondary-tutors/ks3',
   },
   {
-    file: 'app/[locale]/levels/gcse-tutors/page.tsx',
+    file: 'app/[locale]/levels/secondary-tutors/gcse/page.tsx',
     namespace: 'levelPages.gcseTutors',
-    path: '/levels/gcse-tutors',
+    path: '/levels/secondary-tutors/gcse',
   },
   {
-    file: 'app/[locale]/levels/igcse-tutors/page.tsx',
+    file: 'app/[locale]/levels/secondary-tutors/igcse/page.tsx',
     namespace: 'levelPages.igcseTutors',
-    path: '/levels/igcse-tutors',
+    path: '/levels/secondary-tutors/igcse',
   },
   {
-    file: 'app/[locale]/levels/a-level-tutors/page.tsx',
+    file: 'app/[locale]/levels/secondary-tutors/a-level/page.tsx',
     namespace: 'levelPages.aLevelTutors',
-    path: '/levels/a-level-tutors',
+    path: '/levels/secondary-tutors/a-level',
   },
 ];
 

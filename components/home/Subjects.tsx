@@ -13,7 +13,7 @@ export function Subjects() {
     { key: 'english', href: '/subjects/english-tutoring' },
     { key: 'science', href: '/subjects/science-tutoring' },
     { key: 'arabic', href: '/subjects/arabic-tutoring' },
-    { key: 'examPrep', href: '/subjects/exam-preparation' },
+    { key: 'examPrep', href: '/exam-preparation' },
   ];
 
   return (
