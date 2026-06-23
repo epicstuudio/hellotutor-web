@@ -15,6 +15,7 @@ export function CookieSettingsModal() {
 
   useEffect(() => {
     if (consent) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocalConsent({
         necessary: true,
         analytics: consent.analytics,

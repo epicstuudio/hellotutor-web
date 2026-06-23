@@ -2097,7 +2097,7 @@
             "desc": "We provide focused, structured support that reduces stress and boosts results, helping students manage their time, interpret questions accurately, and stay calm during exams.",
             "itemsLabel": "WHAT WE COVER",
             "learnMoreLabel": "Learn more",
-            "learnMoreHref": "/subjects/exam-preparation",
+            "learnMoreHref": "/exam-preparation",
             "items": [
               {
                 "title": "GCSE & A-Level exam technique",
@@ -2209,6 +2209,7 @@
   },
   "levels": {
     "primaryTutors": "Primary Tutors",
+    "secondaryTutors": "Secondary Tutors",
     "ks3Tutors": "KS3 Tutors",
     "gcseTutors": "GCSE Tutors",
     "igcseTutors": "IGCSE Tutors",

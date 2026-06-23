@@ -10,7 +10,7 @@ import { siteConfig } from '@/config/site';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg

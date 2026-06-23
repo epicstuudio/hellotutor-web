@@ -27,7 +27,7 @@ export const mainNav: NavItem[] = [
         ],
       },
       { titleKey: 'subjects.arabicTutoring', href: '/subjects/arabic-tutoring' },
-      { titleKey: 'subjects.examPreparation', href: '/subjects/exam-preparation' },
+      { titleKey: 'subjects.examPreparation', href: '/exam-preparation' },
       { titleKey: 'subjects.allSubjects', href: '/subjects' },
     ],
   },
@@ -35,19 +35,24 @@ export const mainNav: NavItem[] = [
     titleKey: 'nav.levels',
     children: [
       { titleKey: 'levels.primaryTutors', href: '/levels/primary-tutors' },
-      { titleKey: 'levels.ks3Tutors', href: '/levels/ks3-tutors' },
-      { titleKey: 'levels.gcseTutors', href: '/levels/gcse-tutors' },
-      { titleKey: 'levels.igcseTutors', href: '/levels/igcse-tutors' },
-      { titleKey: 'levels.aLevelTutors', href: '/levels/a-level-tutors' },
+      {
+        titleKey: 'levels.secondaryTutors',
+        children: [
+          { titleKey: 'levels.ks3Tutors', href: '/levels/secondary-tutors/ks3' },
+          { titleKey: 'levels.gcseTutors', href: '/levels/secondary-tutors/gcse' },
+          { titleKey: 'levels.igcseTutors', href: '/levels/secondary-tutors/igcse' },
+          { titleKey: 'levels.aLevelTutors', href: '/levels/secondary-tutors/a-level' },
+        ],
+      },
     ],
   },
   {
     titleKey: 'nav.about',
     children: [
-      { titleKey: 'about.forParents', href: '/about/for-parents' },
+      { titleKey: 'about.forParents', href: '/parents' },
       { titleKey: 'about.aboutUs', href: '/about' },
-      { titleKey: 'about.safetyAndTrust', href: '/about/safety-and-trust' },
-      { titleKey: 'about.allFaqs', href: '/about/all-faqs' },
+      { titleKey: 'about.safetyAndTrust', href: '/safety-and-trust' },
+      { titleKey: 'about.allFaqs', href: '/faqs' },
     ],
   },
   { titleKey: 'nav.contact', href: '/contact' },
@@ -62,7 +67,7 @@ export const footerTopNav: { titleKey: string; items: NavItem[] }[] = [
     titleKey: 'footer.helloTutor',
     items: [
       { titleKey: 'about.aboutUs', href: '/about' },
-      { titleKey: 'footer.parentsFaqs', href: '/about/all-faqs?tab=parents' },
+      { titleKey: 'footer.parentsFaqs', href: '/faqs?tab=parents' },
       { titleKey: 'nav.howItWorks', href: '/how-it-works' },
       { titleKey: 'subjects.allSubjects', href: '/subjects' },
     ],
@@ -85,13 +90,13 @@ export const footerBottomNav: { titleKey: string; items: NavItem[] }[] = [
     items: [
       { titleKey: 'nav.becomeATutor', href: '/become-a-tutor' },
       { titleKey: 'footer.tutorCodeOfConduct', href: '/tutor-code-of-conduct' },
-      { titleKey: 'footer.tutorsFaqs', href: '/about/all-faqs?tab=tutors' },
+      { titleKey: 'footer.tutorsFaqs', href: '/faqs?tab=tutors' },
     ],
   },
   {
     titleKey: 'footer.students',
     items: [
-      { titleKey: 'footer.studentsFaqs', href: '/about/all-faqs?tab=students' },
+      { titleKey: 'footer.studentsFaqs', href: '/faqs?tab=students' },
       { titleKey: 'footer.studentCodeOfConduct', href: '/student-code-of-conduct' },
     ],
   },
