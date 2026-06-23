@@ -68,7 +68,7 @@ export function WhyChooseUs() {
             </div>
 
             <div className="flex items-start mt-6">
-              <Button href="/about/for-parents" variant="primary" size="lg" className="px-8">
+              <Button href="/parents" variant="primary" size="lg" className="px-8">
                 {t('cta')}
               </Button>
             </div>

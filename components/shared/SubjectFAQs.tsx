@@ -35,7 +35,7 @@ export function SubjectFAQs({ translationKey, className }: SubjectFAQsProps) {
  </div>
 
  <div className="flex justify-center">
- <Button href="/about/all-faqs" variant="outline" size="lg">
+ <Button href="/faqs" variant="outline" size="lg">
  {t('cta')}
  </Button>
  </div>
