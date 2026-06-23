@@ -1,6 +1,6 @@
 import { Container } from '@/components/layout/Container';
 import { useTranslations } from 'next-intl';
-import { HighlightText } from '@/components/ui/HighlightText';
+
 
 export function USP() {
   const t = useTranslations('usp');

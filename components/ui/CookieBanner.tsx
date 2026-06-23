@@ -2,16 +2,13 @@
 
 import React from 'react';
 import { useCookieConsent } from '../providers/CookieConsentProvider';
-import { useTranslations } from 'next-intl';
+
 import { Button } from '@/components/ui/Button';
 
 export function CookieBanner() {
   const { hasInteracted, acceptAll, acceptNecessary, openSettings, isSettingsOpen } = useCookieConsent();
   
-  // Since we don't have the exact keys in the translation files yet, we can use a fallback mechanism
-  // or hardcode them if next-intl throws errors when missing. For safety, we'll hardcode 
-  // the English strings for now, but in a real setup, we'd add these to ae-en.json and ae-ar.json.
-  const t = (key: string, fallback: string) => fallback;
+
 
   if (hasInteracted || isSettingsOpen) {
     return null;

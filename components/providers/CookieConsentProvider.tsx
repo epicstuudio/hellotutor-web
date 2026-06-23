@@ -30,6 +30,7 @@ export function CookieConsentProvider({ children }: { children: React.ReactNode 
     const stored = localStorage.getItem('hellotutor-cookie-consent');
     if (stored) {
       try {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setConsent(JSON.parse(stored));
         setHasInteracted(true);
       } catch (e) {
