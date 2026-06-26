@@ -42,27 +42,43 @@
     "metaDescription": "Clear online tutoring pricing from AED 265 per lesson. Flexible weekly plans, save up to AED 600/month. No hidden fees. No long-term contracts. Cancel anytime."
   },
   "pricingSection": {
+    "mostPopular": "الأكثر شيوعاً",
     "title": "اختر خطتك الشهرية",
     "subtitle": "أسعار شفافة مصممة خصيصًا لمستوى طفلك. تتضمن كل خطة نفس المدرس المطابق، ملخصات الدروس، مراجعات التقدم، والوصول إلى فريقنا. متوفرة عبر الإنترنت أو في منزلك.",
+    "mode": {
+      "online": "الدروس عبر الإنترنت",
+      "home": "الدروس المنزلية"
+    },
     "tabs": {
       "primary": "المرحلة الابتدائية",
       "secondary": "المرحلة الثانوية",
       "alevel": "A-Level / IB"
     },
+    "term": {
+      "1term": "فصل واحد",
+      "2terms": "فصلين",
+      "fullYear": "سنة كاملة",
+      "save5": "وفّر 5%",
+      "save7": "وفّر 7%"
+    },
     "plans": {
       "standard": {
         "name": "الأساسية",
-        "description": "تعلم أسبوعي خفيف"
+        "description": "تعلم أسبوعي خفيف",
+        "freq": "درس واحد / أسبوع"
       },
       "advanced": {
         "name": "المتقدمة",
-        "description": "تقدم أكاديمي مستمر"
+        "description": "تقدم أكاديمي مستمر",
+        "freq": "درسان / أسبوع"
       },
       "premium": {
         "name": "المميزة",
-        "description": "إتقان المواد بدعم مركز"
+        "description": "إتقان المواد بدعم مركز",
+        "freq": "3 دروس / أسبوع"
       }
     },
+    "from": "ابتداءً من",
     "featuresGridTitle": "ما يتضمنه كل خطة",
     "gridFeatures": {
       "f1": "مرخص من وزارة الموارد البشرية والتوطين ومفحوص أمنياً",
@@ -121,7 +137,16 @@
       "f8": "95% يلاحظون تحسنًا في الدرجات في الفصل الأول"
     },
     "perMonth": "/شهر",
-    "perLesson": "لكل درس"
+    "perLesson": "لكل درس",
+    "savingLine": "توفر {amount} درهم",
+    "savingLineWithLessons": "توفر {amount} درهم — أي {count} درس مجاني",
+    "footnote": "الأسعار المعروضة للدروس {mode}. جميع الأسعار تشمل الضريبة.",
+    "footnoteWithDiscount": "الأسعار المعروضة للدروس {mode}. يتم تطبيق خصم {percent}% للالتزام لمدة {term}. جميع الأسعار تشمل الضريبة.",
+    "termLabels": {
+      "3": "فصل واحد (3 أشهر)",
+      "6": "فصلين (6 أشهر)",
+      "9": "سنة كاملة (9 أشهر)"
+    }
   },
   "howItWorksPageDetailed": {
     "title": "كيف تعمل",

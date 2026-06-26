@@ -42,27 +42,43 @@
     "metaDescription": "Clear online tutoring pricing from AED 265 per lesson. Flexible weekly plans, save up to AED 600/month. No hidden fees. No long-term contracts. Cancel anytime."
   },
   "pricingSection": {
+    "mostPopular": "Most Popular",
     "title": "Choose Your Monthly Plan",
     "subtitle": "Transparent pricing tailored to your child's level. Every plan includes the same matched tutor, lesson summaries, progress reviews, and access to our team. Available online or in your home.",
+    "mode": {
+      "online": "Online tutoring",
+      "home": "Home tutoring"
+    },
     "tabs": {
       "primary": "Primary",
       "secondary": "Secondary",
       "alevel": "A-Level / IB"
     },
+    "term": {
+      "1term": "1st term",
+      "2terms": "2nd term",
+      "fullYear": "Full year",
+      "save5": "Save 5%",
+      "save7": "Save 7%"
+    },
     "plans": {
       "standard": {
         "name": "Standard",
-        "description": "Light weekly learning"
+        "description": "Light weekly learning",
+        "freq": "1 lesson / week"
       },
       "advanced": {
         "name": "Advanced",
-        "description": "Steady academic progress"
+        "description": "Steady academic progress",
+        "freq": "2 lessons / week"
       },
       "premium": {
         "name": "Premium",
-        "description": "Master subjects with focused support"
+        "description": "Master subjects with focused support",
+        "freq": "3 lessons / week"
       }
     },
+    "from": "From",
     "featuresGridTitle": "What's Included in Every Plan",
     "gridFeatures": {
       "f1": "MoHRE Licensed & DBS Checked",
@@ -121,7 +137,16 @@
       "f8": "95% see grade improvement in first term"
     },
     "perMonth": "/mo",
-    "perLesson": "per lesson"
+    "perLesson": "per lesson",
+    "savingLine": "You save AED {amount}",
+    "savingLineWithLessons": "You save AED {amount} — that's {count} free lesson{s}",
+    "footnote": "Prices shown are for {mode} tutoring. All prices include VAT.",
+    "footnoteWithDiscount": "Prices shown are for {mode} tutoring. A {percent}% discount applies for the {term} commitment. All prices include VAT.",
+    "termLabels": {
+      "3": "1 term (3 months)",
+      "6": "2 terms (6 months)",
+      "9": "full year (9 months)"
+    }
   },
   "howItWorksPageDetailed": {
     "title": "How It Works",

@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { Link } from '@/i18n/routing';
 import type { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'dark';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonBaseProps {
@@ -27,6 +27,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   secondary: 'bg-surface-alt text-content border border-edge active:opacity-90',
   outline: 'bg-surface-base text-content border border-edge active:bg-surface-strong',
   ghost: 'bg-transparent text-content-secondary hover:text-content active:bg-surface-strong',
+  dark: 'bg-content text-content-invert active:opacity-85',
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
