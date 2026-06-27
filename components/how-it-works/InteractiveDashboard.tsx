@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { 
   LayoutDashboard, Book, FileEdit, Video, Calendar, MessageCircle, 
   Moon, Sun, Settings, CalendarDays, HelpCircle, Bell, ChevronDown, 
@@ -12,7 +12,7 @@ export function InteractiveDashboard() {
   // Default to dark mode as requested
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -20,7 +20,7 @@ export function InteractiveDashboard() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } },
   };

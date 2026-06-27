@@ -1,0 +1,220 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.page{padding:2.5rem 0;color:var(--color-text-primary);font-family:var(--font-sans)}
+.hero{text-align:center;margin-bottom:2rem}
+.hero h1{font-size:32px;font-weight:500;line-height:1.2;margin-bottom:10px}
+.hero p{font-size:15px;color:var(--color-text-secondary);max-width:500px;margin:0 auto 1.5rem;line-height:1.6}
+.mode-wrap{display:inline-flex;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1rem}
+.mode-btn{padding:10px 24px;border:none;background:transparent;cursor:pointer;font-size:14px;font-weight:500;color:var(--color-text-secondary);display:flex;align-items:center;gap:7px}
+.mode-btn.active{background:var(--color-background-primary);color:var(--color-text-primary)}
+.mode-btn:first-child{border-right:0.5px solid var(--color-border-secondary)}
+.level-row{display:flex;justify-content:center;gap:8px;margin-bottom:1rem}
+.level-btn{padding:7px 20px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;cursor:pointer;font-size:13px;color:var(--color-text-secondary);font-weight:500}
+.level-btn.active{background:var(--color-text-primary);color:var(--color-background-primary);border-color:var(--color-text-primary)}
+.term-row{display:flex;justify-content:center;gap:8px;margin-bottom:2rem}
+.term-btn{padding:7px 16px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;cursor:pointer;font-size:13px;color:var(--color-text-secondary);line-height:1.4;text-align:center}
+.term-btn .save-tag{display:block;font-size:11px;font-weight:500;color:var(--color-text-success)}
+.term-btn.active{background:var(--color-background-secondary);color:var(--color-text-primary);border-color:var(--color-border-primary)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;margin:0 auto 1.5rem}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;display:flex;flex-direction:column;position:relative}
+.card.featured{border:2px solid var(--color-border-info)}
+.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--color-background-info);color:var(--color-text-info);font-size:11px;font-weight:500;padding:3px 14px;border-radius:20px;white-space:nowrap}
+.card-label{font-size:11px;font-weight:500;color:var(--color-text-secondary);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.card-name{font-size:18px;font-weight:500;margin-bottom:6px}
+.card-desc{font-size:13px;color:var(--color-text-secondary);margin-bottom:1.25rem;line-height:1.5;flex-grow:0}
+.card-from{font-size:12px;color:var(--color-text-secondary);margin-bottom:1px}
+.price-row{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
+.price-currency{font-size:14px;color:var(--color-text-secondary)}
+.price-amount{font-size:30px;font-weight:500;line-height:1}
+.price-period{font-size:13px;color:var(--color-text-secondary)}
+.saving-line{font-size:12px;min-height:18px;margin-bottom:1.25rem;font-weight:500;color:var(--color-text-success)}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:0 0 1rem}
+.features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.5rem;flex:1}
+.features li{font-size:13px;color:var(--color-text-secondary);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
+.features li i{color:var(--color-text-success);flex-shrink:0;margin-top:1px;font-size:15px}
+.cta-btn{display:block;text-align:center;padding:11px 16px;border-radius:var(--border-radius-md);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-primary);width:100%}
+.cta-btn.primary-btn{background:var(--color-text-primary);color:var(--color-background-primary);border-color:var(--color-text-primary)}
+.trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:760px;margin:0 auto 2rem}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--color-text-secondary)}
+.trust-item i{font-size:17px;color:var(--color-text-primary)}
+.footnote{text-align:center;font-size:12px;color:var(--color-text-secondary);max-width:560px;margin:0 auto}
+</style>
+
+<div class="page">
+<div class="hero">
+  <h1>Simple, transparent pricing</h1>
+  <p>Every plan includes a matched expert tutor, lesson summaries, progress reviews, and full support from our team.</p>
+
+  <div>
+    <div class="mode-wrap">
+      <button class="mode-btn active" id="btn-online" onclick="setMode('online')">
+        <i class="ti ti-device-laptop" aria-hidden="true"></i> Online tutoring
+      </button>
+      <button class="mode-btn" id="btn-home" onclick="setMode('home')">
+        <i class="ti ti-home" aria-hidden="true"></i> Home tutoring
+      </button>
+    </div>
+  </div>
+
+  <div class="level-row">
+    <button class="level-btn active" onclick="setLevel('primary')">Primary</button>
+    <button class="level-btn" onclick="setLevel('secondary')">Secondary</button>
+    <button class="level-btn" onclick="setLevel('alevel')">A-Level / IB</button>
+  </div>
+
+  <div class="term-row">
+    <button class="term-btn active" onclick="setTerm(3)">1 term<span class="save-tag">&nbsp;</span></button>
+    <button class="term-btn" onclick="setTerm(6)">2 terms<span class="save-tag">Save 5%</span></button>
+    <button class="term-btn" onclick="setTerm(9)">Full year<span class="save-tag">Save 7%</span></button>
+  </div>
+</div>
+
+<div class="cards" id="cards"></div>
+
+<div class="trust-row">
+  <div class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> MoHRE licensed &amp; DBS checked</div>
+  <div class="trust-item"><i class="ti ti-lock" aria-hidden="true"></i> Secure platform</div>
+  <div class="trust-item"><i class="ti ti-user-check" aria-hidden="true"></i> Dedicated tutor</div>
+  <div class="trust-item"><i class="ti ti-video" aria-hidden="true"></i> Recorded lessons</div>
+  <div class="trust-item"><i class="ti ti-calendar" aria-hidden="true"></i> Flexible scheduling</div>
+</div>
+
+<p class="footnote" id="footnote"></p>
+</div>
+
+<script>
+const pricing = {
+  online: {
+    primary:   { standard: 275, advanced: 270, premium: 265 },
+    secondary: { standard: 295, advanced: 290, premium: 285 },
+    alevel:    { standard: 360, advanced: 350, premium: 340 }
+  },
+  home: {
+    primary:   { standard: 350, advanced: 340, premium: 330 },
+    secondary: { standard: 375, advanced: 365, premium: 355 },
+    alevel:    { standard: 450, advanced: 440, premium: 425 }
+  }
+};
+
+const discounts = { 3: 0, 6: 5, 9: 7 };
+
+const plans = [
+  {
+    key: 'standard', label: 'Standard', freq: '1 lesson / week', lpm: 4, featured: false,
+    descs: {
+      primary:   'One focused session a week to build confidence and stay on track.',
+      secondary: 'One focused session a week to strengthen understanding and keep up with coursework.',
+      alevel:    'One focused session a week to consolidate topics and build exam technique.'
+    }
+  },
+  {
+    key: 'advanced', label: 'Advanced', freq: '2 lessons / week', lpm: 8, featured: true,
+    descs: {
+      primary:   'Twice-weekly support to accelerate progress and close gaps faster.',
+      secondary: 'Twice-weekly sessions to deepen understanding and push for higher grades.',
+      alevel:    'Twice-weekly sessions to cover the syllabus thoroughly and sharpen exam performance.'
+    }
+  },
+  {
+    key: 'premium', label: 'Premium', freq: '3 lessons / week', lpm: 12, featured: false,
+    descs: {
+      primary:   'Three sessions a week for students who need to move quickly or catch up.',
+      secondary: 'Three sessions a week for students targeting top grades or preparing for exams.',
+      alevel:    'Three sessions a week for students under exam pressure or targeting top university offers.'
+    }
+  }
+];
+
+const features = [
+  'Expert tutor matched to your child',
+  '60-minute 1:1 lessons',
+  'Secure interactive classroom',
+  'Lesson summaries after each session',
+  'Monthly progress reviews',
+  'Flexible scheduling',
+  'Free rematching if needed',
+  '95% see grade improvement in first term'
+];
+
+const termLabels = { 3: '1 term (3 months)', 6: '2 terms (6 months)', 9: 'full year (9 months)' };
+
+let mode = 'online', level = 'primary', term = 3;
+
+function setMode(v) {
+  mode = v;
+  document.getElementById('btn-online').className = 'mode-btn'+(v==='online'?' active':'');
+  document.getElementById('btn-home').className   = 'mode-btn'+(v==='home'?' active':'');
+  render();
+}
+function setLevel(v) {
+  level = v;
+  document.querySelectorAll('.level-btn').forEach((b,i) =>
+    b.classList.toggle('active', ['primary','secondary','alevel'][i]===v));
+  render();
+}
+function setTerm(v) {
+  term = v;
+  document.querySelectorAll('.term-btn').forEach((b,i) =>
+    b.classList.toggle('active', [3,6,9][i]===v));
+  render();
+}
+
+function fmt(n) { return Math.round(n).toLocaleString(); }
+
+function render() {
+  const container = document.getElementById('cards');
+  container.innerHTML = '';
+
+  plans.forEach(plan => {
+    const basePrice = pricing[mode][level][plan.key];
+    const disc = discounts[term] / 100;
+    const adjPrice = basePrice * (1 - disc);
+    const monthly = Math.round(adjPrice * plan.lpm);
+    const totalLessons = plan.lpm * term;
+    const baseTotalBilled = Math.round(basePrice * totalLessons);
+    const discTotalBilled = Math.round(adjPrice * totalLessons);
+    const saving = baseTotalBilled - discTotalBilled;
+    const freeLessons = saving > 0 ? Math.round(saving / basePrice) : 0;
+
+    let savingLine = '';
+    if (saving > 0) {
+      savingLine = freeLessons >= 1
+        ? `You save AED ${fmt(saving)} — that's ${freeLessons} free lesson${freeLessons>1?'s':''}`
+        : `You save AED ${fmt(saving)}`;
+    }
+
+    const popular = plan.featured ? '<span class="popular-badge">Most popular</span>' : '';
+
+    const card = document.createElement('div');
+    card.className = 'card' + (plan.featured ? ' featured' : '');
+    card.innerHTML = `
+      ${popular}
+      <div class="card-label">${plan.freq}</div>
+      <div class="card-name">${plan.label}</div>
+      <div class="card-desc">${plan.descs[level]}</div>
+      <div class="card-from">From</div>
+      <div class="price-row">
+        <span class="price-currency">AED</span>
+        <span class="price-amount">${fmt(monthly)}</span>
+        <span class="price-period">/mo</span>
+      </div>
+      <div class="saving-line">${savingLine}</div>
+      <div class="divider"></div>
+      <ul class="features">
+        ${features.map(f=>`<li><i class="ti ti-check" aria-hidden="true"></i>${f}</li>`).join('')}
+      </ul>
+      <a href="https://api.whatsapp.com/send/?phone=971585817335" class="cta-btn ${plan.featured?'primary-btn':''}">Book a free consultation</a>
+    `;
+    container.appendChild(card);
+  });
+
+  const discNote = discounts[term] > 0
+    ? ` A ${discounts[term]}% discount applies for the ${termLabels[term]} commitment.`
+    : '';
+  document.getElementById('footnote').textContent =
+    `Prices shown are for ${mode==='online'?'online':'home'} tutoring.${discNote} All prices include VAT.`;
+}
+
+render();
+</script>

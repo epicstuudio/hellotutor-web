@@ -78,7 +78,7 @@ export function HowItWorks() {
             <h2 className="text-h2 text-content mb-4">{t('title')}</h2>
             <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
             <div className="h-[3px] bg-edge-subtle rounded-full mt-8 overflow-hidden max-w-[240px]">
-              <div ref={progressRef} className="h-full w-0 bg-surface-action rounded-full" />
+              <div ref={progressRef} className="h-full w-0 bg-green-500 rounded-full" />
             </div>
           </div>
 
@@ -99,7 +99,7 @@ export function HowItWorks() {
                 />
               </div>
               <div className="p-7 flex flex-col flex-1">
-                <span className="text-sm font-bold text-surface-action tracking-wider uppercase mb-3">
+                <span className="text-sm font-bold text-green-500 tracking-wider uppercase mb-3">
                   {t('stepLabel', { num: String(index + 1).padStart(2, '0') })}
                 </span>
                 <h3 className="text-h5 font-semibold text-content mb-2">
