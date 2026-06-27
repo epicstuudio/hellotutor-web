@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import { InteractiveDashboard } from './InteractiveDashboard';
 import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -25,7 +26,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-surface pt-[calc(40px+8rem)] xl:pt-[calc(48px+8rem)] pb-16 lg:pb-24">
-      <Container className="relative z-10 w-full text-center max-w-5xl mx-auto flex flex-col items-center">
+      <Container className="relative z-10 w-full text-center max-w-[1280px] px-4 sm:px-6 lg:px-8 mx-auto flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,36 +81,16 @@ export function Hero() {
           {t('hero.noCommitment')}
         </motion.p>
 
-        {/* Video / Image container */}
+        {/* Dashboard Window */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="relative w-full mx-auto flex justify-center items-center"
+          className="relative w-full max-w-[1280px] mx-auto mt-8 flex justify-center items-center"
         >
-          {/* We position the video absolutely OVER the monitor image. */}
-          <div
-            className="absolute z-20 bg-surface overflow-hidden rounded-t-[16px]"
-            style={{ top: '8.9%', left: '31.5%', width: '37%', height: '56%' }}
-          >
-            <video
-              src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works/hero-video.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            />
+          <div className="relative w-full bg-surface overflow-hidden rounded-[16px] md:rounded-[24px] border border-edge shadow-2xl">
+            <InteractiveDashboard />
           </div>
-
-          <Image
-            src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works/hero-image.png"
-            alt="How it works"
-            width={1200}
-            height={675}
-            className="relative z-10 w-full h-auto drop-shadow-2xl pointer-events-none"
-            unoptimized
-          />
         </motion.div>
       </Container>
     </section>

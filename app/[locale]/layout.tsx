@@ -10,6 +10,7 @@ import { Analytics } from '@/components/analytics/Analytics';
 import { CookieConsentProvider } from '@/components/providers/CookieConsentProvider';
 import { CookieBanner } from '@/components/ui/CookieBanner';
 import { CookieSettingsModal } from '@/components/ui/CookieSettingsModal';
+import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { createMetadata } from '@/lib/metadata';
 import '@/styles/globals.css';
 
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
             <Footer />
             <CookieBanner />
             <CookieSettingsModal />
+            <FloatingCTA />
           </NextIntlClientProvider>
 
           <Analytics />
