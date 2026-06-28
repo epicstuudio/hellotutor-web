@@ -2238,7 +2238,10 @@
     "ks3Tutors": "KS3 Tutors",
     "gcseTutors": "GCSE Tutors",
     "igcseTutors": "IGCSE Tutors",
-    "aLevelTutors": "A-Level Tutors"
+    "aLevelTutors": "A-Level Tutors",
+    "universities": "Universities",
+    "universityAdmissions": "University Admissions",
+    "admissionsAbroad": "Admissions Abroad"
   },
   "about": {
     "aboutUs": "About Us",
@@ -2371,6 +2374,152 @@
     }
   },
   "levelPages": {
+    "universityAdmissionsPage": {
+      "metaTitle": "University Admissions Support | HelloTutor",
+      "metaDescription": "Expert guidance for students applying to universities abroad. From choosing the right course to visa support.",
+      "whoThisIsFor": {
+        "title": "Who This Is For",
+        "subtitle": "School doesn't last forever. It just feels that way.",
+        "items": [
+          {
+            "title": "Year 12 / Grade 11 students",
+            "desc": "Starting early gives the most options. This is the ideal time to research, shortlist, and begin preparing applications."
+          },
+          {
+            "title": "Year 13 / Grade 12 students",
+            "desc": "Deadline-focused support. We work quickly to make sure applications are strong, complete, and submitted on time."
+          },
+          {
+            "title": "Gap year students",
+            "desc": "Applying for deferred entry or starting fresh. We support students at any stage of the process."
+          },
+          {
+            "title": "IB and A-Level students",
+            "desc": "Managing university applications alongside demanding exams is genuinely difficult. We make sure one doesn't suffer because of the other."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "From first conversation to university offer in four steps.",
+        "steps": [
+          {
+            "title": "Tell us where your child wants to go",
+            "desc": "Share their academic background, subject interests, target countries, and timeline. We take it from there."
+          },
+          {
+            "title": "We connect you with our admissions partner",
+            "desc": "We match you with our specialist university admissions team. Experienced, thorough, and focused entirely on getting the right outcome."
+          },
+          {
+            "title": "Applications prepared and submitted",
+            "desc": "University shortlist confirmed. Personal statement written and refined. Applications submitted to deadline, with visa support running in parallel."
+          },
+          {
+            "title": "Offer received and arrival planned",
+            "desc": "Accommodation sorted. Visa in place. Your child arrives knowing exactly where they're going and what to expect."
+          }
+        ]
+      },
+      "faq": {
+        "title": "FAQs",
+        "subtitle": "Everything you need to know before getting started.",
+        "cta": "View all FAQs",
+        "items": [
+          {
+            "question": "Is this service provided by Hello Tutor directly?",
+            "answer": "We work with a trusted specialist admissions partner to deliver this service. Everything is coordinated through Hello Tutor — you have one point of contact throughout, and we make sure the service is the right fit before connecting you."
+          },
+          {
+            "question": "When should we start the university admissions process?",
+            "answer": "Ideally in Year 12 or equivalent — 12 to 18 months before your target start date. Starting early means more options and less pressure. That said, we can support students at any stage including those with imminent deadlines."
+          },
+          {
+            "question": "Which countries and universities do you cover?",
+            "answer": "We support applications to 600+ universities across 20+ countries including the UK, US, Ireland, Canada, Australia, Germany, Netherlands, France, and more."
+          },
+          {
+            "question": "Do you help with the personal statement?",
+            "answer": "Yes. Personal statement guidance is part of the admissions support — making sure it reflects your child accurately and compellingly for each institution."
+          },
+          {
+            "question": "Is visa support included?",
+            "answer": "Yes. Student visa guidance is part of the service — including document preparation, application forms, and interview preparation where required."
+          },
+          {
+            "question": "Can we use this service alongside Hello Tutor tutoring?",
+            "answer": "Absolutely. Many families use both — tutoring to secure the grades, admissions support to make sure the application reflects them properly. We coordinate across both."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to plan what comes next?",
+        "subtitle": "Book a free consultation and we'll talk through your child's options. No commitment. No pressure. Just the right guidance at the right time."
+      },
+      "heroTitle": "University admissions support matched to your child's goals.",
+      "heroSubtitle": "Expert guidance for students applying to universities abroad. From choosing the right course and country to visa support and accommodation — we connect you with the right people.",
+      "statPartners": "600+ University Partners",
+      "statCountries": "20+ Countries",
+      "statSupport": "End-to-End Support",
+      "metaTitle": "University Admissions Abroad Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert university admissions support for students in Dubai & UAE. Applications, visa guidance and accommodation across 600+ universities in 20+ countries.",
+      "challenges": {
+        "title": "Why University Applications Abroad Feel Overwhelming",
+        "subtitle": "Most families start the process too late and with too little information. We've seen it often enough to know where things go wrong.",
+        "listTitle": "Challenges at this stage",
+        "items": [
+          "Knowing which country and university is genuinely the right fit — not just the most familiar name.",
+          "Understanding what each university actually requires and when.",
+          "Personal statements and applications that stand out for the right reasons.",
+          "Visa processes that vary by country and change regularly.",
+          "Finding accommodation before arriving somewhere you've never lived.",
+          "Doing all of this while managing A-Level, IB, or IGCSE exams at the same time."
+        ],
+        "bottomCardText": "The families who navigate it well all have one thing in common. They got the right guidance early."
+      },
+      "included": {
+        "title": "What's Included",
+        "subtitle": "End-to-end support from the first conversation to arriving at university.",
+        "items": [
+          {
+            "title": "University Evaluation & Admissions",
+            "desc": "Understanding your child's academic profile, goals, and aspirations. Recommending the right universities and courses. Step-by-step guidance through every application. Making sure the application stands out."
+          },
+          {
+            "title": "Visa Guidance",
+            "desc": "Personalised support for student visa applications. Document preparation and checklist. Application form guidance. Interview preparation where required."
+          },
+          {
+            "title": "Accommodation Assistance",
+            "desc": "Exploring the right housing options — university halls, shared apartments, homestays. Based on your child's preferences, budget, and location. Ensuring something is in place before they arrive."
+          }
+        ]
+      },
+      "supportedCountries": {
+        "title": "Countries We Support Applications To",
+        "subtitle": "600+ university partners across 20+ countries.",
+        "countries": {
+          "GB": "United Kingdom",
+          "US": "United States",
+          "IE": "Ireland",
+          "CA": "Canada",
+          "AE": "UAE",
+          "DE": "Germany",
+          "NL": "Netherlands",
+          "BE": "Belgium",
+          "ES": "Spain",
+          "IT": "Italy",
+          "FR": "France",
+          "AU": "Australia",
+          "NZ": "New Zealand",
+          "MY": "Malaysia",
+          "SG": "Singapore",
+          "GE": "Georgia"
+        },
+        "footer": "Don't see your target country? Get in touch — we may still be able to help.",
+        "buttonText": "Get in touch"
+      }
+    },
     "primaryTutors": {
       "heroTitle": "Primary school tutoring that builds the right foundations",
       "heroSubtitle": "Key Stage 1 and 2 support that helps children keep up, catch up, and actually enjoy learning again.",

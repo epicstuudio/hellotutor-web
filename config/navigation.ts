@@ -44,6 +44,13 @@ export const mainNav: NavItem[] = [
           { titleKey: 'levels.aLevelTutors', href: '/levels/secondary-tutors/a-level' },
         ],
       },
+      {
+        titleKey: 'levels.universities',
+        children: [
+          { titleKey: 'levels.universityAdmissions', href: '/university-admissions' },
+          { titleKey: 'levels.admissionsAbroad', href: '/admissions-abroad' },
+        ],
+      },
     ],
   },
   {

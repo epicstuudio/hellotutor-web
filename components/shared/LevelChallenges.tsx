@@ -73,7 +73,7 @@ export function LevelChallenges({ translationKey, imageSrc }: LevelChallengesPro
  {challenge.num}
  </span>
  </div>
- <span className="text-body-md text-content font-medium">{challenge.text}</span>
+ <span className="text-body-md text-content font-normal">{challenge.text}</span>
  </div>
  ))}
  </div>

@@ -6,6 +6,7 @@ import { HighlightText } from '@/components/ui/HighlightText';
 import { siteConfig } from '@/config/site';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -25,6 +26,7 @@ export interface BaseHeroProps {
   imageSrc: string;
   imageClassName?: string;
   highlightWord?: string;
+  stats?: string[];
 }
 
 export function BaseHero({
@@ -33,6 +35,7 @@ export function BaseHero({
   imageSrc,
   imageClassName,
   highlightWord,
+  stats,
 }: BaseHeroProps) {
   const t = useTranslations();
 
@@ -119,11 +122,24 @@ export function BaseHero({
             </div>
 
             <div className="text-body-sm font-semibold text-content flex items-center gap-3 flex-wrap">
-              <span>{t('subjectHero.statTutors')}</span>
-              <span className="text-edge-strong font-normal">/</span>
-              <span>{t('subjectHero.statLessons')}</span>
-              <span className="text-edge-strong font-normal">/</span>
-              <span>{t('subjectHero.statGrades')}</span>
+              {stats ? (
+                stats.map((stat, index) => (
+                  <React.Fragment key={index}>
+                    <span>{stat}</span>
+                    {index < stats.length - 1 && (
+                      <span className="text-edge-strong font-normal">/</span>
+                    )}
+                  </React.Fragment>
+                ))
+              ) : (
+                <>
+                  <span>{t('subjectHero.statTutors')}</span>
+                  <span className="text-edge-strong font-normal">/</span>
+                  <span>{t('subjectHero.statLessons')}</span>
+                  <span className="text-edge-strong font-normal">/</span>
+                  <span>{t('subjectHero.statGrades')}</span>
+                </>
+              )}
             </div>
           </motion.div>
         </div>

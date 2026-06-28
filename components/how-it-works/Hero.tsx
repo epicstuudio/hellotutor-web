@@ -86,11 +86,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="relative w-full max-w-[1280px] mx-auto mt-8 flex justify-center items-center"
+          className="relative w-full max-w-[1280px] mx-auto mt-12 flex justify-center items-center"
         >
-          <div className="relative w-full bg-surface overflow-hidden rounded-[16px] md:rounded-[24px] border border-edge shadow-2xl">
-            <InteractiveDashboard />
-          </div>
+          <InteractiveDashboard />
         </motion.div>
       </Container>
     </section>
