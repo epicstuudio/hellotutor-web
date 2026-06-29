@@ -2295,6 +2295,9 @@
     "legal": "Legal",
     "support": "Support",
     "safeguarding": "Safeguarding",
+    "tutorsInDubai": "Tutors in Dubai",
+    "tutorsInAbuDhabi": "Tutors in Abu Dhabi",
+    "tutorsInSharjah": "Tutors in Sharjah",
     "tutorCodeOfConduct": "Tutor Code of Conduct",
     "tutorsFaqs": "Tutors FAQs",
     "parentsFaqs": "Parents FAQs",
@@ -2375,8 +2378,8 @@
   },
   "levelPages": {
     "universityAdmissionsPage": {
-      "metaTitle": "University Admissions Support | HelloTutor",
-      "metaDescription": "Expert guidance for students applying to universities abroad. From choosing the right course to visa support.",
+      "metaTitle": "University Admissions Abroad Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert university admissions support for students in Dubai & UAE. Applications, visa guidance and accommodation across 600+ universities in 20+ countries.",
       "whoThisIsFor": {
         "title": "Who This Is For",
         "subtitle": "School doesn't last forever. It just feels that way.",
@@ -2461,8 +2464,6 @@
       "statPartners": "600+ University Partners",
       "statCountries": "20+ Countries",
       "statSupport": "End-to-End Support",
-      "metaTitle": "University Admissions Abroad Dubai & UAE | Hello Tutor",
-      "metaDescription": "Expert university admissions support for students in Dubai & UAE. Applications, visa guidance and accommodation across 600+ universities in 20+ countries.",
       "challenges": {
         "title": "Why University Applications Abroad Feel Overwhelming",
         "subtitle": "Most families start the process too late and with too little information. We've seen it often enough to know where things go wrong.",
@@ -6644,5 +6645,757 @@
         ]
       }
     ]
+  },
+  "tutorsInDubai": {
+    "hero": {
+      "headline": "Expert online tutors for Dubai students",
+      "subheadline": "1:1 tutoring matched to your child’s school, curriculum, and exam board. No commute. No wasted time. Just results.",
+      "ctaPrimary": "No commitment. Takes 5 minutes."
+    },
+    "stats": {
+      "title": "",
+      "subtitle": "",
+      "items": [
+        {
+          "value": "500",
+          "suffix": "+",
+          "label": "Tutors"
+        },
+        {
+          "value": "10000",
+          "suffix": "+",
+          "label": "lessons delivered"
+        },
+        {
+          "value": "95",
+          "suffix": "%",
+          "label": "See Grade Improvement"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Why Dubai Families Choose Online Tutoring",
+      "subtitle": "Dubai is one of the most academically demanding cities in the world. International schools are competitive, curriculum standards are rigorous, and the pressure on students — and parents — is real.",
+      "cards": [
+        {
+          "title": "No two schools are the same",
+          "desc": "Dubai has over 200 private schools across British, American, IB, Indian, and French curriculum streams. A tutor who knows IGCSE isn’t automatically right for an IB student. We match based on your child’s specific school and curriculum."
+        },
+        {
+          "title": "Traffic makes in-person tutoring impractical",
+          "desc": "Travelling across Dubai for a one-hour lesson is a two-hour commitment. Online tutoring removes that entirely — the lesson starts when the school bag hits the floor, not 45 minutes later."
+        },
+        {
+          "title": "Exam pressure arrives early",
+          "desc": "With Year 10 IGCSE choices and IB subject selection often locked in by Year 9, the stakes arrive sooner than many families expect. Getting the right support early makes a measurable difference."
+        },
+        {
+          "title": "Consistency is hard to find",
+          "desc": "Many families in Dubai have tried tutors who didn’t last, didn’t know the exam board, or weren’t the right fit. We handle the matching so you don’t have to start again."
+        }
+      ]
+    },
+    "schools": {
+      "title": "Schools We Support Students From",
+      "subtitle": "Our tutors are familiar with the schools, curriculum, and exam pressures that Dubai students face.",
+      "list": [
+        "Dubai College",
+        "Jumeirah English Speaking School (JESS)",
+        "Dubai British School",
+        "Repton School Dubai",
+        "Kings’ School Dubai",
+        "Brighton College Dubai",
+        "Nord Anglia International School",
+        "GEMS Wellington Academy",
+        "Dubai International Academy",
+        "Hartland International School",
+        "Horizon International School",
+        "Universal American School"
+      ],
+      "footer": "Non-exhaustive. We support students from schools across all areas of Dubai."
+    },
+    "whatWeCover": {
+      "title": "What We Cover",
+      "subtitle": "Whatever the curriculum, whatever the level — we have the right tutor for where your child is.",
+      "blocks": [
+        {
+          "title": "By Level",
+          "itemsLabel": "Levels",
+          "items": [
+            {
+              "title": "Primary",
+              "desc": ""
+            },
+            {
+              "title": "KS3 (Years 7–9)",
+              "desc": ""
+            },
+            {
+              "title": "GCSE & IGCSE",
+              "desc": ""
+            },
+            {
+              "title": "A-Level",
+              "desc": ""
+            },
+            {
+              "title": "IB Diploma (SL & HL)",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "title": "By Subject",
+          "itemsLabel": "Subjects",
+          "items": [
+            {
+              "title": "Maths",
+              "desc": ""
+            },
+            {
+              "title": "English",
+              "desc": ""
+            },
+            {
+              "title": "Biology",
+              "desc": ""
+            },
+            {
+              "title": "Chemistry",
+              "desc": ""
+            },
+            {
+              "title": "Physics",
+              "desc": ""
+            },
+            {
+              "title": "Arabic",
+              "desc": ""
+            },
+            {
+              "title": "Economics",
+              "desc": ""
+            },
+            {
+              "title": "Business Studies",
+              "desc": ""
+            },
+            {
+              "title": "History",
+              "desc": ""
+            },
+            {
+              "title": "Computer Science",
+              "desc": ""
+            },
+            {
+              "title": "And more",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "title": "By Curriculum",
+          "itemsLabel": "Curriculums",
+          "items": [
+            {
+              "title": "British Curriculum (IGCSE, A-Level)",
+              "desc": ""
+            },
+            {
+              "title": "IB Diploma",
+              "desc": ""
+            },
+            {
+              "title": "American Curriculum (AP, SAT)",
+              "desc": ""
+            },
+            {
+              "title": "CBSE / Indian Curriculum",
+              "desc": ""
+            },
+            {
+              "title": "Cambridge International",
+              "desc": ""
+            },
+            {
+              "title": "Edexcel",
+              "desc": ""
+            }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Trusted by parents across Dubai",
+      "stats": [
+        "95% of parents see grade improvement within 3 months",
+        "4.9/5 average parent rating",
+        "10,000+ lessons delivered"
+      ],
+      "reviews": {
+        "1": {
+          "text": "“We’d tried two tutors before Hello Tutor. Both knew the subject but neither understood the way Dubai College teaches it. The match we got this time was completely different — first lesson felt like he’d been with them for months.”",
+          "author": "— James, Dad of Year 10 student, Dubai College"
+        },
+        "2": {
+          "text": "“With two kids at different schools doing different curriculum needs, we needed two completely separate tutors. Hello Tutor handled both without any fuss. Both children are now getting the grades they need and the stress at home has genuinely dropped.”",
+          "author": "— Aisha, Mum of students at JESS and Dubai British School"
+        },
+        "3": {
+          "text": "“The convenience is honestly the biggest thing for us. We live in Dubai Marina and finding time to travel for tutoring was a nightmare. Online lessons mean my daughter goes straight from school to her session. No wasted evenings.”",
+          "author": "— Caroline, Mum of Year 11 student, Nord Anglia Dubai"
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "From first conversation to first lesson in four simple steps.",
+      "stepLabel": "Step",
+      "steps": [
+        {
+          "title": "Tell us what you need",
+          "desc": "Share your child’s current level, the subjects causing difficulty, and any upcoming exams. We know the schools and curriculum across Dubai inside out."
+        },
+        {
+          "title": "We assign the right tutor",
+          "desc": "We find the right tutor based on subject expertise, curriculum knowledge, teaching style, and your child’s specific needs. No browsing needed."
+        },
+        {
+          "title": "First lesson booked within days",
+          "desc": "Meet your tutor in our interactive online classroom. Discuss goals, current challenges, and get started."
+        },
+        {
+          "title": "Progress from day one",
+          "desc": "Regular lessons focused on closing gaps, building confidence, and improving grades. A summary after every session so you always know how it’s going."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Everything you need to know before getting started.",
+      "items": [
+        {
+          "question": "Do your tutors know the schools and curriculum in Dubai?",
+          "answer": "Yes. Our tutors are experienced with the schools, exam boards, and curriculum that Dubai students follow — including IGCSE, A-Level, IB, and more. When we match, we factor in your child’s specific school and curriculum, not just the subject."
+        },
+        {
+          "question": "Are all lessons online?",
+          "answer": "Yes. All Hello Tutor lessons take place in our interactive online classroom. For Dubai families this means no travel, flexible scheduling around school and activities, and access to the best tutors regardless of where in the city you are."
+        },
+        {
+          "question": "Do you cover all areas of Dubai?",
+          "answer": "Yes. Whether you’re in the Marina, JLT, Arabian Ranches, Mirdif, or anywhere else — the tutor comes to your screen."
+        },
+        {
+          "question": "How quickly can we get started?",
+          "answer": "We typically match students within 24–48 hours and have the first lesson booked within a few days."
+        },
+        {
+          "question": "What if the tutor isn’t the right fit?",
+          "answer": "We’ll rematch you. No awkward conversations, no penalties. Getting the right fit matters more than sticking with the first match."
+        },
+        {
+          "question": "What subjects and levels do you cover?",
+          "answer": "All major subjects across Primary, KS3, GCSE, IGCSE, A-Level, and IB. If you’re unsure whether we cover your child’s specific subject or exam board, get in touch and we’ll confirm."
+        }
+      ],
+      "subtitle": "Everything you need to know about tutoring in Dubai",
+      "cta": "View all FAQs"
+    },
+    "cta": {
+      "title": "Ready to find the right tutor?",
+      "subtitle": "Book a free consultation and we’ll take it from there. Over 5,000 families have trusted us to make the match.",
+      "primaryBtn": "Book Consultation",
+      "secondaryBtn": "View Pricing"
+    },
+    "metaTitle": "Online Tutors Dubai | IGCSE, IB & A-Level | Hello Tutor",
+    "metaDescription": "Expert online tutors in Dubai matched to your child’s school, curriculum, and exam board. IGCSE, IB, A-Level and more. 1:1 lessons. No commute. Book free consultation."
+  },
+  "tutorsInAbuDhabi": {
+    "hero": {
+      "headline": "Expert online tutors for Abu Dhabi students",
+      "subheadline": "1:1 tutoring matched to your child’s school, curriculum, and exam board. The right tutor, online, whenever it suits you.",
+      "cta": "No commitment. Takes 5 minutes."
+    },
+    "whyChoose": {
+      "title": "Why Abu Dhabi families choose online tutoring",
+      "subtitle": "Abu Dhabi’s school landscape is uniquely diverse — British, American, IB, and MOE schools sit side by side across the emirate. The right tutor for an Abu Dhabi student needs to understand that landscape, not just the subject.",
+      "cards": [
+        {
+          "title": "Curriculum variety that generic tutors can’t handle",
+          "desc": "From BSAK and Cranleigh to Abu Dhabi International School and Al Yasmina Academy, students in Abu Dhabi follow very different academic paths. We match based on your child’s specific school and curriculum, not a one-size-fits-all approach."
+        },
+        {
+          "title": "Distances within Abu Dhabi matter",
+          "desc": "Whether you’re on Reem Island, Saadiyat, in Khalidiyah, or out toward Al Ain, finding a strong tutor nearby is genuinely difficult. Online tutoring removes the distance entirely."
+        },
+        {
+          "title": "The stakes are high from early on",
+          "desc": "Abu Dhabi’s competitive school environment means academic pressure arrives early. IGCSE choices, IB options, and university preparation often begin before families realise the window has narrowed."
+        },
+        {
+          "title": "Quality is hard to verify locally",
+          "desc": "Word-of-mouth only goes so far. We vet every tutor rigorously — qualifications, experience, DBS-checked and MOHRE licensed — so you know exactly who is teaching your child."
+        }
+      ]
+    },
+    "schools": {
+      "title": "Schools we support students from",
+      "subtitle": "Our tutors know the schools, curriculum, and exam expectations that Abu Dhabi students are working toward.",
+      "list": [
+        "British School Al Khubairat (BSAK)",
+        "Cranleigh Abu Dhabi",
+        "Repton Abu Dhabi",
+        "Brighton College Abu Dhabi",
+        "The British International School Abu Dhabi",
+        "Abu Dhabi International School",
+        "American Community School Abu Dhabi",
+        "Yas School",
+        "Al Yasmina Academy",
+        "Raha International School",
+        "Aldar Academies"
+      ],
+      "footer": "Non-exhaustive. We support students from schools across all areas of Abu Dhabi, Al Ain, and the wider emirate."
+    },
+    "whatWeCover": {
+      "title": "What we cover",
+      "subtitle": "Whatever the curriculum, whatever the level — we have the right tutor for where your child is.",
+      "blocks": [
+        {
+          "title": "By Level",
+          "itemsLabel": "Levels",
+          "items": [
+            {
+              "title": "Primary",
+              "desc": ""
+            },
+            {
+              "title": "KS3 (Years 7–9)",
+              "desc": ""
+            },
+            {
+              "title": "GCSE & IGCSE",
+              "desc": ""
+            },
+            {
+              "title": "A-Level",
+              "desc": ""
+            },
+            {
+              "title": "IB Diploma (SL & HL)",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "title": "By Subject",
+          "itemsLabel": "Subjects",
+          "items": [
+            {
+              "title": "Maths",
+              "desc": ""
+            },
+            {
+              "title": "English",
+              "desc": ""
+            },
+            {
+              "title": "Biology",
+              "desc": ""
+            },
+            {
+              "title": "Chemistry",
+              "desc": ""
+            },
+            {
+              "title": "Physics",
+              "desc": ""
+            },
+            {
+              "title": "Arabic",
+              "desc": ""
+            },
+            {
+              "title": "Economics",
+              "desc": ""
+            },
+            {
+              "title": "Business Studies",
+              "desc": ""
+            },
+            {
+              "title": "History",
+              "desc": ""
+            },
+            {
+              "title": "Computer Science",
+              "desc": ""
+            },
+            {
+              "title": "And more",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "title": "By Curriculum",
+          "itemsLabel": "Curriculums",
+          "items": [
+            {
+              "title": "British Curriculum (IGCSE, A-Level)",
+              "desc": ""
+            },
+            {
+              "title": "IB Diploma",
+              "desc": ""
+            },
+            {
+              "title": "American Curriculum (AP, SAT)",
+              "desc": ""
+            },
+            {
+              "title": "CBSE / Indian Curriculum",
+              "desc": ""
+            },
+            {
+              "title": "MOE Curriculum",
+              "desc": ""
+            },
+            {
+              "title": "Cambridge International",
+              "desc": ""
+            },
+            {
+              "title": "Edexcel",
+              "desc": ""
+            }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Trusted by parents in Abu Dhabi",
+      "stats": [
+        "95% of parents see grade improvement within 3 months",
+        "4.9/5 average parent rating",
+        "10,000+ lessons delivered"
+      ],
+      "reviews": {
+        "1": {
+          "text": "“We’re based on Reem Island and finding a reliable tutor who could come to us was practically impossible. Online tutoring through Hello Tutor solved that completely. Our son has had the same tutor every week for six months and his IGCSE Maths has genuinely transformed.”",
+          "author": "— Mariam, Mum of Year 10 student, British School Al Khubairat"
+        },
+        "2": {
+          "text": "“My daughter is at Cranleigh doing IB HL Chemistry. Finding someone who actually knew the IB specification in Abu Dhabi felt impossible. Her tutor knew it inside out. She went from a 4 to a 6 and is now confident going into the exams.”",
+          "author": "— David, Dad of IB student, Cranleigh Abu Dhabi"
+        },
+        "3": {
+          "text": "“We’d tried a few local recommendations before this. The quality was inconsistent. Hello Tutor was different from the first conversation — they listened, matched properly, and the tutor they found has been with us for nearly a year now.”",
+          "author": "— Noura, Mum of two students, Abu Dhabi International School"
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "From first conversation to first lesson in four simple steps.",
+      "stepLabel": "Step",
+      "steps": [
+        {
+          "title": "Tell us what you need",
+          "desc": "Share your child’s current level, the subjects causing difficulty, and any upcoming exams. We know the schools and curriculum across Abu Dhabi inside out."
+        },
+        {
+          "title": "We assign the right tutor",
+          "desc": "We find the right tutor based on subject expertise, curriculum knowledge, teaching style, and your child’s specific needs. No browsing needed."
+        },
+        {
+          "title": "First lesson booked within days",
+          "desc": "Meet your tutor in our interactive online classroom. Discuss goals, current challenges, and get started."
+        },
+        {
+          "title": "Progress from day one",
+          "desc": "Regular lessons focused on closing gaps, building confidence, and improving grades. A summary after every session so you always know how it’s going."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Everything you need to know before getting started.",
+      "subtitle": "Everything you need to know about tutoring in Abu Dhabi",
+      "cta": "View all FAQs",
+      "items": [
+        {
+          "question": "Do your tutors know the schools and curriculum in Abu Dhabi?",
+          "answer": "Yes. We match based on your child’s specific school and curriculum — IGCSE, A-Level, IB, MOE, or others. Our tutors know what’s expected at schools like BSAK, Cranleigh, Repton, and others across Abu Dhabi and the wider emirate."
+        },
+        {
+          "question": "Are all lessons online?",
+          "answer": "Yes. All Hello Tutor lessons take place in our interactive online classroom. For Abu Dhabi families this means no commute, flexible scheduling, and access to the best tutors wherever you are in the emirate."
+        },
+        {
+          "question": "Do you cover students in Al Ain or other parts of the emirate?",
+          "answer": "Yes. Because all lessons are online, we work with families across Abu Dhabi city, Reem Island, Saadiyat, Al Ain, and everywhere in between. Distance is not a factor."
+        },
+        {
+          "question": "How quickly can we get started?",
+          "answer": "We typically match students within 24–48 hours and have the first lesson booked within a few days."
+        },
+        {
+          "question": "What if the tutor isn’t the right fit?",
+          "answer": "We’ll rematch you. No awkward conversations, no penalties. Getting the right fit matters more than sticking with the first match."
+        },
+        {
+          "question": "What subjects and levels do you cover?",
+          "answer": "All major subjects across Primary, KS3, GCSE, IGCSE, A-Level, and IB. If you’re unsure whether we cover your child’s specific subject or exam board, get in touch and we’ll confirm."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to find the right tutor?",
+      "subtitle": "Book a free consultation and we’ll take it from there. Over 5,000 families have trusted us to make the match.",
+      "primaryBtn": "Book Consultation",
+      "secondaryBtn": "View Pricing"
+    },
+    "metaTitle": "Online Tutors Abu Dhabi | IGCSE, IB & A-Level | Hello Tutor",
+    "metaDescription": "Expert online tutors in Abu Dhabi matched to your child’s school and curriculum. IGCSE, IB, A-Level and more. 1:1 lessons with no commute required. Book free consultation."
+  },
+  "tutorsInSharjah": {
+    "hero": {
+      "headline": "Expert online tutors for Sharjah students",
+      "subheadline": "1:1 tutoring matched to your child’s curriculum and exam board — without travelling to Dubai to find a good tutor.",
+      "cta": "No commitment. Takes 5 minutes."
+    },
+    "whyChoose": {
+      "title": "Why Sharjah families choose online tutoring",
+      "subtitle": "Sharjah has a large, academically focused student population and some of the best international schools in the UAE. But the tutoring options available locally have never matched that. Online tutoring changes that completely.",
+      "cards": [
+        {
+          "title": "Quality tutoring used to mean travelling to Dubai",
+          "desc": "For Sharjah families, finding a strong subject specialist has historically meant crossing the border. With online tutoring, the best tutors come to you — and your child loses nothing by staying home."
+        },
+        {
+          "title": "Multiple curriculum streams, multiple demands",
+          "desc": "From Sharjah English School and the Cambridge High School to GEMS Westminster and American international schools, Sharjah students follow a wide range of curriculum streams. We match based on exactly what your child is studying."
+        },
+        {
+          "title": "Academic pressure in a competitive environment",
+          "desc": "Sharjah has a reputation as one of the most education-focused emirates in the UAE. Students here feel the pressure to perform, and the right support at the right time makes a measurable difference."
+        },
+        {
+          "title": "Consistency is hard to come by",
+          "desc": "Many Sharjah families have cycled through tutors who weren’t qualified for the right exam board or who didn’t last. We vet every tutor rigorously and rematch for free if something isn’t working."
+        }
+      ]
+    },
+    "schools": {
+      "title": "Schools We Support Students From",
+      "subtitle": "Our tutors understand the schools, curriculum, and academic expectations that Sharjah students are working within.",
+      "list": [
+        "Sharjah English School",
+        "The Cambridge High School Sharjah",
+        "GEMS Westminster School Sharjah",
+        "Sharjah American International School",
+        "English College Sharjah",
+        "Dunes International School",
+        "Sharjah Indian School",
+        "University of Sharjah affiliated prep students"
+      ],
+      "footer": "Non-exhaustive. We support students across all areas of Sharjah and the Northern Emirates."
+    },
+    "whatWeCover": {
+      "title": "What We Cover",
+      "subtitle": "Whatever the curriculum, whatever the level — we have the right tutor for where your child is.",
+      "blocks": [
+        {
+          "title": "By Level",
+          "itemsLabel": "Levels",
+          "items": [
+            {
+              "title": "Primary",
+              "desc": ""
+            },
+            {
+              "title": "KS3 (Years 7–9)",
+              "desc": ""
+            },
+            {
+              "title": "GCSE & IGCSE",
+              "desc": ""
+            },
+            {
+              "title": "A-Level",
+              "desc": ""
+            },
+            {
+              "title": "IB Diploma (SL & HL)",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "title": "By Subject",
+          "itemsLabel": "Subjects",
+          "items": [
+            {
+              "title": "Maths",
+              "desc": ""
+            },
+            {
+              "title": "English",
+              "desc": ""
+            },
+            {
+              "title": "Biology",
+              "desc": ""
+            },
+            {
+              "title": "Chemistry",
+              "desc": ""
+            },
+            {
+              "title": "Physics",
+              "desc": ""
+            },
+            {
+              "title": "Arabic",
+              "desc": ""
+            },
+            {
+              "title": "Economics",
+              "desc": ""
+            },
+            {
+              "title": "Business Studies",
+              "desc": ""
+            },
+            {
+              "title": "History",
+              "desc": ""
+            },
+            {
+              "title": "Computer Science",
+              "desc": ""
+            },
+            {
+              "title": "And more",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "title": "By Curriculum",
+          "itemsLabel": "Curriculums",
+          "items": [
+            {
+              "title": "British Curriculum (IGCSE, A-Level)",
+              "desc": ""
+            },
+            {
+              "title": "IB Diploma",
+              "desc": ""
+            },
+            {
+              "title": "American Curriculum (AP, SAT)",
+              "desc": ""
+            },
+            {
+              "title": "CBSE / Indian Curriculum",
+              "desc": ""
+            },
+            {
+              "title": "Cambridge International",
+              "desc": ""
+            },
+            {
+              "title": "Edexcel",
+              "desc": ""
+            }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Trusted by parents in Sharjah",
+      "stats": [
+        "95% of parents see grade improvement within 3 months",
+        "4.9/5 average parent rating",
+        "10,000+ lessons delivered"
+      ],
+      "reviews": {
+        "1": {
+          "text": "“Before Hello Tutor, every decent tutor we found was based in Dubai. The travel was unsustainable. Getting a tutor online who actually knew the Cambridge IGCSE specification was a genuine relief. My son’s grades improved within two months.”",
+          "author": "— Hassan, Dad of Year 11 student, Sharjah English School"
+        },
+        "2": {
+          "text": "“My daughter needed support for A-Level Chemistry and Maths. Hello Tutor matched her with two specialist tutors within a few days. She’s now predicted two As and a B — we’re absolutely thrilled.”",
+          "author": "— Priya, Mum of Year 13 student, Cambridge High School Sharjah"
+        },
+        "3": {
+          "text": "“We’d always assumed the best tutors were only available in Dubai. What we found through Hello Tutor was actually better than anything we’d tried in person. Convenient, consistent, and our son actually looks forward to the sessions.”",
+          "author": "— Fatima, Mum of Year 10 student, GEMS Westminster School Sharjah"
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "From first conversation to first lesson in four simple steps.",
+      "stepLabel": "Step",
+      "steps": [
+        {
+          "title": "Tell us what you need",
+          "desc": "Share your child’s current level, the subjects causing difficulty, and any upcoming exams. We know the schools and curriculum across Sharjah inside out."
+        },
+        {
+          "title": "We assign the right tutor",
+          "desc": "We find the right tutor based on subject expertise, curriculum knowledge, teaching style, and your child’s specific needs. No browsing needed."
+        },
+        {
+          "title": "First lesson booked within days",
+          "desc": "Meet your tutor in our interactive online classroom. Discuss goals, current challenges, and get started."
+        },
+        {
+          "title": "Progress from day one",
+          "desc": "Regular lessons focused on closing gaps, building confidence, and improving grades. A summary after every session so you always know how it’s going."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Everything you need to know before getting started.",
+      "subtitle": "Everything you need to know about tutoring in Sharjah",
+      "cta": "View all FAQs",
+      "items": [
+        {
+          "question": "Do your tutors know the schools and curriculum in Sharjah?",
+          "answer": "Yes. We match based on your child’s specific school and curriculum. Our tutors are experienced with the Cambridge, Edexcel, and A-Level specifications followed by schools like Sharjah English School, the Cambridge High School, GEMS Westminster, and others."
+        },
+        {
+          "question": "Are all lessons online?",
+          "answer": "Yes. All Hello Tutor lessons take place in our interactive online classroom. For Sharjah families this means no commute to Dubai, flexible scheduling, and access to specialist tutors that simply aren’t available locally."
+        },
+        {
+          "question": "Do you cover the Northern Emirates as well?",
+          "answer": "Yes. Because all lessons are online, we work with families across Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Um Al Quwain. Distance is not a factor."
+        },
+        {
+          "question": "How quickly can we get started?",
+          "answer": "We typically match students within 24–48 hours and have the first lesson booked within a few days."
+        },
+        {
+          "question": "What if the tutor isn’t the right fit?",
+          "answer": "We’ll rematch you. No awkward conversations, no penalties. Getting the right fit matters more than sticking with the first match."
+        },
+        {
+          "question": "What subjects and levels do you cover?",
+          "answer": "All major subjects across Primary, KS3, GCSE, IGCSE, A-Level, and IB. If you’re unsure whether we cover your child’s specific subject or exam board, get in touch and we’ll confirm."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to find the right tutor?",
+      "subtitle": "Book a free consultation and we’ll take it from there. Over 5,000 families have trusted us to make the match.",
+      "primaryBtn": "Book free consultation",
+      "secondaryBtn": "View pricing"
+    },
+    "metaTitle": "Online Tutors Sharjah | IGCSE, IB & A-Level | Hello Tutor",
+    "metaDescription": "Expert online tutors in Sharjah matched to your child’s school and curriculum. IGCSE, A-Level and IB covered. 1:1 lessons with no commute to Dubai. Book free consultation."
   }
 }

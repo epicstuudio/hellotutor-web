@@ -48,7 +48,7 @@ export const mainNav: NavItem[] = [
         titleKey: 'levels.universities',
         children: [
           { titleKey: 'levels.universityAdmissions', href: '/university-admissions' },
-          { titleKey: 'levels.admissionsAbroad', href: '/admissions-abroad' },
+          // { titleKey: 'levels.admissionsAbroad', href: '/admissions-abroad' },
         ],
       },
     ],
@@ -84,6 +84,9 @@ export const footerTopNav: { titleKey: string; items: NavItem[] }[] = [
     items: [
       { titleKey: 'footer.safeguarding', href: '/safeguarding' },
       { titleKey: 'nav.contact', href: '/contact' },
+      { titleKey: 'footer.tutorsInDubai', href: '/tutors-in-dubai' },
+      { titleKey: 'footer.tutorsInAbuDhabi', href: '/tutors-in-abu-dhabi' },
+      { titleKey: 'footer.tutorsInSharjah', href: '/tutors-in-sharjah' },
     ],
   },
 ];
