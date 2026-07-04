@@ -12,6 +12,7 @@ import { CookieBanner } from '@/components/ui/CookieBanner';
 import { CookieSettingsModal } from '@/components/ui/CookieSettingsModal';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { createMetadata } from '@/lib/metadata';
+import type { Viewport } from 'next';
 import '@/styles/globals.css';
 
 const notoSansArabic = Noto_Sans_Arabic({
@@ -19,6 +20,10 @@ const notoSansArabic = Noto_Sans_Arabic({
   variable: '--font-noto-arabic',
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  themeColor: '#fff5ed',
+};
 
 export function generateMetadata() {
   return createMetadata({

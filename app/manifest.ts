@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Expert Online Tutoring across the UK and UAE',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#5ac919', // Parrot 500
+    background_color: '#fff5ed',
+    theme_color: '#fff5ed', // Surface color
     icons: [
       {
         src: '/favicon.ico',

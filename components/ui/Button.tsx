@@ -89,6 +89,7 @@ export function Button({
     'group relative inline-flex items-center justify-center whitespace-nowrap select-none cursor-pointer overflow-hidden',
     'transition-all duration-normal ease-smooth',
     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-edge-focus',
+    '[-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]',
     'disabled:opacity-50 disabled:pointer-events-none',
     variantClasses[variant],
     sizeClasses[size],
