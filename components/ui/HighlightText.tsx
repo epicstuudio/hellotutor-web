@@ -17,15 +17,17 @@ export function HighlightText({ children, words, className, emClassName }: Highl
  targets.forEach((word, wi) => {
  const idx = remaining.indexOf(word);
  if (idx !== -1) {
- const before = remaining.slice(0, idx);
- const after = remaining.slice(idx + word.length);
- if (before) parts.push(<span key={`b-${wi}`}>{before}</span>);
- parts.push(
- <em key={`w-${wi}`} className={cn('italic pr-3', emClassName)}>
- {word}
- </em>
- );
- remaining = after;
+    const before = remaining.slice(0, idx);
+    const after = remaining.slice(idx + word.length);
+    const isAtEndOrPunctuation = after.length === 0 || /^[.,!?:;]/.test(after);
+    
+    if (before) parts.push(<span key={`b-${wi}`}>{before}</span>);
+    parts.push(
+      <em key={`w-${wi}`} className={cn('italic', !isAtEndOrPunctuation && 'pr-3', emClassName)}>
+        {word}
+      </em>
+    );
+    remaining = after;
  }
  });
 
