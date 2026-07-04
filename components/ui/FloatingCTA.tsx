@@ -63,7 +63,7 @@ export function FloatingCTA() {
             variant="primary"
             size="lg"
             className="shadow-2xl shadow-surface-action/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            hoverChildren="+971 585989768"
+            hoverChildren={siteConfig.whatsappFormatted}
             hoverStartSlot={<WhatsAppIcon className="w-5 h-5" />}
           >
             <WhatsAppIcon className="w-5 h-5" />

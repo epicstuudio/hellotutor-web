@@ -55,7 +55,7 @@ export function TutorHero() {
               size="lg"
               target="_blank"
               rel="noopener noreferrer"
-              hoverChildren="+971 585989768"
+              hoverChildren={siteConfig.whatsappFormatted}
               hoverStartSlot={<WhatsAppIcon className="w-5 h-5" />}
             >
               <WhatsAppIcon className="w-5 h-5" />

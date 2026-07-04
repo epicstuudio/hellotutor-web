@@ -1,3 +1,6 @@
+const whatsappNumber = '971585817335';
+const whatsappFormatted = '+971 58 581 7335';
+
 export const siteConfig = {
   name: 'HelloTutor',
   description: '', // To be provided
@@ -5,8 +8,9 @@ export const siteConfig = {
   ogImage: 'https://hellotutor.me/og.png',
   locale: 'ae-en',
   loginUrl: 'https://app.hellotutor.me',
-  whatsappUrl:
-    'https://api.whatsapp.com/send/?phone=971585989768&text&type=phone_number&app_absent=0',
+  whatsappNumber,
+  whatsappFormatted,
+  whatsappUrl: `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&type=phone_number&app_absent=0`,
   links: {
     twitter: '',
     facebook: '',

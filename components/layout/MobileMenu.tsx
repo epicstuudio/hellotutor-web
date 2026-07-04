@@ -204,7 +204,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               href={siteConfig.whatsappUrl}
               variant="primary"
               className="w-full"
-              hoverChildren="+971 585989768"
+              hoverChildren={siteConfig.whatsappFormatted}
             >
               {t('common.bookConsultation')}
             </Button>

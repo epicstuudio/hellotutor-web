@@ -145,7 +145,7 @@ export function CommitmentBanner({ translationKey }: CommitmentBannerProps) {
               variant="primary"
               size="lg"
               className="w-full sm:w-auto"
-              hoverChildren="+971 585989768"
+              hoverChildren={siteConfig.whatsappFormatted}
               hoverStartSlot={<WhatsAppIcon className="w-5 h-5" />}
             >
               <WhatsAppIcon className="w-5 h-5" />

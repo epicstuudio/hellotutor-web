@@ -25,6 +25,7 @@ import {
     Video,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { siteConfig } from '@/config/site';
 
 /* ------------------------------------------------------------------ */
 // Types
@@ -361,7 +362,7 @@ export function SafeguardingContent() {
                                                 safeguarding@hellotutor.me
                                             </a>
                                             <a
-                                                href="tel:+971585817335"
+                                                href={`tel:${siteConfig.whatsappFormatted.replace(/ /g, '')}`}
                                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-edge text-content text-body-sm font-semibold hover:bg-surface-strong transition-colors"
                                             >
                                                 <Phone className="w-4 h-4" />

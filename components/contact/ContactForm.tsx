@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
+import { siteConfig } from '@/config/site';
 import { isValidPhoneNumber, type CountryCode } from 'libphonenumber-js';
 import {
  Mail,
@@ -718,15 +719,15 @@ function ContactWays() {
  {
  key: 'whatsapp',
  icon: MessageCircle,
- value: '+971 58 581 7335',
- href: 'https://api.whatsapp.com/send/?phone=971585817335&text&type=phone_number&app_absent=0',
+ value: siteConfig.whatsappFormatted,
+ href: siteConfig.whatsappUrl,
  color: 'bg-green-50 text-green-600',
  },
  {
  key: 'phone',
  icon: Phone,
- value: '+971 58 581 7335',
- href: 'tel:+971585817335',
+ value: siteConfig.whatsappFormatted,
+ href: `tel:${siteConfig.whatsappNumber}`,
  color: 'bg-blue-50 text-blue-600',
  },
  ];
