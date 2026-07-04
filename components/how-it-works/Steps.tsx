@@ -139,7 +139,7 @@ export function Steps() {
               className="w-full lg:w-1/2"
             >
               <Image
-                src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Tell%20us%20about%20your%20child.jpg"
+                src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/how-it-works-1.png"
                 alt={t('steps.1.title')}
                 width={800}
                 height={600}
@@ -163,10 +163,10 @@ export function Steps() {
                 <div className="relative z-10 flex flex-col items-center gap-1 mt-12">
                   <div className="relative w-24 h-24 rounded-full border-4 border-white overflow-hidden bg-surface mb-2">
                     <Image
-                      src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works/t1.jpg"
+                      src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/how-it-works-sara.png"
                       alt="Tutor"
                       fill
-                      className="object-cover"
+                      className="object-cover scale-[1.7] origin-[50%_25%]"
                       unoptimized
                       sizes="96px"
                     />
