@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { TrustBadge } from '@/components/shared/TrustBadge';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -27,6 +28,7 @@ export interface BaseHeroProps {
   imageClassName?: string;
   highlightWord?: string;
   stats?: string[];
+  trustText?: string;
 }
 
 export function BaseHero({
@@ -36,6 +38,7 @@ export function BaseHero({
   imageClassName,
   highlightWord,
   stats,
+  trustText,
 }: BaseHeroProps) {
   const t = useTranslations();
 
@@ -142,6 +145,17 @@ export function BaseHero({
               )}
             </div>
           </motion.div>
+
+          {trustText && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-6 sm:mt-8"
+            >
+              <TrustBadge text={trustText} />
+            </motion.div>
+          )}
         </div>
 
         <motion.div

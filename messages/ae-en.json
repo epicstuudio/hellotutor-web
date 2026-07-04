@@ -12,7 +12,7 @@
   "hero": {
     "titleLine1": "The grades they need.",
     "titleLine2": "The confidence they deserve.",
-    "subtitle": "1:1 tutoring — online or at home — that fits around school and activities, boosts results, and takes the stress out of learning.",
+    "subtitle": "At HelloTutor, we unlock the potential in every student. Families trust us to find the right tutor, match them carefully, and stay involved to make sure it's working. Through expert home and online tutoring, we help students build the skills, habits, and results that matter to them.",
     "noCommitment": "No commitment. Takes 5 minutes.",
     "stat1Value": "500",
     "stat1Label": "Tutors from top universities",
@@ -6649,8 +6649,9 @@
   "tutorsInDubai": {
     "hero": {
       "headline": "Expert online tutors for Dubai students",
-      "subheadline": "1:1 tutoring matched to your child’s school, curriculum, and exam board. No commute. No wasted time. Just results.",
-      "ctaPrimary": "No commitment. Takes 5 minutes."
+      "subheadline": "1:1 tutoring matched to your child's school, curriculum, and exam board. Online or at home. No wasted time. Just results.",
+      "ctaPrimary": "No commitment. Takes 5 minutes.",
+      "trustText": "Every tutor is MoHRE licensed and DBS checked, whether they're teaching online or in your home."
     },
     "stats": {
       "title": "",
@@ -6674,16 +6675,16 @@
       ]
     },
     "whyChoose": {
-      "title": "Why Dubai Families Choose Online Tutoring",
-      "subtitle": "Dubai is one of the most academically demanding cities in the world. International schools are competitive, curriculum standards are rigorous, and the pressure on students — and parents — is real.",
+      "title": "Why Dubai Families Choose Hello Tutor",
+      "subtitle": "Dubai is one of the most academically demanding cities in the world. International schools are competitive, curriculum standards are rigorous, and the pressure on students, and parents, is real.",
       "cards": [
         {
           "title": "No two schools are the same",
           "desc": "Dubai has over 200 private schools across British, American, IB, Indian, and French curriculum streams. A tutor who knows IGCSE isn’t automatically right for an IB student. We match based on your child’s specific school and curriculum."
         },
         {
-          "title": "Traffic makes in-person tutoring impractical",
-          "desc": "Travelling across Dubai for a one-hour lesson is a two-hour commitment. Online tutoring removes that entirely — the lesson starts when the school bag hits the floor, not 45 minutes later."
+          "title": "Traffic shouldn't decide your options",
+          "desc": "Travelling across Dubai for a one-hour lesson is a two-hour commitment. That's why most families choose online, the lesson starts when the school bag hits the floor, not 45 minutes later. For those who want a tutor in the room, we also place home tutors locally, so you're never stuck crossing the city for a good match."
         },
         {
           "title": "Exam pressure arrives early",
@@ -6692,6 +6693,10 @@
         {
           "title": "Consistency is hard to find",
           "desc": "Many families in Dubai have tried tutors who didn’t last, didn’t know the exam board, or weren’t the right fit. We handle the matching so you don’t have to start again."
+        },
+        {
+          "title": "Choose what works for your family",
+          "desc": "Some students focus best with a tutor in the room. Others prefer the flexibility of online lessons straight after school. We offer both, with the same vetting and curriculum matching either way."
         }
       ]
     },
@@ -6880,7 +6885,7 @@
         },
         {
           "question": "Are all lessons online?",
-          "answer": "Yes. All Hello Tutor lessons take place in our interactive online classroom. For Dubai families this means no travel, flexible scheduling around school and activities, and access to the best tutors regardless of where in the city you are."
+          "answer": "No. We offer both online tutoring and home tutoring across Dubai. Let us know your preference when you tell us what you need, and we'll match you accordingly."
         },
         {
           "question": "Do you cover all areas of Dubai?",
@@ -6908,18 +6913,19 @@
       "primaryBtn": "Book Consultation",
       "secondaryBtn": "View Pricing"
     },
-    "metaTitle": "Online Tutors Dubai | IGCSE, IB & A-Level | Hello Tutor",
+    "metaTitle": "Tutors in Dubai | Online & Home Tutoring | Hello Tutor",
     "metaDescription": "Expert online tutors in Dubai matched to your child’s school, curriculum, and exam board. IGCSE, IB, A-Level and more. 1:1 lessons. No commute. Book free consultation."
   },
   "tutorsInAbuDhabi": {
     "hero": {
       "headline": "Expert online tutors for Abu Dhabi students",
-      "subheadline": "1:1 tutoring matched to your child’s school, curriculum, and exam board. The right tutor, online, whenever it suits you.",
-      "cta": "No commitment. Takes 5 minutes."
+      "subheadline": "1:1 tutoring matched to your child's school, curriculum, and exam board. The right tutor, online or at home, whenever it suits you.",
+      "cta": "No commitment. Takes 5 minutes.",
+      "trustText": "Every tutor is MoHRE licensed and DBS checked, whether they're teaching online or in your home."
     },
     "whyChoose": {
-      "title": "Why Abu Dhabi families choose online tutoring",
-      "subtitle": "Abu Dhabi’s school landscape is uniquely diverse — British, American, IB, and MOE schools sit side by side across the emirate. The right tutor for an Abu Dhabi student needs to understand that landscape, not just the subject.",
+      "title": "Why Abu Dhabi families choose Hello Tutor",
+      "subtitle": "Abu Dhabi's school landscape is uniquely diverse. British, American, IB, and MOE schools sit side by side across the emirate. The right tutor for an Abu Dhabi student needs to understand that landscape, not just the subject.",
       "cards": [
         {
           "title": "Curriculum variety that generic tutors can’t handle",
@@ -6927,7 +6933,7 @@
         },
         {
           "title": "Distances within Abu Dhabi matter",
-          "desc": "Whether you’re on Reem Island, Saadiyat, in Khalidiyah, or out toward Al Ain, finding a strong tutor nearby is genuinely difficult. Online tutoring removes the distance entirely."
+          "desc": "Whether you're on Reem Island, Saadiyat, in Khalidiyah, or out toward Al Ain, finding a strong tutor nearby is genuinely difficult. Online tutoring removes the distance entirely. If you'd rather have a tutor in person, we also place home tutors across these areas, so distance doesn't have to mean compromise either way."
         },
         {
           "title": "The stakes are high from early on",
@@ -6936,6 +6942,10 @@
         {
           "title": "Quality is hard to verify locally",
           "desc": "Word-of-mouth only goes so far. We vet every tutor rigorously — qualifications, experience, DBS-checked and MOHRE licensed — so you know exactly who is teaching your child."
+        },
+        {
+          "title": "Choose what works for your family",
+          "desc": "Some students focus best with a tutor in the room. Others prefer the flexibility of online lessons after school. We offer both, matched with the same rigorous vetting and curriculum knowledge."
         }
       ]
     },
@@ -7129,7 +7139,7 @@
         },
         {
           "question": "Are all lessons online?",
-          "answer": "Yes. All Hello Tutor lessons take place in our interactive online classroom. For Abu Dhabi families this means no commute, flexible scheduling, and access to the best tutors wherever you are in the emirate."
+          "answer": "No. We offer both online tutoring and home tutoring across Abu Dhabi and Al Ain. Let us know your preference when you tell us what you need, and we'll match you accordingly."
         },
         {
           "question": "Do you cover students in Al Ain or other parts of the emirate?",
@@ -7155,22 +7165,23 @@
       "primaryBtn": "Book Consultation",
       "secondaryBtn": "View Pricing"
     },
-    "metaTitle": "Online Tutors Abu Dhabi | IGCSE, IB & A-Level | Hello Tutor",
+    "metaTitle": "Tutors in Abu Dhabi | Online & Home Tutoring | Hello Tutor",
     "metaDescription": "Expert online tutors in Abu Dhabi matched to your child’s school and curriculum. IGCSE, IB, A-Level and more. 1:1 lessons with no commute required. Book free consultation."
   },
   "tutorsInSharjah": {
     "hero": {
       "headline": "Expert online tutors for Sharjah students",
-      "subheadline": "1:1 tutoring matched to your child’s curriculum and exam board — without travelling to Dubai to find a good tutor.",
-      "cta": "No commitment. Takes 5 minutes."
+      "subheadline": "1:1 tutoring matched to your child's curriculum and exam board, online or at home, without travelling to Dubai to find a good tutor.",
+      "cta": "No commitment. Takes 5 minutes.",
+      "trustText": "Every tutor is MoHRE licensed and DBS checked, whether they're teaching online or in your home."
     },
     "whyChoose": {
-      "title": "Why Sharjah families choose online tutoring",
-      "subtitle": "Sharjah has a large, academically focused student population and some of the best international schools in the UAE. But the tutoring options available locally have never matched that. Online tutoring changes that completely.",
+      "title": "Why Sharjah families choose Hello Tutor",
+      "subtitle": "Sharjah has a large, academically focused student population and some of the best international schools in the UAE. But the tutoring options available locally have never matched that. Whether you want a tutor in your home or online, that changes completely.",
       "cards": [
         {
           "title": "Quality tutoring used to mean travelling to Dubai",
-          "desc": "For Sharjah families, finding a strong subject specialist has historically meant crossing the border. With online tutoring, the best tutors come to you — and your child loses nothing by staying home."
+          "desc": "For Sharjah families, finding a strong subject specialist has historically meant crossing the border. With Hello Tutor, the best tutors come to you, whether that's in your home or in our online classroom. Your child loses nothing by staying local."
         },
         {
           "title": "Multiple curriculum streams, multiple demands",
@@ -7183,6 +7194,10 @@
         {
           "title": "Consistency is hard to come by",
           "desc": "Many Sharjah families have cycled through tutors who weren’t qualified for the right exam board or who didn’t last. We vet every tutor rigorously and rematch for free if something isn’t working."
+        },
+        {
+          "title": "Choose what works for your family",
+          "desc": "Some students focus best with a tutor in the room. Others prefer the flexibility of online lessons after school. We offer both, matched to the same rigorous vetting and curriculum expertise either way."
         }
       ]
     },
@@ -7369,7 +7384,7 @@
         },
         {
           "question": "Are all lessons online?",
-          "answer": "Yes. All Hello Tutor lessons take place in our interactive online classroom. For Sharjah families this means no commute to Dubai, flexible scheduling, and access to specialist tutors that simply aren’t available locally."
+          "answer": "No. We offer both online tutoring and home tutoring across Sharjah. Let us know your preference when you tell us what you need, and we'll match you with a tutor who can deliver it."
         },
         {
           "question": "Do you cover the Northern Emirates as well?",
@@ -7395,7 +7410,7 @@
       "primaryBtn": "Book free consultation",
       "secondaryBtn": "View pricing"
     },
-    "metaTitle": "Online Tutors Sharjah | IGCSE, IB & A-Level | Hello Tutor",
+    "metaTitle": "Tutors in Sharjah | Online & Home Tutoring | Hello Tutor",
     "metaDescription": "Expert online tutors in Sharjah matched to your child’s school and curriculum. IGCSE, A-Level and IB covered. 1:1 lessons with no commute to Dubai. Book free consultation."
   }
 }

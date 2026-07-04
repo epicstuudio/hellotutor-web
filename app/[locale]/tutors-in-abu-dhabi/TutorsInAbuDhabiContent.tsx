@@ -19,6 +19,7 @@ export function TutorsInAbuDhabiContent() {
         subtitle={t('hero.subheadline')}
         imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryHero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
+        trustText={t('hero.trustText')}
       />
 
 

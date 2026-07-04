@@ -70,7 +70,7 @@
 
   /* Values section colors */
   --color-value-human: #9c4d9e;
-  --color-value-quality: var(--color-purple-600);
+  --color-value-quality: var(--color-palm-green-950);
   --color-value-calm: #b85c2e;
 
   --animate-marquee: marquee 120s linear infinite;
@@ -149,18 +149,18 @@
   --color-parrot-900: #285215;
   --color-parrot-950: #112d06;
 
-  /* Purple */
-  --color-purple-50: #eef4ff;
-  --color-purple-100: #e0ebff;
-  --color-purple-200: #c6d9ff;
-  --color-purple-300: #a4c0fd;
-  --color-purple-400: #809cf9;
-  --color-purple-500: #6279f2;
-  --color-purple-600: #4f5ce8;
-  --color-purple-700: #3741cb;
-  --color-purple-800: #2f38a4;
-  --color-purple-900: #2d3682;
-  --color-purple-950: #1b1f4b;
+  /* Palm Green */
+  --color-palm-green-50: #f4faf3;
+  --color-palm-green-100: #e5f4e4;
+  --color-palm-green-200: #cde7cb;
+  --color-palm-green-300: #a5d3a2;
+  --color-palm-green-400: #74b771;
+  --color-palm-green-500: #519a4d;
+  --color-palm-green-600: #3e7e3b;
+  --color-palm-green-700: #336431;
+  --color-palm-green-800: #2c502b;
+  --color-palm-green-900: #264225;
+  --color-palm-green-950: #132a13;
 
   /* Gray (warm) */
   --color-gray-0: #ffffff;
@@ -263,7 +263,7 @@
   --color-surface-strong: var(--color-gray-200);
   --color-surface-action: var(--color-parrot-400);
   --color-surface-brand: var(--color-parrot-500);
-  --color-surface-brand-alt: var(--color-purple-600);
+  --color-surface-brand-alt: var(--color-palm-green-950);
   --color-surface-hover: rgba(0, 0, 0, 0.08);
   --color-surface-base: var(--color-gray-0);
 
@@ -288,8 +288,8 @@
   --color-edge-danger: var(--color-red-400);
 
   /* Icon accents */
-  --color-icon-accent: var(--color-purple-600);
-  --color-icon-accent-bg: var(--color-purple-100);
+  --color-icon-accent: var(--color-palm-green-950);
+  --color-icon-accent-bg: var(--color-palm-green-100);
 
   /* Status Backgrounds */
   --color-surface-info-light: var(--color-blue-50);

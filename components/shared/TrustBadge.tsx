@@ -5,9 +5,10 @@ import { cn } from '@/lib/utils';
 interface TrustBadgeProps {
   className?: string;
   textClassName?: string;
+  text?: string;
 }
 
-export function TrustBadge({ className, textClassName }: TrustBadgeProps) {
+export function TrustBadge({ className, textClassName, text }: TrustBadgeProps) {
   const t = useTranslations('common');
 
   return (
@@ -21,7 +22,7 @@ export function TrustBadge({ className, textClassName }: TrustBadgeProps) {
         unoptimized
       />
       <span className={cn('text-body-sm text-content-secondary', textClassName)}>
-        {t('trustBadge')}
+        {text || t('trustBadge')}
       </span>
     </div>
   );

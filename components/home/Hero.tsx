@@ -158,16 +158,16 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-h1 text-content mb-6 "
               >
-                <HighlightText words="grades">{t('hero.titleLine1')}</HighlightText>{' '}
+                <HighlightText words="need">{t('hero.titleLine1')}</HighlightText>{' '}
                 <br className="hidden lg:block" />
-                <HighlightText words="confidence">{t('hero.titleLine2')}</HighlightText>
+                <HighlightText words="deserve">{t('hero.titleLine2')}</HighlightText>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-body-xl text-content-secondary mb-8 max-w-lg mx-auto lg:mx-0"
+                className="text-body-base text-content-secondary mb-8 max-w-2xl mx-auto lg:mx-0"
               >
                 {t('hero.subtitle')}
               </motion.p>
@@ -251,7 +251,8 @@ export function Hero() {
             </div>
 
             {/* Right Column — Visual + Dial */}
-            <div className="relative z-0 mt-8 lg:mt-0 min-w-0 lg:overflow-visible">
+            <div className="relative z-0 mt-8 lg:mt-0 min-w-0 lg:overflow-visible flex items-center justify-center">
+              {/* Animation Temporarily Hidden
               <HeroVisual
                 phase={phase}
                 matchedTutor={{
@@ -261,7 +262,6 @@ export function Hero() {
                   image: matchedTutor.image,
                 }}
               />
-              {/* Desktop TutorDial — fades out when matched */}
               <AnimatePresence>
                 {phase === 'matching' && (
                   <motion.div
@@ -280,6 +280,15 @@ export function Hero() {
                   </motion.div>
                 )}
               </AnimatePresence>
+              */}
+              <Image
+                src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/her-home.png"
+                alt="Hero Image"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover rounded-3xl"
+                unoptimized
+              />
             </div>
           </div>
         </Container>
@@ -344,8 +353,8 @@ function TutorDial({ rotation, matchedIndex }: TutorDialProps) {
               >
                 <div
                   className={`w-16 h-16 rounded-full border-2 overflow-hidden flex items-center justify-center transition-all duration-700 relative ${isMatched
-                      ? 'border-green-400 bg-surface-base shadow-[0_0_20px_var(--color-green-200)]'
-                      : 'border-green-200 bg-surface-base'
+                    ? 'border-green-400 bg-surface-base shadow-[0_0_20px_var(--color-green-200)]'
+                    : 'border-green-200 bg-surface-base'
                     }`}
                 >
                   {tutor.image ? (

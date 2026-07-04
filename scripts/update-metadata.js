@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require('fs');
 
-const enPath = 'messages/en.json';
-const arPath = 'messages/ar.json';
+const enPath = 'messages/ae-en.json';
+const arPath = 'messages/ae-ar.json';
 
 const enData = JSON.parse(fs.readFileSync(enPath, 'utf8'));
 const arData = JSON.parse(fs.readFileSync(arPath, 'utf8'));
@@ -356,6 +356,30 @@ arData.termsAndConditions.metaDescription = enData.termsAndConditions.metaDescri
 arData.cookiePolicy = arData.cookiePolicy || {};
 arData.cookiePolicy.metaTitle = enData.cookiePolicy.metaTitle;
 arData.cookiePolicy.metaDescription = enData.cookiePolicy.metaDescription;
+
+enData.tutorsInDubai = enData.tutorsInDubai || {};
+enData.tutorsInDubai.metaTitle = 'Online Tutors Dubai | IGCSE, IB & A-Level | Hello Tutor';
+enData.tutorsInDubai.metaDescription = 'Expert online tutors in Dubai matched to your child’s school, curriculum, and exam board. IGCSE, IB, A-Level and more. 1:1 lessons. No commute. Book free consultation.';
+
+arData.tutorsInDubai = arData.tutorsInDubai || {};
+arData.tutorsInDubai.metaTitle = enData.tutorsInDubai.metaTitle;
+arData.tutorsInDubai.metaDescription = enData.tutorsInDubai.metaDescription;
+
+enData.tutorsInAbuDhabi = enData.tutorsInAbuDhabi || {};
+enData.tutorsInAbuDhabi.metaTitle = 'Online Tutors Abu Dhabi | IGCSE, IB & A-Level | Hello Tutor';
+enData.tutorsInAbuDhabi.metaDescription = 'Expert online tutors in Abu Dhabi matched to your child’s school and curriculum. IGCSE, IB, A-Level and more. 1:1 lessons with no commute required. Book free consultation.';
+
+arData.tutorsInAbuDhabi = arData.tutorsInAbuDhabi || {};
+arData.tutorsInAbuDhabi.metaTitle = 'مدرسون عبر الإنترنت في أبوظبي | IGCSE و IB و A-Level | Hello Tutor';
+arData.tutorsInAbuDhabi.metaDescription = 'مدرسون خبراء عبر الإنترنت في أبوظبي يتم اختيارهم ليناسبوا مدرسة طفلك ومنهجه الدراسي. IGCSE و IB و A-Level وغيرها. دروس فردية 1:1 بدون الحاجة للتنقل. احجز استشارة مجانية.';
+
+enData.tutorsInSharjah = enData.tutorsInSharjah || {};
+enData.tutorsInSharjah.metaTitle = 'Online Tutors Sharjah | IGCSE, IB & A-Level | Hello Tutor';
+enData.tutorsInSharjah.metaDescription = 'Expert online tutors in Sharjah matched to your child’s school and curriculum. IGCSE, A-Level and IB covered. 1:1 lessons with no commute to Dubai. Book free consultation.';
+
+arData.tutorsInSharjah = arData.tutorsInSharjah || {};
+arData.tutorsInSharjah.metaTitle = 'مدرسون عبر الإنترنت في الشارقة | IGCSE و IB و A-Level | Hello Tutor';
+arData.tutorsInSharjah.metaDescription = 'مدرسون خبراء عبر الإنترنت في الشارقة يتم اختيارهم ليناسبوا مدرسة طفلك ومنهجه الدراسي. نغطي IGCSE و A-Level و IB. دروس فردية 1:1 بدون الحاجة للتنقل إلى دبي. احجز استشارة مجانية.';
 
 // Write back
 fs.writeFileSync(enPath, JSON.stringify(enData, null, 2) + '\n');

@@ -84,7 +84,7 @@ export function WhyChooseUs() {
           >
             <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] w-full rounded-4xl overflow-hidden group">
               <Image
-                src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/g33.jpg"
+                src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/home-why-2.png"
                 alt={t('title')}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

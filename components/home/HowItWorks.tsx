@@ -12,10 +12,10 @@ if (typeof window !== 'undefined') {
 }
 
 const STEP_IMAGES = [
-  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Tell%20us%20about%20your%20child.jpg',
-  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/We%20match%20the%20perfect%20tutor.jpg',
-  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/Lessons%20begin.jpeg',
-  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/how-it-works-sm/You%20stay%20in%20the%20loop.jpg',
+  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/how-it-works-1.png',
+  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/how-it-works-2.png',
+  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/how-it-works-3.png',
+  'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/how-it-works-4.png',
 ];
 
 const STEP_IDS = ['1', '2', '3', '4'] as const;
