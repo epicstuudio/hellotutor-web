@@ -23,9 +23,11 @@ export function createMetadata({
   noIndex = false,
 }: CreateMetadataParams): Metadata {
   const url = `${siteConfig.url}${path}`;
+  const hasBrand = title.includes('Hello Tutor') || title.includes('HelloTutor');
+  const finalTitle = hasBrand ? title : `${title} | Hello Tutor`;
 
   return {
-    title,
+    title: finalTitle,
     description: description || undefined,
     ...(noIndex && {
       robots: {
@@ -41,7 +43,7 @@ export function createMetadata({
       },
     },
     openGraph: {
-      title,
+      title: finalTitle,
       description: description || undefined,
       url,
       siteName: siteConfig.name,
@@ -53,14 +55,14 @@ export function createMetadata({
               url: image,
               width: 1200,
               height: 630,
-              alt: title,
+              alt: finalTitle,
             },
           ]
         : [],
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: finalTitle,
       description: description || undefined,
       images: image ? [image] : [],
     },

@@ -3,9 +3,9 @@ const whatsappFormatted = '+971 58 581 7335';
 
 export const siteConfig = {
   name: 'HelloTutor',
-  description: '', // To be provided
+  description: "Expert online tutoring tailored to your child's needs. We connect students with top tutors in Maths, Science, English, and more to build confidence and deliver results.",
   url: 'https://hellotutor.me',
-  ogImage: 'https://hellotutor.me/og.png',
+  ogImage: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/hero-main.png',
   locale: 'ae-en',
   loginUrl: 'https://app.hellotutor.me',
   whatsappNumber,
