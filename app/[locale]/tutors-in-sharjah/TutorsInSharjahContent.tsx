@@ -17,7 +17,7 @@ export function TutorsInSharjahContent() {
       <BaseHero
         title={t('hero.headline')}
         subtitle={t('hero.subheadline')}
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryHero.png"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/sharjah-tutors/sharjah-hero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
         trustText={t('hero.trustText')}
       />
@@ -31,12 +31,12 @@ export function TutorsInSharjahContent() {
       <SchoolsWeSupport translationKey="tutorsInSharjah.schools" />
 
       {/* SECTION 5 — WHAT WE COVER */}
-      <WhatWeCover 
-        translationKey="tutorsInSharjah.whatWeCover" 
+      <WhatWeCover
+        translationKey="tutorsInSharjah.whatWeCover"
         images={[
-          '/images/subjects/maths-hero.jpg',
-          '/images/subjects/english-hero.jpg',
-          '/images/subjects/science-hero.jpg'
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/sharjah-tutors/sharjah-2.png',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/sharjah-tutors/sharjah-1.png',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/sharjah-tutors/sharjah-3.png'
         ]}
       />
 
@@ -44,9 +44,9 @@ export function TutorsInSharjahContent() {
       <Testimonials translationKey="tutorsInSharjah.testimonials" />
 
       {/* SECTION 4 — HOW IT WORKS */}
-      <SubjectHowItWorks 
-        translationKey="tutorsInSharjah.howItWorks" 
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryStudents.jpg"
+      <SubjectHowItWorks
+        translationKey="tutorsInSharjah.howItWorks"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/sharjah-tutors/sharjah-4.png"
       />
 
       {/* SECTION 8 — FAQS */}

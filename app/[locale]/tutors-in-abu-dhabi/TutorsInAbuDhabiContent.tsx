@@ -17,7 +17,7 @@ export function TutorsInAbuDhabiContent() {
       <BaseHero
         title={t('hero.headline')}
         subtitle={t('hero.subheadline')}
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryHero.png"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/abudhabi-tutors/abudhabi-hero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
         trustText={t('hero.trustText')}
       />
@@ -31,12 +31,12 @@ export function TutorsInAbuDhabiContent() {
       <SchoolsWeSupport translationKey="tutorsInAbuDhabi.schools" />
 
       {/* SECTION 5 — WHAT WE COVER */}
-      <WhatWeCover 
-        translationKey="tutorsInAbuDhabi.whatWeCover" 
+      <WhatWeCover
+        translationKey="tutorsInAbuDhabi.whatWeCover"
         images={[
-          '/images/subjects/maths-hero.jpg',
-          '/images/subjects/english-hero.jpg',
-          '/images/subjects/science-hero.jpg'
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/abudhabi-tutors/abudhabi-1.png',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/abudhabi-tutors/abduhabi-2.jpg',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/abudhabi-tutors/abudhabi-3.jpg'
         ]}
       />
 
@@ -44,9 +44,9 @@ export function TutorsInAbuDhabiContent() {
       <Testimonials translationKey="tutorsInAbuDhabi.testimonials" />
 
       {/* SECTION 4 — HOW IT WORKS */}
-      <SubjectHowItWorks 
-        translationKey="tutorsInAbuDhabi.howItWorks" 
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryStudents.jpg"
+      <SubjectHowItWorks
+        translationKey="tutorsInAbuDhabi.howItWorks"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/abudhabi-tutors/abudhabi-4.png"
       />
 
       {/* SECTION 8 — FAQS */}

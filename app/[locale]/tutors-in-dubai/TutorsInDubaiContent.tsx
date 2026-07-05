@@ -17,7 +17,7 @@ export function TutorsInDubaiContent() {
       <BaseHero
         title={t('hero.headline')}
         subtitle={t('hero.subheadline')}
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryHero.png"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/dubai-tutors/dubai-hero.png"
         imageClassName="object-bottom lg:object-[center_60%]"
         trustText={t('hero.trustText')}
       />
@@ -31,12 +31,12 @@ export function TutorsInDubaiContent() {
       <SchoolsWeSupport translationKey="tutorsInDubai.schools" />
 
       {/* SECTION 5 — WHAT WE COVER */}
-      <WhatWeCover 
-        translationKey="tutorsInDubai.whatWeCover" 
+      <WhatWeCover
+        translationKey="tutorsInDubai.whatWeCover"
         images={[
-          '/images/subjects/maths-hero.jpg',
-          '/images/subjects/english-hero.jpg',
-          '/images/subjects/science-hero.jpg'
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/dubai-tutors/dubai-1.png',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/dubai-tutors/dubai-2.png',
+          'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/dubai-tutors/dubai-3.png'
         ]}
       />
 
@@ -44,9 +44,9 @@ export function TutorsInDubaiContent() {
       <Testimonials translationKey="tutorsInDubai.testimonials" />
 
       {/* SECTION 4 — HOW IT WORKS */}
-      <SubjectHowItWorks 
-        translationKey="tutorsInDubai.howItWorks" 
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryStudents.jpg"
+      <SubjectHowItWorks
+        translationKey="tutorsInDubai.howItWorks"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/dubai-tutors/dubai-4.png"
       />
 
       {/* SECTION 8 — FAQS */}

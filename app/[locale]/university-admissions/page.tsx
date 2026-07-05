@@ -42,29 +42,29 @@ export default async function UniversityAdmissionsPage({
       <BaseHero
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryHero.png"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/university-admissions/uni5.jpg"
         imageClassName="object-bottom lg:object-[center_60%]"
         stats={[t('statPartners'), t('statCountries'), t('statSupport')]}
       />
       <LevelChallenges
         translationKey="levelPages.universityAdmissionsPage.challenges"
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryStudents.jpg"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/university-admissions/uni2.jpg"
       />
       <IncludedServices translationKey="levelPages.universityAdmissionsPage.included" />
       <SupportedCountries translationKey="levelPages.universityAdmissionsPage.supportedCountries" />
-      <TargetAudienceList 
+      <TargetAudienceList
         translationKey="levelPages.universityAdmissionsPage.whoThisIsFor"
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryHero.png" 
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/university-admissions/uni-4.png"
       />
-      <SubjectHowItWorks 
+      <SubjectHowItWorks
         translationKey="levelPages.universityAdmissionsPage.howItWorks"
-        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/Primary-Tutors/PrimaryStudents.jpg"
+        imageSrc="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/university-admissions/uni3.jpg"
       />
       <SubjectFAQs translationKey="levelPages.universityAdmissionsPage.faq" />
-      <CTASection 
-        title={t('cta.title')} 
-        subtitle={t('cta.subtitle')} 
-        highlightWord="plan" 
+      <CTASection
+        title={t('cta.title')}
+        subtitle={t('cta.subtitle')}
+        highlightWord="plan"
       />
     </>
   );

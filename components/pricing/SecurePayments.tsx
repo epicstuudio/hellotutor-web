@@ -96,7 +96,7 @@ export function SecurePayments() {
           >
             {/* Placeholder image since we don't have the original asset */}
             <Image
-              src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/pricing/Secure%20payments.jpg"
+              src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/pricing/pricing-page.png"
               alt="Secure Payments"
               fill
               className="object-cover"
