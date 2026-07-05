@@ -66,5 +66,10 @@ export function createMetadata({
       description: description || undefined,
       images: image ? [image] : [],
     },
+    icons: {
+      icon: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/favicon/favicon-2.png',
+      shortcut: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/favicon/favicon-2.png',
+      apple: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/favicon/favicon-2.png',
+    },
   };
 }
