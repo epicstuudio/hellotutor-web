@@ -67,9 +67,14 @@ export function createMetadata({
       images: image ? [image] : [],
     },
     icons: {
-      icon: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/favicon/favicon-2.png',
-      shortcut: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/favicon/favicon-2.png',
-      apple: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/favicon/favicon-2.png',
+      icon: [
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
     },
   };
 }
