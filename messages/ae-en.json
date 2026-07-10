@@ -31,15 +31,15 @@
   "howItWorksPageHero": {
     "title": "Learn from anywhere with expert tutors",
     "subtitle": "Finding the perfect tutor is the hard part. We handle it so you don't have to.",
-    "metaTitle": "How Hello Tutor Works | Expert Tutor Matching Dubai & UAE",
-    "metaDescription": "From free consultation to first lesson in 4 simple steps. We find the right tutor for your child's curriculum and goals. No browsing, no guesswork. See how it works."
+    "metaTitle": "How Hello Tutor Works | Private Tutors Dubai & UAE",
+    "metaDescription": "Tell us what your child needs. We match you with a carefully selected private tutor and manage everything — at home or online across the UAE."
   },
   "pricingPageHero": {
     "titleLine1": "1:1 tutoring from",
     "titleLine2": "AED 265 per 60-minute lesson",
     "subtitle": "Straightforward monthly tutoring plans. No hidden fees, no long-term commitment.",
-    "metaTitle": "Online Tutoring Prices Dubai | From AED 265 | Hello Tutor",
-    "metaDescription": "Clear online tutoring pricing from AED 265 per lesson. Flexible weekly plans, save up to AED 600/month. No hidden fees. No long-term contracts. Cancel anytime."
+    "metaTitle": "Private Tutoring Prices UAE | Hello Tutor Home & Online",
+    "metaDescription": "Clear, honest fees for every level and curriculum. Home and online tutoring packages for British, IB, and American curriculum students across the UAE."
   },
   "pricingSection": {
     "mostPopular": "Most Popular",
@@ -505,8 +505,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online English Tutors Dubai | IGCSE, A-Level, IB | Hello Tutor",
-      "metaDescription": "Expert 1:1 English tutoring in Dubai & UAE. IGCSE, A-Level and IB support across reading, writing, comprehension and exam technique. Matched to your curriculum."
+      "metaTitle": "Private English Tutors Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert private English tutors for all ages and curricula across the UAE. Stronger reading, writing, and comprehension — at home or online."
     },
     "scienceTutoring": {
       "heroTitle": "Science tutoring across Biology, Chemistry, and Physics",
@@ -712,8 +712,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Science Tutors Dubai | IGCSE, IB & A-Level | Hello Tutor",
-      "metaDescription": "Expert Biology, Chemistry and Physics tutoring in Dubai & UAE. IGCSE, IB and A-Level specialists matched to your exam board. 1:1 online sessions. Free consultation."
+      "metaTitle": "Private Science Tutors Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert private science tutors for GCSE, IGCSE, and A-Level students across the UAE. Home and online sessions that build understanding, not just grades."
     },
     "mathsTutoring": {
       "heroTitle": "Expert Maths Tutors Matched to You",
@@ -919,8 +919,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Maths Tutors Dubai | IGCSE, IB & A-Level | Hello Tutor",
-      "metaDescription": "1:1 Maths tutoring across Dubai & UAE for IGCSE, IB, A-Level and Primary. Expert tutors matched to your curriculum. Build confidence and improve grades. Book a free consultation."
+      "metaTitle": "Private Maths Tutors Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert private maths tutors for IGCSE, A-Level, and IB across the UAE. Real understanding, lasting confidence — at home or online in Dubai and Abu Dhabi."
     },
     "physicsTutoring": {
       "heroTitle": "Physics tutors who make the equations make sense",
@@ -1109,8 +1109,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Physics Tutors Dubai | IGCSE, A-Level & IB | Hello Tutor",
-      "metaDescription": "Expert 1:1 Physics tutoring in Dubai & UAE. IGCSE, A-Level and IB support across forces, electricity, mechanics and exam technique. Matched to your exam board."
+      "metaTitle": "Private Physics Tutors Dubai & UAE | IGCSE & A-Level",
+      "metaDescription": "Expert private physics tutors for IGCSE, A-Level, and IB across the UAE. The kind of teaching that makes a difficult subject genuinely click."
     },
     "chemistryTutoring": {
       "heroTitle": "Chemistry tutoring that connects the theory to the calculations",
@@ -1299,8 +1299,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Chemistry Tutors Dubai | IGCSE, A-Level & IB | Hello Tutor",
-      "metaDescription": "Expert 1:1 Chemistry tutoring in Dubai & UAE. IGCSE, A-Level and IB support across calculations, mechanisms, and exam technique. Matched to your exam board."
+      "metaTitle": "Chemistry Tutors Dubai & UAE | IGCSE & A-Level | Hello Tutor",
+      "metaDescription": "Expert private chemistry tutors for GCSE, IGCSE, and A-Level across the UAE. Flexible home and online sessions, carefully matched to your child."
     },
     "biologyTutoring": {
       "heroTitle": "Biology tutoring built around more than just memorisation",
@@ -1489,8 +1489,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Biology Tutors Dubai | IGCSE, A-Level & IB | Hello Tutor",
-      "metaDescription": "Expert 1:1 Biology tutoring in Dubai & UAE. IGCSE, A-Level and IB support across cells, genetics, ecology and exam technique. Matched to your exam board."
+      "metaTitle": "Private Biology Tutors Dubai & UAE | IGCSE & A-Level",
+      "metaDescription": "Expert private biology tutors for GCSE, IGCSE, and A-Level across the UAE. Home and online sessions that build real depth — in Dubai and Abu Dhabi."
     },
     "arabicTutoring": {
       "heroTitle": "Arabic tutoring for every level, native speaker or not",
@@ -1696,8 +1696,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Arabic Tutors Dubai & UAE | Native & Non-Native | Hello Tutor",
-      "metaDescription": "Expert Arabic tutoring for native and non-native speakers across Dubai & UAE. All levels and curriculum covered. Build fluency and confidence with a matched tutor."
+      "metaTitle": "Private Arabic Tutors Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert private Arabic tutors for native speakers and learners across the UAE. Stronger language, grammar, and comprehension — at home or online."
     },
     "examPreparation": {
       "heroTitle": "Online Exam Preparation Tutors Who Build Confidence",
@@ -1954,8 +1954,8 @@
         },
         "cta": "View all FAQs"
       },
-      "metaTitle": "Exam Prep Tutors Dubai | IGCSE, IB & A-Level | Hello Tutor",
-      "metaDescription": "Focused exam preparation for IGCSE, A-Level, IB and 11+ in Dubai & UAE. Expert tutors who sharpen technique, build confidence and improve results. Book a free consultation."
+      "metaTitle": "Exam Prep Tutors Dubai & UAE | IGCSE, A-Level, IB",
+      "metaDescription": "Focused exam preparation for GCSE, IGCSE, A-Level, and IB students. Private home and online revision sessions, matched to your child's exam board."
     },
     "allSubjects": {
       "heroTitle": "Whatever the subject, we've got a tutor for it",
@@ -2206,8 +2206,8 @@
           }
         }
       },
-      "metaTitle": "Online Tutoring Subjects | IGCSE, IB & A-Level | Hello Tutor UAE",
-      "metaDescription": "Expert tutoring in Maths, English, Science & Arabic — from Primary through IGCSE, A-Level and IB. Tutors matched to your child's curriculum. Book a free consultation."
+      "metaTitle": "Private Tutoring by Subject | Hello Tutor Dubai & UAE",
+      "metaDescription": "Maths, English, Physics, Chemistry, Biology, Arabic, French, Spanish, Economics, Business Studies, Computer Science & more — home and online, UAE-wide."
     }
   },
   "nav": {
@@ -2241,7 +2241,7 @@
     "aLevelTutors": "A-Level Tutors",
     "universities": "Universities",
     "universityAdmissions": "University Admissions",
-    "admissionsAbroad": "Admissions Abroad"
+    "admissionsAbroad": "Applying to a UK, US, or international university from the UAE? Hello Tutor connects families with expert admissions guidance from Dubai and beyond."
   },
   "about": {
     "aboutUs": "About Us",
@@ -2314,8 +2314,8 @@
     "tryAgain": "Try again"
   },
   "metadata": {
-    "homeTitle": "Online Tutoring Dubai & UAE | IGCSE, IB & A-Level | Hello Tutor",
-    "homeDescription": "Expert 1:1 online tutoring for IGCSE, IB & A-Level students in Dubai & UAE. 500+ vetted tutors, 95% improve grades. We match the right tutor. Book a free consultation."
+    "homeTitle": "Private Tutors in Dubai & UAE | Hello Tutor",
+    "homeDescription": "MOHRE-licensed, DBS-checked tutors from top universities. Home and online across the UAE. British, IB & American curriculum. Book a free consultation."
   },
   "subjectsWeCover": {
     "title": "Subjects We Cover",
@@ -2634,8 +2634,8 @@
         },
         "cta": "View all FAQs"
       },
-      "metaTitle": "Primary School Tutors Dubai & UAE | Online 1:1 | Hello Tutor",
-      "metaDescription": "Expert 1:1 primary tutoring in Maths, English, Science and Arabic for students in Dubai & UAE. Tutors matched to your child's school, curriculum and learning style."
+      "metaTitle": "Primary School Private Tutors Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert private tutors for KS1 and KS2 students across the UAE. The right foundations, built early — home and online in Dubai, Abu Dhabi, and Sharjah."
     },
     "ks3Tutors": {
       "heroTitle": "KS3 tutoring – the years that shape GCSE",
@@ -2754,8 +2754,8 @@
         ],
         "cta": "View all FAQs"
       },
-      "metaTitle": "KS3 Tutors Dubai | Years 7–9 Online Tutoring | Hello Tutor UAE",
-      "metaDescription": "Build confidence before IGCSEs with expert KS3 tutoring in Dubai & UAE. Maths, English and Science support for Years 7–9, matched to your child's curriculum."
+      "metaTitle": "KS3 Private Tutors Dubai & UAE | Years 7–9 | Hello Tutor",
+      "metaDescription": "Expert private KS3 tutors for Years 7–9 across the UAE. Keep momentum, close gaps, and build confidence — home and online in Dubai and Abu Dhabi."
     },
     "gcseTutors": {
       "heroTitle": "GCSE tutoring that delivers the grades your child is capable of",
@@ -2879,8 +2879,8 @@
         ],
         "cta": "View all FAQs"
       },
-      "metaTitle": "GCSE Tutors Dubai & UAE | Expert Exam Prep | Hello Tutor",
-      "metaDescription": "GCSE tutoring that improves grades and builds exam confidence in Dubai & UAE. Expert tutors matched to AQA, Edexcel & OCR across all subjects. 95% improve."
+      "metaTitle": "Private GCSE Tutors in Dubai & UAE | Hello Tutor",
+      "metaDescription": "Expert private GCSE tutors, carefully matched to your child's learning style. Home and online sessions across Dubai, Abu Dhabi, and Sharjah."
     },
     "igcseTutors": {
       "heroTitle": "IGCSE Tutors Matched to Boost Your Grades",
@@ -3008,8 +3008,8 @@
         ],
         "cta": "View all FAQs"
       },
-      "metaTitle": "IGCSE Tutors Dubai & UAE | Cambridge, Edexcel & AQA | Hello Tutor",
-      "metaDescription": "IGCSE tutoring that boosts grades and builds exam confidence in Dubai & UAE. Expert tutors matched to Cambridge, Edexcel & AQA across all subjects. 95% improve."
+      "metaTitle": "Private IGCSE Tutors in Dubai & UAE | Hello Tutor",
+      "metaDescription": "Specialist private IGCSE tutors across all core subjects — carefully selected and matched. Home sessions in Dubai and Abu Dhabi, or online UAE-wide."
     },
     "aLevelTutors": {
       "heroTitle": "A-Level tutoring from specialists who know the jump it requires",
@@ -3129,8 +3129,8 @@
         ],
         "cta": "View all FAQs"
       },
-      "metaTitle": "A-Level Tutors Dubai & UAE | Cambridge & Edexcel | Hello Tutor",
-      "metaDescription": "Expert A-Level tutoring for university entrance in Dubai & UAE. Cambridge and Edexcel specialists matched to your subjects and goals. Book a free consultation."
+      "metaTitle": "Private A-Level Tutors in Dubai & UAE | Hello Tutor",
+      "metaDescription": "Specialist private A-Level tutors who go beyond the syllabus. The depth and rigour UAE students need for top grades and competitive university offers."
     }
   },
   "aboutPages": {
@@ -3280,8 +3280,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "About Hello Tutor | Online Tutoring Dubai Since 2018",
-      "metaDescription": "Hello Tutor has matched students with expert tutors across Dubai & the UAE since 2018. 10,000+ lessons delivered, 5,000+ students supported. Meet the team behind it."
+      "metaTitle": "About Hello Tutor | UAE-Based Private Tutoring",
+      "metaDescription": "Hello Tutor is a UAE-based tutoring service. We select MOHRE-licensed, DBS-checked graduates from top universities, matched to your child's needs."
     },
     "safetyAndTrust": {
       "heroTitle": "Your child's safety comes first. Always.",
@@ -3407,8 +3407,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Child Safety & Safeguarding | Hello Tutor Dubai & UAE",
-      "metaDescription": "Every Hello Tutor tutor is DBS-checked and MOHRE licensed. Your child's safety comes first — from first lesson to last. Learn about our safeguarding standards."
+      "metaTitle": "Safety & Trust | MOHRE-Licensed Tutors | Hello Tutor",
+      "metaDescription": "Every Hello Tutor tutor is MOHRE-licensed, DBS-checked, and carefully referenced. Rigorous standards as a baseline, not an afterthought."
     },
     "forParents": {
       "heroTitle": "Tutoring that fits around school and life",
@@ -3546,8 +3546,8 @@
         ],
         "cta": "See all FAQs"
       },
-      "metaTitle": "Online Tutoring for Parents in Dubai & UAE | Hello Tutor",
-      "metaDescription": "We handle everything — tutor matching, progress tracking and ongoing support. Stress-free tutoring for busy parents across Dubai & UAE. See why families choose us."
+      "metaTitle": "For Parents | Hello Tutor UAE Private Tutoring",
+      "metaDescription": "From first enquiry to measurable progress — Hello Tutor manages every step so UAE parents can focus on what matters: their child's results."
     }
   },
   "allFaqs": {
@@ -4121,12 +4121,12 @@
         "body": "Our team is here to help. Reach us through the platform or by email."
       }
     },
-    "metaTitle": "FAQs | Hello Tutor Online Tutoring Dubai & UAE",
-    "metaDescription": "Answers to common questions about Hello Tutor. Learn about tutor matching, IGCSE and IB support, pricing, safety and how to get started in Dubai & UAE."
+    "metaTitle": "FAQs | Hello Tutor UAE Private Tutoring",
+    "metaDescription": "Everything you need to know about Hello Tutor — how we select tutors, what sessions look like, pricing, and curriculum support across the UAE."
   },
   "safeguarding": {
-    "metaTitle": "Child Safety & Safeguarding | Hello Tutor Dubai & UAE",
-    "metaDescription": "Every Hello Tutor tutor is DBS-checked and MOHRE licensed. Your child's safety comes first — from first lesson to last. Learn about our safeguarding standards.",
+    "metaTitle": "Safeguarding Policy | Hello Tutor UAE",
+    "metaDescription": "Hello Tutor takes child safety seriously. Read our safeguarding policy covering every home and online private tutoring engagement across the UAE.",
     "heroBadge": "Policy",
     "heroTitle": "Safeguarding Policy",
     "heroSubtitle": "Our commitment to protecting every student. Clear standards, verified tutors, and a safe learning environment backed by UAE law.",
@@ -4598,8 +4598,8 @@
     ]
   },
   "tutorCodeOfConduct": {
-    "metaTitle": "Tutor Code of Conduct | Hello Tutor Teaching Standards UAE",
-    "metaDescription": "Professional standards and conduct expectations for all Hello Tutor online tutors in Dubai & UAE. Understand our quality, safety and safeguarding requirements.",
+    "metaTitle": "Tutor Code of Conduct | Hello Tutor UAE",
+    "metaDescription": "Hello Tutor tutors uphold the highest professional standards. Read the code governing conduct, safety, and quality across all UAE sessions.",
     "heroBadge": "For Tutors",
     "heroTitle": "Tutor Code of Conduct",
     "heroSubtitle": "The experience a student has in a session depends almost entirely on the person teaching them. We take that seriously.",
@@ -4698,8 +4698,8 @@
     }
   },
   "studentCodeOfConduct": {
-    "metaTitle": "Student Code of Conduct | Hello Tutor | hellotutor.me",
-    "metaDescription": "Expected behaviour and conduct standards for students on Hello Tutor's online tutoring platform in Dubai & UAE. Read before your first lesson.",
+    "metaTitle": "Student Code of Conduct | Hello Tutor UAE",
+    "metaDescription": "Our student code sets clear expectations for respectful, productive learning across all Hello Tutor home and online sessions in the UAE.",
     "heroBadge": "For Students",
     "heroTitle": "Student Code of Conduct",
     "heroSubtitle": "We want every session to be a positive experience. That means creating an environment where students feel supported and tutors feel respected.",
@@ -4828,8 +4828,8 @@
         }
       ]
     },
-    "metaTitle": "Contact Hello Tutor | Book a Free Trial Lesson | Dubai & UAE",
-    "metaDescription": "Get in touch with Hello Tutor. Book a free consultation, ask about tutors, pricing, or subjects. Expert support for IGCSE, IB & A-Level students in Dubai & UAE."
+    "metaTitle": "Contact Hello Tutor | Private Tutoring Dubai & UAE",
+    "metaDescription": "Get in touch to find the right private tutor for your child. Hello Tutor serves families across Dubai, Abu Dhabi, Sharjah, and the wider UAE."
   },
   "becomeATutorPage": {
     "hero": {
@@ -4956,12 +4956,12 @@
       "subtitle": "The application takes about 5 minutes. If you're a good fit, you'll hear from us within a few days.",
       "buttonText": "Book a Free Consultation"
     },
-    "metaTitle": "Become an Online Tutor in Dubai & UAE | Hello Tutor",
-    "metaDescription": "Join 500+ tutors already teaching with Hello Tutor. We match students to you — no hunting for clients. Flexible hours, competitive pay. Apply in minutes."
+    "metaTitle": "Become a Private Tutor | UAE-Based | Hello Tutor",
+    "metaDescription": "Hello Tutor works with exceptional graduates from top universities. All tutors are MOHRE-licensed and DBS-checked. Join our UAE-based network today."
   },
   "privacyPolicy": {
-    "metaTitle": "Privacy Policy | Hello Tutor | hellotutor.me",
-    "metaDescription": "How Hello Tutor collects, uses and protects your personal data. Read our full privacy policy and data protection standards for students and tutors.",
+    "metaTitle": "Privacy Policy | Hello Tutor UAE",
+    "metaDescription": "Learn how Hello Tutor collects, uses, and protects personal data for families and tutors across the UAE. Your privacy matters to us.",
     "heroBadge": "Policy",
     "heroTitle": "Privacy Policy",
     "heroSubtitle": "How we collect, use, and protect your personal information. Transparent, secure, and aligned with UAE data protection standards.",
@@ -5575,8 +5575,8 @@
     ]
   },
   "cookiePolicy": {
-    "metaTitle": "Cookie Policy | Hello Tutor | hellotutor.me",
-    "metaDescription": "How Hello Tutor uses cookies on hellotutor.me. Understand cookie types, purposes and how to manage or disable your cookie preferences.",
+    "metaTitle": "Cookie Policy | Hello Tutor UAE",
+    "metaDescription": "Find out how Hello Tutor uses cookies to improve your experience. Manage your preferences in line with our policy.",
     "heroBadge": "Policy",
     "heroTitle": "Cookie Policy",
     "heroSubtitle": "How we use cookies to keep our platform secure, functional, and continuously improving.",
@@ -5731,8 +5731,8 @@
     ]
   },
   "termsAndConditions": {
-    "metaTitle": "Terms & Conditions | Hello Tutor | hellotutor.me",
-    "metaDescription": "Read Hello Tutor's full terms and conditions before getting started. Covers lessons, tutor matching, payments and cancellations for Dubai & UAE tutoring.",
+    "metaTitle": "Terms and Conditions | Hello Tutor UAE",
+    "metaDescription": "Read Hello Tutor's Terms and Conditions for private tutoring services in the UAE — bookings, payments, and tutor agreements.",
     "heroBadge": "Legal",
     "heroTitle": "Terms and Conditions",
     "heroSubtitle": "The rules, rights, and responsibilities that keep Hello Tutor fair, safe, and transparent for everyone.",
@@ -7412,5 +7412,7 @@
     },
     "metaTitle": "Tutors in Sharjah | Online & Home Tutoring | Hello Tutor",
     "metaDescription": "Expert online tutors in Sharjah matched to your child’s school and curriculum. IGCSE, A-Level and IB covered. 1:1 lessons with no commute to Dubai. Book free consultation."
-  }
+  },
+  "metaTitle": "Tutor FAQs | Join Hello Tutor in Dubai & UAE",
+  "metaDescription": "Everything tutors need to know about joining Hello Tutor — MOHRE licensing, DBS checks, the application process, pay, and how sessions are managed."
 }
