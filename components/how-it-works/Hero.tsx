@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/Button';
 import { InteractiveDashboard } from './InteractiveDashboard';
 import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 import { siteConfig } from '@/config/site';
 

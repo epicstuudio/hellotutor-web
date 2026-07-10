@@ -19,10 +19,18 @@ export function createMetadata({
   description = siteConfig.description,
   path = '',
   image = siteConfig.ogImage,
-  locale = 'en',
+  locale = 'ae-en', // Default to ae-en just in case
   noIndex = false,
 }: CreateMetadataParams): Metadata {
-  const url = `${siteConfig.url}${path}`;
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  const finalPath = cleanPath === '/' ? '' : cleanPath;
+  
+  const currentPrefix = locale === 'ae-ar' ? '/ae-ar' : '/ae-en';
+  
+  const currentUrl = `${siteConfig.url}${currentPrefix}${finalPath}`;
+  const enUrl = `${siteConfig.url}/ae-en${finalPath}`;
+  const arUrl = `${siteConfig.url}/ae-ar${finalPath}`;
+
   const hasBrand = title.includes('Hello Tutor') || title.includes('HelloTutor');
   const finalTitle = hasBrand ? title : `${title} | Hello Tutor`;
 
@@ -36,16 +44,17 @@ export function createMetadata({
       },
     }),
     alternates: {
-      canonical: url,
+      canonical: currentUrl,
       languages: {
-        'ae-en': `${siteConfig.url}${path}`,
-        'ae-ar': `${siteConfig.url}/ae-ar${path}`,
+        'en-AE': enUrl,
+        'ar-AE': arUrl,
+        'x-default': enUrl,
       },
     },
     openGraph: {
       title: finalTitle,
       description: description || undefined,
-      url,
+      url: currentUrl,
       siteName: siteConfig.name,
       locale: locale === 'ae-ar' ? 'ar_AE' : 'en_GB',
       type: 'website',

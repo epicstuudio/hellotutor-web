@@ -25,9 +25,15 @@ export const viewport: Viewport = {
   themeColor: '#fff5ed',
 };
 
-export function generateMetadata() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   return createMetadata({
     title: 'HelloTutor — Expert Online Tutoring',
+    locale,
   });
 }
 

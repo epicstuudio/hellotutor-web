@@ -179,7 +179,7 @@ export function InteractiveDashboard() {
                 Welcome back, Hamed!
               </h1>
               <p className="text-[16px] text-slate-500 dark:text-[#97979A]">
-                Here's what's happening with your lessons today.
+                Here&apos;s what&apos;s happening with your lessons today.
               </p>
             </motion.div>
 

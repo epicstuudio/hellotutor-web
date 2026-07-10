@@ -40,21 +40,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms-and-conditions',
     '/student-code-of-conduct',
     '/tutor-code-of-conduct',
-  ].map((route) => {
-    const url = `${siteConfig.url}${route}`;
+  ].flatMap((route) => {
+    const url_en = `${siteConfig.url}/ae-en${route}`;
     const url_ar = `${siteConfig.url}/ae-ar${route}`;
-    return {
-      url,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'weekly' as const,
-      priority: route === '' ? 1 : 0.8,
-      alternates: {
-        languages: {
-          'ae-en': url,
-          'ae-ar': url_ar,
-        },
+    const alternates = {
+      languages: {
+        'en-AE': url_en,
+        'ar-AE': url_ar,
+        'x-default': url_en,
       },
     };
+
+    return [
+      {
+        url: url_en,
+        lastModified: new Date().toISOString().split('T')[0],
+        changeFrequency: 'weekly' as const,
+        priority: route === '' ? 1 : 0.8,
+        alternates,
+      },
+      {
+        url: url_ar,
+        lastModified: new Date().toISOString().split('T')[0],
+        changeFrequency: 'weekly' as const,
+        priority: route === '' ? 1 : 0.8,
+        alternates,
+      },
+    ];
   });
 
   return routes;

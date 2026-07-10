@@ -5,12 +5,11 @@ import { Button } from '@/components/ui/Button';
 import { HighlightText } from '@/components/ui/HighlightText';
 import { TrustBadge } from '@/components/shared/TrustBadge';
 import { AnimatedNumber } from '@/components/shared/AnimatedNumber';
-import { HeroVisual } from './HeroVisual';
-import { siteConfig } from '@/config/site';
-import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import { siteConfig } from '@/config/site';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -24,6 +23,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 /* ─── Tutor data ─── */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TUTORS = [
   {
     id: 1,
@@ -106,12 +106,12 @@ export function Hero() {
 
   // ─── Animation state machine ───
   const [phase, setPhase] = useState<'matching' | 'matched'>('matching');
-  const [step, setStep] = useState(0);
+  const [, setStep] = useState(0);
 
   // The tutor that gets "matched" after MATCH_AFTER_STEPS rotations
-  const count = TUTORS.length;
-  const matchedIndex = (count - (step % count)) % count;
-  const matchedTutor = TUTORS[matchedIndex];
+  // const count = TUTORS.length;
+  // const matchedIndex = (count - (step % count)) % count;
+  // const matchedTutor = TUTORS[matchedIndex];
 
   // Phase 1: step the dial every STEP_INTERVAL
   useEffect(() => {
@@ -143,7 +143,7 @@ export function Hero() {
     return () => clearTimeout(timer);
   }, [phase]);
 
-  const rotation = 180 + step * (360 / count);
+  // const rotation = 180 + step * (360 / count);
 
   return (
     <section className="relative overflow-hidden bg-surface">
@@ -297,89 +297,3 @@ export function Hero() {
   );
 }
 
-/* ─── TutorDial (desktop only) ─── */
-interface TutorDialProps {
-  step: number;
-  rotation: number;
-  matchedIndex: number;
-  variant?: string;
-}
-
-function TutorDial({ rotation, matchedIndex }: TutorDialProps) {
-  const radius = 340;
-  const count = TUTORS.length;
-
-  return (
-    <div className="relative w-full h-full">
-      <motion.div
-        className="absolute"
-        style={{
-          width: radius * 2,
-          height: radius * 2,
-          insetInlineEnd: -(radius * 2.27),
-          top: '50%',
-          translate: '0 -50%',
-        }}
-        animate={{ rotate: rotation }}
-        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-      >
-        {/* Dashed orbit ring */}
-        <div className="absolute inset-0 rounded-full border-2 border-dashed border-green-200/60" />
-
-        {/* Tutor avatars — counter-rotated to stay upright */}
-        {TUTORS.map((tutor, i) => {
-          const angleDeg = (i * 360) / count;
-          const rad = (angleDeg * Math.PI) / 180;
-          const x = radius + radius * Math.cos(rad);
-          const y = radius + radius * Math.sin(rad);
-          const isMatched = i === matchedIndex;
-
-          return (
-            <div
-              key={tutor.id}
-              className="absolute"
-              style={{
-                left: x,
-                top: y,
-                transform: 'translate(-50%, -50%)',
-              }}
-            >
-              <motion.div
-                animate={{
-                  rotate: -rotation,
-                  scale: isMatched ? 1.3 : 1,
-                }}
-                transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-              >
-                <div
-                  className={`w-16 h-16 rounded-full border-2 overflow-hidden flex items-center justify-center transition-all duration-700 relative ${isMatched
-                    ? 'border-green-400 bg-surface-base shadow-[0_0_20px_var(--color-green-200)]'
-                    : 'border-green-200 bg-surface-base'
-                    }`}
-                >
-                  {tutor.image ? (
-                    <Image
-                      src={tutor.image}
-                      alt={tutor.name}
-                      width={64}
-                      height={64}
-                      className="object-cover w-full h-full"
-                      unoptimized
-                    />
-                  ) : (
-                    <span
-                      className={`font-semibold text-sm ${isMatched ? 'text-green-600' : 'text-content-success'
-                        }`}
-                    >
-                      {tutor.name[0]}
-                    </span>
-                  )}
-                </div>
-              </motion.div>
-            </div>
-          );
-        })}
-      </motion.div>
-    </div>
-  );
-}
