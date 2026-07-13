@@ -16,7 +16,7 @@ export function WhoWereLookingFor() {
  }[];
 
  return (
- <section className="py-16 lg:py-20 bg-purple-600">
+ <section className="py-16 lg:py-20 bg-surface-brand-alt">
  <Container>
  {/* Header */}
  <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16">
@@ -34,7 +34,7 @@ export function WhoWereLookingFor() {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  transition={{ duration: 0.5, delay: 0.1 }}
- className="text-body-lg text-purple-100"
+ className="text-body-lg text-white/90"
  >
  {t('subtitle')}
  </motion.p>
@@ -59,7 +59,7 @@ export function WhoWereLookingFor() {
  </div>
  <div className="flex-1 min-w-0">
  <h3 className="text-body-lg font-semibold text-white mb-1.5">{item.title}</h3>
- <p className="text-body-sm text-purple-100/80 leading-relaxed">{item.desc}</p>
+ <p className="text-body-sm text-white/70 leading-relaxed">{item.desc}</p>
  </div>
  </div>
  ))}
@@ -73,7 +73,7 @@ export function WhoWereLookingFor() {
  transition={{ duration: 0.5, delay: 0.3 }}
  className="relative"
  >
- <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-square bg-purple-700">
+ <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-square bg-white/10">
  <Image
  src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/become-a-tutor/tutor-who.jpg"
  alt={t('title')}

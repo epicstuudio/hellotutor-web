@@ -19,7 +19,7 @@ export function Footer() {
             <div className="mb-6">
               <Logo variant="white" />
             </div>
-            <p className="text-xl md:text-2xl font-medium max-w-sm text-white/90 leading-tight mb-8">
+            <p className="text-xl md:text-2xl font-medium max-w-sm text-white/90 leading-tight mb-8 whitespace-pre-line">
               {t('footer.tagline')}
             </p>
 

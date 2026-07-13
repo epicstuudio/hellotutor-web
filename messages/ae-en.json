@@ -2285,7 +2285,7 @@
     }
   },
   "footer": {
-    "tagline": "We find the right tutor. You see the difference.",
+    "tagline": "We find the right tutor.\nYou see the difference.",
     "legalEntity": "Hello Tutor is a trading name of Northstar Connect FZ-LLC, registered in RAKEZ, UAE. Licence No: 47033173.",
     "helloTutor": "Hello Tutor",
     "resources": "Resources",
@@ -4139,7 +4139,7 @@
       "verifiedTutors": "Verified Tutors",
       "verifiedTutorsDesc": "ID checks, background checks, and references for every tutor.",
       "lessonRecording": "Lesson Recording",
-      "lessonRecordingDesc": "All sessions recorded and stored securely for up to one year.",
+      "lessonRecordingDesc": "All online sessions recorded and stored securely for up to one year.",
       "reportConcerns": "Report Concerns",
       "reportConcernsDesc": "A dedicated Safeguarding Officer handles every report as a priority."
     },
@@ -4355,6 +4355,10 @@
             "text": "Tutors must ensure that their session environment does not display any inappropriate images, materials, or documents that could be visible to students during an online session."
           },
           {
+            "id": "5.12a",
+            "text": "Tutors must ensure their conduct, appearance, and behaviour during a home visit are professional at all times, and that sessions take place only in the space agreed with the family."
+          },
+          {
             "id": "5.13",
             "text": "Tutors must treat all students fairly and without prejudice or discrimination on the basis of age, culture, ability, gender, language, racial origin, religious belief, or any other characteristic."
           },
@@ -4494,7 +4498,7 @@
           },
           {
             "id": "7.6",
-            "text": "The parent or legal guardian must not leave a child under the age of 18 in the unsupervised sole care of a tutor during an online session. Learners must be able to report any concerns to a parent or guardian without delay."
+            "text": "The parent or legal guardian must not leave a child under the age of 18 in the unsupervised sole care of a tutor during a session. Learners must be able to report any concerns to a parent or guardian without delay."
           },
           {
             "id": "7.7",
@@ -4617,7 +4621,7 @@
         {
           "id": "look-and-sound",
           "title": "Look and sound the part",
-          "desc": "Join sessions from a tidy, quiet space that is free from distractions. Make sure your device, camera, microphone, and internet connection are working properly before each session begins."
+          "desc": "For online sessions, join from a tidy, quiet space, and make sure your device, camera, microphone, and internet connection are working properly beforehand. For home sessions, arrive on time, dressed appropriately, and ready to teach in the space agreed with the family."
         },
         {
           "id": "communicate",
@@ -4712,12 +4716,12 @@
         {
           "id": "arrive-on-time",
           "title": "Arrive on time and prepared",
-          "desc": "Your tutor has set aside dedicated time for you, and showing up ready makes a real difference to what you can achieve together. Make sure your device, camera, and internet connection are working before the session starts."
+          "desc": "Whether your session is online or at home, make sure you're ready to start on time. For online sessions, check your device, camera, and internet connection beforehand. For home sessions, have your books and materials ready."
         },
         {
           "id": "tech-ready",
           "title": "Create the right environment",
-          "desc": "Joining from a quiet space, free from distractions, will help you get the most out of your time. A tidy, well-lit space helps both you and your tutor focus on what matters."
+          "desc": "A quiet space free from distractions helps every session go well — a tidy, well-lit desk for online sessions, or a similar dedicated space at home for in-person ones."
         }
       ]
     },
@@ -4858,8 +4862,8 @@
           "desc": "You're not alone. Pedagogical guidance, platform training, and responses when you need help."
         },
         {
-          "title": "Flexible remote work",
-          "desc": "Teach from anywhere. Set your availability. Work around your life."
+          "title": "Flexible working",
+          "desc": "Choose to teach online, in homes, or both. Set your availability. Work around your life."
         },
         {
           "title": "Meaningful impact",
@@ -4890,6 +4894,10 @@
         {
           "title": "Online teaching ability",
           "desc": "Comfortable using technology to create interactive, engaging lessons."
+        },
+        {
+          "title": "Home tutors",
+          "desc": "Reliable and mobile — Able to travel to student homes across Dubai, Abu Dhabi, or Sharjah, punctually and fully prepared."
         }
       ],
       "testimonial": {
@@ -5141,6 +5149,10 @@
           {
             "id": "4.14",
             "text": "Tutor availability and engagement data: we collect information on tutors' on-platform behaviour, response times, availability, and interactions with other users, to ensure students are matched with the most suitable tutor for their needs."
+          },
+          {
+            "id": "4.15",
+            "text": "Home address information: for bookings involving home tutoring, we collect the student's home address in order to share it with the matched tutor and to enable the lesson to take place at the agreed location."
           }
         ]
       },
@@ -5249,7 +5261,7 @@
         "clauses": [
           {
             "id": "7.1",
-            "text": "Matched tutors and students: where a student is matched with a tutor through the platform, limited personal information will be shared with the relevant tutor to facilitate the introduction, including the student's first name, the subject and level requested, and the contents of their initial message. Tutor profile information, including their first name, profile photo, qualifications, bio, subjects, and reviews, is visible to all visitors of the platform."
+            "text": "Matched tutors and students: where a student is matched with a tutor through the platform, limited personal information will be shared with the relevant tutor to facilitate the introduction, including the student's first name, the subject and level requested, and the contents of their initial message. For home tutoring bookings, the student's home address is also shared with the matched tutor to enable the lesson to take place at the agreed location. Tutor profile information, including their first name, profile photo, qualifications, bio, subjects, and reviews, is visible to all visitors of the platform."
           },
           {
             "id": "7.2",
@@ -6098,7 +6110,7 @@
           },
           {
             "id": "5.22",
-            "text": "(T) Tutors acknowledge that all Lessons may be recorded by Hello Tutor and agree to the storage and use of such recordings for safeguarding and quality purposes."
+            "text": "(T) Tutors acknowledge that all Online Lessons may be recorded by Hello Tutor and agree to the storage and use of such recordings for safeguarding and quality purposes."
           },
           {
             "id": "5.23",
@@ -6391,7 +6403,7 @@
           },
           {
             "id": "12.7",
-            "text": "Students acknowledge that all class sessions may be recorded by Hello Tutor and agree to the storage and use of such recordings for safeguarding and quality purposes."
+            "text": "Students acknowledge that all Online class sessions may be recorded by Hello Tutor and agree to the storage and use of such recordings for safeguarding and quality purposes."
           }
         ]
       },
@@ -6426,7 +6438,7 @@
           },
           {
             "id": "13.7",
-            "text": "(T) Tutors acknowledge that all class sessions may be recorded by Hello Tutor and agree to the storage and use of such recordings for safeguarding and quality purposes."
+            "text": "(T) Tutors acknowledge that all Online class sessions may be recorded by Hello Tutor and agree to the storage and use of such recordings for safeguarding and quality purposes."
           }
         ]
       },
