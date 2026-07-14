@@ -19,7 +19,6 @@ export function TrustBadge({ className, textClassName, text }: TrustBadgeProps) 
         width={90}
         height={45}
         className="h-11 w-auto"
-        unoptimized
       />
       <span className={cn('text-body-sm text-content-secondary', textClassName)}>
         {text || t('trustBadge')}

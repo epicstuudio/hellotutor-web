@@ -144,7 +144,6 @@ export function Steps() {
                 width={800}
                 height={600}
                 className="w-full rounded-3xl object-cover aspect-[4/3] rotate-2 hover:rotate-0 transition-transform duration-500"
-                unoptimized
               />
             </motion.div>
           </div>
@@ -167,7 +166,6 @@ export function Steps() {
                       alt="Tutor"
                       fill
                       className="object-cover scale-[1.7] origin-[50%_25%]"
-                      unoptimized
                       sizes="96px"
                     />
                   </div>
@@ -260,7 +258,6 @@ export function Steps() {
                   width={800}
                   height={600}
                   className="w-full h-auto rounded-xl"
-                  unoptimized
                 />
               </div>
             </motion.div>

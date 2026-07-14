@@ -59,7 +59,6 @@ export function HeroVisual({ phase, matchedTutor }: HeroVisualProps) {
             alt="Student learning"
             fill
             className="object-cover"
-            unoptimized
           />
 
           {/* Bottom gradient overlay */}
@@ -105,7 +104,6 @@ export function HeroVisual({ phase, matchedTutor }: HeroVisualProps) {
                     alt={matchedTutor.name}
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-green-100 via-green-50 to-surface-base flex items-center justify-center">

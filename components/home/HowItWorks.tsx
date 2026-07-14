@@ -95,7 +95,6 @@ export function HowItWorks() {
                   width={760}
                   height={500}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  unoptimized
                 />
               </div>
               <div className="p-7 flex flex-col flex-1">
