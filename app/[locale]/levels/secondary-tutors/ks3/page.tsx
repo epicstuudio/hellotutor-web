@@ -21,7 +21,7 @@ export async function generateMetadata({
   return createMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    path: '/levels/ks3-tutors',
+    path: '/levels/secondary-tutors/ks3',
     locale,
   });
 }

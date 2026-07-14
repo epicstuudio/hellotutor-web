@@ -15,7 +15,7 @@ export async function generateMetadata({
   return createMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    path: '/about/all-faqs',
+    path: '/faqs',
     locale,
   });
 }

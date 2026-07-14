@@ -15,7 +15,7 @@ export async function generateMetadata({
   return createMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    path: '/tutors-in-abuDhabi',
+    path: '/tutors-in-abu-dhabi',
     locale,
   });
 }

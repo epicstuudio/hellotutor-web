@@ -19,7 +19,7 @@ export async function generateMetadata({
   return createMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    path: '/about/safety-and-trust',
+    path: '/safety-and-trust',
     locale,
   });
 }

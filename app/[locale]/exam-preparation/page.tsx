@@ -21,7 +21,7 @@ export async function generateMetadata({
   return createMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    path: '/subjects/exam-preparation',
+    path: '/exam-preparation',
     locale,
   });
 }

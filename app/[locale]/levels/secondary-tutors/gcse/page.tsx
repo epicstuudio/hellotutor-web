@@ -21,7 +21,7 @@ export async function generateMetadata({
   return createMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    path: '/levels/gcse-tutors',
+    path: '/levels/secondary-tutors/gcse',
     locale,
   });
 }
