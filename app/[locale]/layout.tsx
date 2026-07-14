@@ -95,6 +95,7 @@ export default async function LocaleLayout({
   return (
     <html lang={htmlLang} dir={dir} suppressHydrationWarning className={notoSansArabic.variable}>
       <head>
+        <link rel="preconnect" href="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
