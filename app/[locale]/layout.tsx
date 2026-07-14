@@ -2,7 +2,25 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Noto_Sans_Arabic, Inter_Tight } from 'next/font/google';
+import localFont from 'next/font/local';
 import { routing } from '@/i18n/routing';
+
+const awesomeSerif = localFont({
+  src: [
+    {
+      path: '../../public/fonts/AwesomeSerif-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/AwesomeSerifItalic-Regular.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-awesome-serif',
+  display: 'swap',
+});
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -82,7 +100,7 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       </head>
-      <body className={`antialiased min-h-screen flex flex-col ${interTight.variable}`}>
+      <body className={`antialiased min-h-screen flex flex-col ${interTight.variable} ${awesomeSerif.variable}`}>
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
