@@ -2018,7 +2018,7 @@
             "desc": "من جداول الضرب إلى التفاضل والتكامل، نجعل الأرقام منطقية من خلال بناء الثقة في حل المشكلات، وتقوية أساليب الامتحان، وسد الفجوات المعرفية.",
             "itemsLabel": "ماذا نغطي",
             "learnMoreLabel": "اعرف المزيد",
-            "learnMoreHref": "/subjects/maths",
+            "learnMoreHref": "/subjects/maths-tutoring",
             "items": [
               {
                 "title": "أسس KS2 و KS3",
@@ -2044,7 +2044,7 @@
             "desc": "من القراءة والكتابة إلى التحليل والتعبير، نبني مهارات اللغة الإنجليزية التي تدوم مدى الحياة، وندعم هيكلة المقالات، وتحليل الأدب، والثقة في الامتحانات.",
             "itemsLabel": "ماذا نغطي",
             "learnMoreLabel": "اعرف المزيد",
-            "learnMoreHref": "/subjects/english",
+            "learnMoreHref": "/subjects/english-tutoring",
             "items": [
               {
                 "title": "فهم القراءة والكتابة الإبداعية",
@@ -2070,7 +2070,7 @@
             "desc": "من علم الأحياء والكيمياء إلى الفيزياء، نقدم تفسيرات واضحة تبني الثقة، وتساعد الطلاب على ربط النظرية بالتطبيق، وفهم المفاهيم المعقدة، والاستعداد للامتحانات بشكل فعال.",
             "itemsLabel": "ماذا نغطي",
             "learnMoreLabel": "اعرف المزيد",
-            "learnMoreHref": "/subjects/science",
+            "learnMoreHref": "/subjects/science-tutoring",
             "items": [
               {
                 "title": "العلوم المدمجة في KS3",
@@ -2096,7 +2096,7 @@
             "desc": "للناطقين بها لتعزيز مهاراتهم ولغير الناطقين بها للبدء من الصفر، نبني الثقة في القراءة والكتابة، ونوضح القواعد، ونساعد الطلاب على مواكبة المنهج المدرسي.",
             "itemsLabel": "ماذا نغطي",
             "learnMoreLabel": "اعرف المزيد",
-            "learnMoreHref": "/subjects/arabic",
+            "learnMoreHref": "/subjects/arabic-tutoring",
             "items": [
               {
                 "title": "العربية لغير الناطقين بها (من المبتدئ إلى المتقدم)",
