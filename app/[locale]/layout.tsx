@@ -1,10 +1,33 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Noto_Sans_Arabic } from 'next/font/google';
+import { Noto_Sans_Arabic, Inter_Tight } from 'next/font/google';
 import { routing } from '@/i18n/routing';
+
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-inter-tight',
+  display: 'swap',
+});
+import localFont from 'next/font/local';
 import { Header } from '@/components/layout/Header';
+
+const awesomeSerif = localFont({
+  src: [
+    {
+      path: '../../styles/fonts/AwesomeSerif-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../styles/fonts/AwesomeSerifItalic-Regular.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-awesome-serif',
+  display: 'swap',
+});
 import { Footer } from '@/components/layout/Footer';
 import { Analytics } from '@/components/analytics/Analytics';
 import { CookieConsentProvider } from '@/components/providers/CookieConsentProvider';
@@ -71,18 +94,12 @@ export default async function LocaleLayout({
   return (
     <html lang={htmlLang} dir={dir} suppressHydrationWarning className={notoSansArabic.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       </head>
-      <body className={`antialiased min-h-screen flex flex-col`}>
+      <body className={`antialiased min-h-screen flex flex-col ${interTight.variable} ${awesomeSerif.variable}`}>
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
