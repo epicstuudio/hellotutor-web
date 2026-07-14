@@ -142,7 +142,7 @@ export function HeroVisual({ phase, matchedTutor }: HeroVisualProps) {
                 className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 lg:gap-2 px-3 lg:px-4 py-1.5 lg:py-2 rounded-full border-2 border-green-300 bg-surface-base whitespace-nowrap"
               >
                 <svg
-                  className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-green-500"
+                  className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-green-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2.5}

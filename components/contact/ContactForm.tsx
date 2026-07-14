@@ -487,7 +487,7 @@ export function ContactForm() {
  initial={{ opacity: 0, y: -4 }}
  animate={{ opacity: 1, y: 0 }}
  exit={{ opacity: 0, y: -4 }}
- className="text-body-xs text-red-500 mt-1.5 flex items-center gap-1"
+ className="text-body-xs text-red-600 mt-1.5 flex items-center gap-1"
  >
  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
  {errors.fullName}
@@ -520,7 +520,7 @@ export function ContactForm() {
  initial={{ opacity: 0, y: -4 }}
  animate={{ opacity: 1, y: 0 }}
  exit={{ opacity: 0, y: -4 }}
- className="text-body-xs text-red-500 mt-1.5 flex items-center gap-1"
+ className="text-body-xs text-red-600 mt-1.5 flex items-center gap-1"
  >
  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
  {errors.email}
@@ -566,7 +566,7 @@ export function ContactForm() {
  initial={{ opacity: 0, y: -4 }}
  animate={{ opacity: 1, y: 0 }}
  exit={{ opacity: 0, y: -4 }}
- className="text-body-xs text-red-500 mt-1.5 flex items-center gap-1"
+ className="text-body-xs text-red-600 mt-1.5 flex items-center gap-1"
  >
  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
  {errors.phoneNumber}
@@ -600,7 +600,7 @@ export function ContactForm() {
  initial={{ opacity: 0, y: -4 }}
  animate={{ opacity: 1, y: 0 }}
  exit={{ opacity: 0, y: -4 }}
- className="text-body-xs text-red-500 mt-1.5 flex items-center gap-1"
+ className="text-body-xs text-red-600 mt-1.5 flex items-center gap-1"
  >
  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
  {errors.message}
@@ -651,7 +651,7 @@ export function ContactForm() {
  initial={{ opacity: 0, y: -4 }}
  animate={{ opacity: 1, y: 0 }}
  exit={{ opacity: 0, y: -4 }}
- className="text-body-xs text-red-500 mt-1.5 flex items-center gap-1"
+ className="text-body-xs text-red-600 mt-1.5 flex items-center gap-1"
  >
  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
  {errors.preferredContact}
@@ -669,7 +669,7 @@ export function ContactForm() {
  exit={{ opacity: 0, y: -4 }}
  className="rounded-xl bg-red-50 border border-red-200 p-4 flex items-start gap-3"
  >
- <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+ <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
  <p className="text-body-sm text-red-700">{errors.api}</p>
  </motion.div>
  )}

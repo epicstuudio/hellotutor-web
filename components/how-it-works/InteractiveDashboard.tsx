@@ -111,13 +111,13 @@ export function InteractiveDashboard() {
             <div className="flex bg-slate-100 dark:bg-[#1C1E21] p-1 rounded-full mb-4">
               <button 
                 onClick={() => setIsDarkMode(false)}
-                className={`flex-1 flex items-center justify-center gap-2 py-1.5 rounded-full text-[13px] font-medium transition-all ${!isDarkMode ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700 dark:text-[#97979A] dark:hover:text-[#E2E3E5]'}`}
+                className={`flex-1 flex items-center justify-center gap-2 py-1.5 rounded-full text-[13px] font-medium transition-all ${!isDarkMode ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-700 dark:text-[#97979A] dark:hover:text-[#E2E3E5]'}`}
               >
                 <Sun className="w-[16px] h-[16px]" /> Light
               </button>
               <button 
                 onClick={() => setIsDarkMode(true)}
-                className={`flex-1 flex items-center justify-center gap-2 py-1.5 rounded-full text-[13px] font-medium transition-all ${isDarkMode ? 'bg-[#252627] text-white shadow-sm border border-[#2A2D31]' : 'text-slate-500 hover:text-slate-700 dark:text-[#97979A] dark:hover:text-[#E2E3E5]'}`}
+                className={`flex-1 flex items-center justify-center gap-2 py-1.5 rounded-full text-[13px] font-medium transition-all ${isDarkMode ? 'bg-[#252627] text-white shadow-sm border border-[#2A2D31]' : 'text-slate-600 hover:text-slate-700 dark:text-[#97979A] dark:hover:text-[#E2E3E5]'}`}
               >
                 <Moon className="w-[16px] h-[16px]" /> Dark
               </button>
@@ -140,16 +140,16 @@ export function InteractiveDashboard() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="h-[72px] shrink-0 flex items-center justify-between px-8 bg-white/80 dark:bg-[#1C1C1D]/80 backdrop-blur border-b border-slate-200 dark:border-[#2A2D31] z-20 transition-colors duration-300"
           >
-            <div className="flex items-center gap-2 text-slate-500 dark:text-[#97979A] font-medium text-[14px]">
+            <div className="flex items-center gap-2 text-slate-600 dark:text-[#97979A] font-medium text-[14px]">
               <CalendarDays className="w-[18px] h-[18px]" />
               Today, 26 June 2026
             </div>
             
             <div className="flex items-center gap-4">
-              <button className="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-[#1C1E21] text-slate-500 dark:text-[#97979A] hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              <button className="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-[#1C1E21] text-slate-600 dark:text-[#97979A] hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                 <HelpCircle className="w-[18px] h-[18px]" />
               </button>
-              <button className="relative w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-[#1C1E21] text-slate-500 dark:text-[#97979A] hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              <button className="relative w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-[#1C1E21] text-slate-600 dark:text-[#97979A] hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                 <Bell className="w-[18px] h-[18px]" />
                 <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-[#1C1E21]">2</span>
               </button>
@@ -178,7 +178,7 @@ export function InteractiveDashboard() {
               <h1 className="text-[30px] font-semibold text-slate-900 dark:text-white tracking-tight mb-1">
                 Welcome back, Hamed!
               </h1>
-              <p className="text-[16px] text-slate-500 dark:text-[#97979A]">
+              <p className="text-[16px] text-slate-600 dark:text-[#97979A]">
                 Here&apos;s what&apos;s happening with your lessons today.
               </p>
             </motion.div>
@@ -206,7 +206,7 @@ export function InteractiveDashboard() {
                     Maths W16, L17
                   </h2>
                   
-                  <div className="relative z-10 flex flex-wrap gap-4 text-[14px] text-slate-500 dark:text-[#97979A] mb-6 font-medium">
+                  <div className="relative z-10 flex flex-wrap gap-4 text-[14px] text-slate-600 dark:text-[#97979A] mb-6 font-medium">
                     <div className="flex items-center gap-1.5 bg-slate-50 dark:bg-[#252627] px-3 py-1.5 rounded-lg border border-slate-100 dark:border-[#1C1E21]">
                       <CalendarDays className="w-[18px] h-[18px]" /> Today, 12:15 PM
                     </div>
@@ -229,7 +229,7 @@ export function InteractiveDashboard() {
                 <motion.div variants={itemVariants} className="bg-white dark:bg-[#1C1C1D] rounded-[16px] border border-slate-200 dark:border-[#2A2D31] p-5 transition-colors duration-300">
                   <div className="mb-4">
                     <h3 className="text-[16px] font-bold text-slate-900 dark:text-white">Pending Tasks</h3>
-                    <div className="text-[13px] text-slate-500 dark:text-[#97979A]">Homework & Assignments</div>
+                    <div className="text-[13px] text-slate-600 dark:text-[#97979A]">Homework & Assignments</div>
                   </div>
                   
                   <div className="space-y-3">
@@ -255,7 +255,7 @@ export function InteractiveDashboard() {
                         </div>
                         <div>
                           <div className="font-semibold text-[14px] text-slate-900 dark:text-white">Physics Reading</div>
-                          <div className="text-[12px] font-medium text-slate-500 dark:text-[#97979A]">Due Friday</div>
+                          <div className="text-[12px] font-medium text-slate-600 dark:text-[#97979A]">Due Friday</div>
                         </div>
                       </div>
                       <button className="text-[13px] font-semibold text-indigo-600 dark:text-indigo-400 bg-white dark:bg-[#1C1C1D] border border-slate-200 dark:border-[#1C1E21] px-3 py-1.5 rounded-lg shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors">
@@ -275,7 +275,7 @@ export function InteractiveDashboard() {
                     { label: 'Total Hours', value: '128h', icon: <TrendingUp className="w-[18px] h-[18px]" /> },
                   ].map((stat, i) => (
                     <div key={i} className="bg-white dark:bg-[#1C1C1D] rounded-[16px] border border-slate-200 dark:border-[#2A2D31] p-5 transition-all duration-300">
-                      <div className="flex items-center justify-between text-slate-500 dark:text-[#97979A] text-[13px] font-medium mb-3">
+                      <div className="flex items-center justify-between text-slate-600 dark:text-[#97979A] text-[13px] font-medium mb-3">
                         {stat.label}
                         <span className="opacity-60">{stat.icon}</span>
                       </div>
@@ -298,7 +298,7 @@ export function InteractiveDashboard() {
                           <TrendingUp className="w-[14px] h-[14px]" /> +12.5% vs last month
                         </div>
                       </div>
-                      <div className="text-[14px] text-slate-500 dark:text-[#97979A]">
+                      <div className="text-[14px] text-slate-600 dark:text-[#97979A]">
                         Completed 14 lessons in the last 30 days
                       </div>
                     </div>
@@ -372,7 +372,7 @@ export function InteractiveDashboard() {
                 <motion.div variants={itemVariants} className="bg-white dark:bg-[#1C1C1D] rounded-[16px] border border-slate-200 dark:border-[#2A2D31] p-5 transition-colors duration-300">
                   <div className="mb-4">
                     <h3 className="text-[16px] font-bold text-slate-900 dark:text-white">Recent Activity</h3>
-                    <div className="text-[13px] text-slate-500 dark:text-[#97979A]">Your latest lesson interactions</div>
+                    <div className="text-[13px] text-slate-600 dark:text-[#97979A]">Your latest lesson interactions</div>
                   </div>
                   
                   <div className="space-y-4">
@@ -387,7 +387,7 @@ export function InteractiveDashboard() {
                           <div className="w-2 h-2 mt-2 rounded-full bg-indigo-200 dark:bg-indigo-500/30 border-2 border-white dark:border-[#1C1E21]"></div>
                           <div>
                             <div className="font-medium text-[14px] text-slate-900 dark:text-white">{activity.title}</div>
-                            <div className="text-[12px] text-slate-500 dark:text-[#97979A]">{activity.date}</div>
+                            <div className="text-[12px] text-slate-600 dark:text-[#97979A]">{activity.date}</div>
                           </div>
                         </div>
                         <div className="bg-slate-100 dark:bg-[#252627] text-slate-600 dark:text-[#97979A] text-[11px] font-bold uppercase tracking-wider px-2 py-1 rounded-md">

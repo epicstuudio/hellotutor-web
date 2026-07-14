@@ -78,7 +78,7 @@ export function HowItWorks() {
             <h2 className="text-h2 text-content mb-4">{t('title')}</h2>
             <p className="text-body-xl text-content-secondary">{t('subtitle')}</p>
             <div className="h-[3px] bg-edge-subtle rounded-full mt-8 overflow-hidden max-w-[240px]">
-              <div ref={progressRef} className="h-full w-0 bg-green-500 rounded-full" />
+              <div ref={progressRef} className="h-full w-0 bg-green-600 rounded-full" />
             </div>
           </div>
 
