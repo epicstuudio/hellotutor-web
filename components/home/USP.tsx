@@ -43,7 +43,7 @@ export function USP() {
               </svg>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="text-h5 text-content">{t('matchingTitle')}</h3>
+              <h2 className="text-h5 text-content">{t('matchingTitle')}</h2>
               <p className="text-body-base text-content-secondary leading-relaxed">
                 {t('matchingDesc')}
               </p>
@@ -80,7 +80,7 @@ export function USP() {
               </svg>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="text-h5 text-content">{t('schedulingTitle')}</h3>
+              <h2 className="text-h5 text-content">{t('schedulingTitle')}</h2>
               <p className="text-body-base text-content-secondary leading-relaxed">
                 {t('schedulingDesc')}
               </p>
@@ -121,7 +121,7 @@ export function USP() {
               </svg>
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="text-h5 text-content">{t('supportTitle')}</h3>
+              <h2 className="text-h5 text-content">{t('supportTitle')}</h2>
               <p className="text-body-base text-content-secondary leading-relaxed">
                 {t('supportDesc')}
               </p>

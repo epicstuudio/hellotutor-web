@@ -98,7 +98,7 @@ export function HowItWorks() {
                 />
               </div>
               <div className="p-7 flex flex-col flex-1">
-                <span className="text-sm font-bold text-green-500 tracking-wider uppercase mb-3">
+                <span className="text-sm font-bold text-green-600 tracking-wider uppercase mb-3">
                   {t('stepLabel', { num: String(index + 1).padStart(2, '0') })}
                 </span>
                 <h3 className="text-h5 font-semibold text-content mb-2">
