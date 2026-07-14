@@ -3,12 +3,12 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ==========================================================================
-   AwesomeSerif — self-hosted from /styles/fonts/
+   AwesomeSerif — served statically from /public/fonts/
    ========================================================================== */
 
 @font-face {
   font-family: 'AwesomeSerif';
-  src: url('./fonts/AwesomeSerif-Regular.woff2') format('woff2');
+  src: url('/fonts/AwesomeSerif-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'AwesomeSerif';
-  src: url('./fonts/AwesomeSerifItalic-Regular.woff2') format('woff2');
+  src: url('/fonts/AwesomeSerifItalic-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -366,7 +366,7 @@ body {
 }
 
 .text-h6 {
-  font-family: 'AwesomeSerif', var(--font-sans);
+  font-family: 'AwesomeSerif';
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
@@ -626,32 +626,32 @@ body {
 }
 
 /* Stagger children animations */
-.stagger-children > * {
+.stagger-children>* {
   opacity: 0;
   animation: fade-in-up 0.5s var(--transition-timing-function-smooth) both;
 }
 
-.stagger-children > *:nth-child(1) {
+.stagger-children>*:nth-child(1) {
   animation-delay: 0ms;
 }
 
-.stagger-children > *:nth-child(2) {
+.stagger-children>*:nth-child(2) {
   animation-delay: 80ms;
 }
 
-.stagger-children > *:nth-child(3) {
+.stagger-children>*:nth-child(3) {
   animation-delay: 160ms;
 }
 
-.stagger-children > *:nth-child(4) {
+.stagger-children>*:nth-child(4) {
   animation-delay: 240ms;
 }
 
-.stagger-children > *:nth-child(5) {
+.stagger-children>*:nth-child(5) {
   animation-delay: 320ms;
 }
 
-.stagger-children > *:nth-child(6) {
+.stagger-children>*:nth-child(6) {
   animation-delay: 400ms;
 }
 

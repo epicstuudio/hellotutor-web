@@ -9,7 +9,7 @@ const interTight = Inter_Tight({
   variable: '--font-inter-tight',
   display: 'swap',
 });
-import localFont from 'next/font/local';
+
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Analytics } from '@/components/analytics/Analytics';
@@ -70,7 +70,7 @@ export default async function LocaleLayout({
 
   // Determine direction for RTL support
   const dir = locale === 'ae-ar' ? 'rtl' : 'ltr';
-  
+
   // Convert custom URL locales to valid BCP-47 language tags for the browser
   const htmlLang = locale === 'ae-ar' ? 'ar-AE' : 'en-AE';
 
