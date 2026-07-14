@@ -287,6 +287,8 @@ export function Hero() {
                 width={600}
                 height={600}
                 className="w-full h-auto object-cover rounded-3xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={60}
                 priority
               />
             </div>

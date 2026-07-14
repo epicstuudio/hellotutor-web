@@ -7,12 +7,14 @@ import type { Metadata } from 'next';
 import { USP } from '@/components/home/USP';
 import { Subjects } from '@/components/home/Subjects';
 
-import { Trust } from '@/components/home/Trust';
-import { HowItWorks } from '@/components/home/HowItWorks';
-import { Testimonials } from '@/components/shared/Testimonials';
-import { WhyChooseUs } from '@/components/home/WhyChooseUs';
-import { FAQs } from '@/components/home/FAQs';
-import { CTASection } from '@/components/shared/CTASection';
+import dynamic from 'next/dynamic';
+
+const Trust = dynamic(() => import('@/components/home/Trust').then(mod => mod.Trust), { ssr: true });
+const HowItWorks = dynamic(() => import('@/components/home/HowItWorks').then(mod => mod.HowItWorks), { ssr: true });
+const Testimonials = dynamic(() => import('@/components/shared/Testimonials').then(mod => mod.Testimonials), { ssr: true });
+const WhyChooseUs = dynamic(() => import('@/components/home/WhyChooseUs').then(mod => mod.WhyChooseUs), { ssr: true });
+const FAQs = dynamic(() => import('@/components/home/FAQs').then(mod => mod.FAQs), { ssr: true });
+const CTASection = dynamic(() => import('@/components/shared/CTASection').then(mod => mod.CTASection), { ssr: true });
 
 export async function generateMetadata({
   params,

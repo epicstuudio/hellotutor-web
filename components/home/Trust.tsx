@@ -77,6 +77,7 @@ export function Trust() {
  fill
  className="object-contain"
  sizes="(max-width: 768px) 128px, 128px"
+ quality={60}
  />
  </div>
  ))}
@@ -99,6 +100,7 @@ export function Trust() {
  fill
  className="object-contain"
  sizes="(max-width: 768px) 128px, 128px"
+ quality={60}
  />
  </div>
  ))}

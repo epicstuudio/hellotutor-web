@@ -11,23 +11,6 @@ const interTight = Inter_Tight({
 });
 import localFont from 'next/font/local';
 import { Header } from '@/components/layout/Header';
-
-const awesomeSerif = localFont({
-  src: [
-    {
-      path: '../../styles/fonts/AwesomeSerif-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../styles/fonts/AwesomeSerifItalic-Regular.woff2',
-      weight: '400',
-      style: 'italic',
-    },
-  ],
-  variable: '--font-awesome-serif',
-  display: 'swap',
-});
 import { Footer } from '@/components/layout/Footer';
 import { Analytics } from '@/components/analytics/Analytics';
 import { CookieConsentProvider } from '@/components/providers/CookieConsentProvider';
@@ -99,7 +82,7 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       </head>
-      <body className={`antialiased min-h-screen flex flex-col ${interTight.variable} ${awesomeSerif.variable}`}>
+      <body className={`antialiased min-h-screen flex flex-col ${interTight.variable}`}>
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
