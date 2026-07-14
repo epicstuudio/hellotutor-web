@@ -12,9 +12,7 @@ import { Trust } from '@/components/home/Trust';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { FAQs } from '@/components/home/FAQs';
 
-const HowItWorks = dynamic(() => import('@/components/home/HowItWorks').then(mod => mod.HowItWorks), { ssr: false });
-const WhyChooseUs = dynamic(() => import('@/components/home/WhyChooseUs').then(mod => mod.WhyChooseUs), { ssr: false });
-const CTASection = dynamic(() => import('@/components/shared/CTASection').then(mod => mod.CTASection), { ssr: false });
+import { LazyHowItWorks, LazyWhyChooseUs, LazyCTASection } from '@/components/home/LazyClientComponents';
 
 export async function generateMetadata({
   params,
@@ -42,11 +40,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <USP />
       <Subjects />
       <Trust />
-      <HowItWorks />
+      <LazyHowItWorks />
       <Testimonials />
-      <WhyChooseUs />
+      <LazyWhyChooseUs />
       <FAQs />
-      <CTASection />
+      <LazyCTASection />
     </>
   );
 }
