@@ -54,6 +54,15 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
+    titleKey: 'nav.activities',
+    children: [
+      { titleKey: 'nav.martialArts', href: '/activities/martial-arts' },
+      { titleKey: 'nav.music', href: '/activities/music' },
+      { titleKey: 'nav.chess', href: '/activities/chess' },
+      { titleKey: 'nav.football', href: '/activities/football' },
+    ],
+  },
+  {
     titleKey: 'nav.about',
     children: [
       { titleKey: 'about.forParents', href: '/parents' },
@@ -62,7 +71,6 @@ export const mainNav: NavItem[] = [
       { titleKey: 'about.allFaqs', href: '/faqs' },
     ],
   },
-  { titleKey: 'nav.contact', href: '/contact' },
   { titleKey: 'nav.becomeATutor', href: '/become-a-tutor' },
 ];
 
@@ -74,6 +82,7 @@ export const footerTopNav: { titleKey: string; items: NavItem[] }[] = [
     titleKey: 'footer.helloTutor',
     items: [
       { titleKey: 'about.aboutUs', href: '/about' },
+      { titleKey: 'nav.contact', href: '/contact' },
       { titleKey: 'footer.parentsFaqs', href: '/faqs?tab=parents' },
       { titleKey: 'nav.howItWorks', href: '/how-it-works' },
       { titleKey: 'subjects.allSubjects', href: '/subjects' },
@@ -83,7 +92,6 @@ export const footerTopNav: { titleKey: string; items: NavItem[] }[] = [
     titleKey: 'footer.resources',
     items: [
       { titleKey: 'footer.safeguarding', href: '/safeguarding' },
-      { titleKey: 'nav.contact', href: '/contact' },
       { titleKey: 'footer.tutorsInDubai', href: '/tutors-in-dubai' },
       { titleKey: 'footer.tutorsInAbuDhabi', href: '/tutors-in-abu-dhabi' },
       { titleKey: 'footer.tutorsInSharjah', href: '/tutors-in-sharjah' },

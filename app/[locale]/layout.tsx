@@ -101,7 +101,7 @@ export default async function LocaleLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=2" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=2" />
       </head>
-      <body className={`antialiased min-h-screen flex flex-col ${interTight.variable} ${awesomeSerif.variable}`}>
+      <body suppressHydrationWarning className={`antialiased min-h-screen flex flex-col ${interTight.variable} ${awesomeSerif.variable}`}>
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
