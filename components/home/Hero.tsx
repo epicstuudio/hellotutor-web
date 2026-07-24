@@ -47,7 +47,9 @@ export function Hero() {
         playsInline
         preload="auto"
         poster="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/video-poster.png"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        disablePictureInPicture
+        disableRemotePlayback
+        className="bg-video absolute inset-0 w-full h-full object-cover pointer-events-none"
       >
         <source src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/hellotutor-hero.mp4" type="video/mp4" />
       </video>
