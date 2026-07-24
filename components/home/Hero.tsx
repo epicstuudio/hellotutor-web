@@ -40,7 +40,7 @@ export function Hero() {
 
       {/* Content */}
       <Container className="relative z-10 w-full">
-        <div className="flex flex-col items-start md:items-center justify-center text-left md:text-center max-w-4xl mx-auto pt-24 pb-16 lg:pt-32 lg:pb-24">
+        <div className="flex flex-col items-start justify-center text-left max-w-4xl pt-24 pb-16 lg:pt-32 lg:pb-24">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start md:justify-center gap-4 mb-6 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-4 mb-6 w-full sm:w-auto"
           >
             <Button
               href={siteConfig.whatsappUrl}
