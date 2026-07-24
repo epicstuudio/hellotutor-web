@@ -12,7 +12,7 @@ export function HeroStatsBanner() {
   return (
     <section className="bg-surface py-8 border-b border-content/5 relative z-10 -mt-2">
       <Container>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-6xl mx-auto w-full">
           {/* Trust Badge Left (or top in mobile) */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -28,9 +28,9 @@ export function HeroStatsBanner() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap md:flex-nowrap justify-center gap-8 md:gap-12"
+            className="flex flex-col md:flex-row flex-wrap md:flex-nowrap items-start md:items-center justify-start md:justify-center gap-8 md:gap-12 w-full md:w-auto"
           >
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-start md:items-center text-left md:text-center">
               <div className="text-h4 lg:text-h3 text-content mb-1 tracking-tight flex items-baseline">
                 <AnimatedNumber value={t('hero.stat1Value')} duration={2} delay={0.2} />
                 <span className="text-2xl font-extralight text-content ms-1 font-sans">+</span>
@@ -40,7 +40,7 @@ export function HeroStatsBanner() {
             
             <div className="w-px h-12 bg-content/10 hidden md:block self-center"></div>
 
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-start md:items-center text-left md:text-center">
               <div className="text-h4 lg:text-h3 text-content mb-1 tracking-tight">
                 <AnimatedNumber value={t('hero.stat2Value')} duration={2} delay={0.4} />
               </div>
@@ -49,7 +49,7 @@ export function HeroStatsBanner() {
             
             <div className="w-px h-12 bg-content/10 hidden md:block self-center"></div>
 
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-start md:items-center text-left md:text-center">
               <div className="text-h4 lg:text-h3 text-content mb-1 tracking-tight flex items-end gap-1.5">
                 <AnimatedNumber value={t('hero.stat3Value')} duration={2} delay={0.6} />
                 <svg className="w-5 h-5 mb-1.5 text-content" fill="currentColor" viewBox="0 0 24 24">
