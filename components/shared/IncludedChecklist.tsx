@@ -18,8 +18,6 @@ export function IncludedChecklist({ translationKey }: IncludedChecklistProps) {
 
   return (
     <section className="bg-surface py-16 lg:py-24 border-t border-content/5 relative overflow-hidden">
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand/5 via-transparent to-transparent pointer-events-none" />
       
       <Container>
         <div className="max-w-4xl mx-auto relative z-10">

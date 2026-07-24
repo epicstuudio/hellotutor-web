@@ -8175,11 +8175,35 @@
         "items": [
           {
             "question": "Where do sessions take place?",
-            "answer": "Football sessions take place at a local park, pitch, or sports facility near you. Our coaches come to your preferred location. We confirm the right setup during your free consultation and can suggest suitable spaces in your area if needed."
+            "answer": "Sessions take place at a local park, pitch, or sports facility near you. Our coaches come to your preferred location. We can suggest suitable spaces in your area during the free consultation."
+          },
+          {
+            "question": "What age can students start football coaching?",
+            "answer": "We work with students from age 5 upwards. Sessions are adapted to age, physical development, and attention span at every stage."
+          },
+          {
+            "question": "My child already plays for a team. Can coaching still help?",
+            "answer": "Absolutely. Most students who play in teams benefit significantly from individual coaching. Group training rarely provides the focused technical attention that 1:1 coaching delivers."
+          },
+          {
+            "question": "Can coaching help with academy or school team trials?",
+            "answer": "Yes. We can structure sessions entirely around trial preparation, focusing on the technical and positional qualities selectors are looking for."
+          },
+          {
+            "question": "What equipment does my child need?",
+            "answer": "Appropriate footwear, shin pads, and a ball. Your coach will advise on anything specific before the first session."
+          },
+          {
+            "question": "My child has never played football before. Is that fine?",
+            "answer": "Absolutely. Many students start from complete beginners. We match a coach experienced with new starters across all ages."
+          },
+          {
+            "question": "What if my child loses motivation?",
+            "answer": "If coaching is not working, we talk it through and either adjust the approach or rematch with a different coach. We want it to work."
           }
         ],
         "cta": "See all FAQs"
       }
     }
   }
-}
+}\n
