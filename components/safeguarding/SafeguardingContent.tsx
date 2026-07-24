@@ -356,14 +356,14 @@ export function SafeguardingContent() {
                                         <div className="flex flex-wrap gap-3">
                                             <a
                                                 href="mailto:safeguarding@hellotutor.me"
-                                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-content-danger text-white text-body-sm font-semibold hover:opacity-90 transition-opacity"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-content-danger text-white text-body-sm font-semibold hover:opacity-90 transition-opacity"
                                             >
                                                 <Mail className="w-4 h-4" />
                                                 safeguarding@hellotutor.me
                                             </a>
                                             <a
                                                 href={`tel:${siteConfig.whatsappFormatted.replace(/ /g, '')}`}
-                                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-edge text-content text-body-sm font-semibold hover:bg-surface-strong transition-colors"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-white border border-edge text-content text-body-sm font-semibold hover:bg-surface-strong transition-colors"
                                             >
                                                 <Phone className="w-4 h-4" />
                                                 +971 58 581 7335

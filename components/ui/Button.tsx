@@ -31,9 +31,9 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: 'h-10 px-5 text-sm font-semibold rounded-xl',
-  md: 'h-12 px-6 text-sm font-semibold rounded-xl',
-  lg: 'h-14 px-8 text-base font-semibold rounded-xl',
+  sm: 'h-10 px-5 text-sm font-semibold rounded-md',
+  md: 'h-12 px-6 text-sm font-semibold rounded-md',
+  lg: 'h-14 px-8 text-base font-semibold rounded-md',
 };
 
 function ButtonContent({

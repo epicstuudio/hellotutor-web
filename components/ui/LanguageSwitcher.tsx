@@ -6,7 +6,7 @@ import { useLocale } from 'next-intl';
 /**
  * Language switcher with UK 🇬🇧 and UAE 🇦🇪 flag icons.
  */
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ isTransparent = false }: { isTransparent?: boolean }) {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -19,7 +19,11 @@ export function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLocale}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-edge px-3 py-1.5 text-sm font-medium text-content-secondary transition-colors hover:bg-surface-hover cursor-pointer"
+      className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-surface-hover cursor-pointer ${
+        isTransparent
+          ? 'border-white/30 text-white hover:text-content-brand-strong'
+          : 'border-edge text-content-secondary'
+      }`}
       aria-label={`Switch to ${locale === 'ae-en' ? 'Arabic' : 'English'}`}
     >
       {locale === 'ae-en' ? (

@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { createMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Hero } from '@/components/home/Hero';
+import { HeroStatsBanner } from '@/components/home/HeroStatsBanner';
 import type { Metadata } from 'next';
 import { USP } from '@/components/home/USP';
 import { Subjects } from '@/components/home/Subjects';
@@ -37,6 +38,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <JsonLd />
       <Hero />
+      <HeroStatsBanner />
       <USP />
       <Subjects />
       <Trust />

@@ -23,6 +23,8 @@ export function Header() {
  const [isScrolled, setIsScrolled] = useState(false);
  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+ const isTransparent = !isScrolled && pathname === '/';
+
  useEffect(() => {
  const handleScroll = () => {
  setIsScrolled(window.scrollY > 20);
@@ -41,7 +43,7 @@ export function Header() {
  )}
  >
  <Container className="flex items-center justify-between">
- <Logo />
+ <Logo variant={isTransparent ? 'white' : 'black'} />
 
  {/* Desktop Navigation */}
  <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
@@ -53,7 +55,12 @@ export function Header() {
  <div key={item.titleKey} className="relative group">
  <button
  type="button"
- className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-content-secondary hover:text-content-brand-strong transition-colors cursor-pointer"
+ className={cn(
+ 'inline-flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors cursor-pointer',
+ isTransparent
+ ? 'text-white/80 hover:text-white'
+ : 'text-content-secondary hover:text-content-brand-strong'
+ )}
  aria-expanded="false"
  aria-haspopup="true"
  >
@@ -139,8 +146,10 @@ export function Header() {
  key={item.titleKey}
  href={item.href || '/'}
  className={cn(
- 'px-3 py-2 text-sm font-medium transition-colors hover:text-surface-brand-alt',
- isActive ? 'text-surface-brand-alt' : 'text-content-secondary',
+ 'px-3 py-2 text-sm font-medium transition-colors',
+ isActive 
+ ? (isTransparent ? 'text-white' : 'text-surface-brand-alt')
+ : (isTransparent ? 'text-white/80 hover:text-white' : 'text-content-secondary hover:text-surface-brand-alt')
  )}
  >
  {item.titleKey.includes('.')
@@ -155,17 +164,27 @@ export function Header() {
  <div className="hidden xl:flex items-center gap-4">
  <a
  href={siteConfig.loginUrl}
- className="text-sm font-medium text-content-secondary hover:text-content-brand-strong transition-colors px-3 py-2"
+ className={cn(
+ 'text-sm font-medium transition-colors px-3 py-2',
+ isTransparent
+ ? 'text-white hover:text-white/80'
+ : 'text-content-secondary hover:text-content-brand-strong'
+ )}
  rel="noopener noreferrer"
  >
  {t('common.login')}
  </a>
- <LanguageSwitcher />
+ <LanguageSwitcher isTransparent={isTransparent} />
  </div>
 
  {/* Mobile Menu Toggle */}
  <button
- className="xl:hidden p-2 text-content-secondary hover:text-content-brand-strong transition-colors"
+ className={cn(
+ 'xl:hidden p-2 transition-colors',
+ isTransparent
+ ? 'text-white hover:text-white/80'
+ : 'text-content-secondary hover:text-content-brand-strong'
+ )}
  onClick={() => setIsMobileMenuOpen(true)}
  aria-label="Open menu"
  >

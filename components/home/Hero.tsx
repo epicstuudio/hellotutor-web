@@ -3,11 +3,7 @@
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { HighlightText } from '@/components/ui/HighlightText';
-import { TrustBadge } from '@/components/shared/TrustBadge';
-import { AnimatedNumber } from '@/components/shared/AnimatedNumber';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site';
 
@@ -22,280 +18,86 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-/* ─── Tutor data ─── */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const TUTORS = [
-  {
-    id: 1,
-    name: 'Alex P.',
-    subject: 'IGCSE Maths Expert',
-    tags: ['5+ Years', '4.9★', 'Available'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/1.png',
-  },
-  {
-    id: 2,
-    name: 'Maria L.',
-    subject: 'Physics Specialist',
-    tags: ['8 Years', '4.8★', 'Evenings'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/2.png',
-  },
-  {
-    id: 3,
-    name: 'Sam R.',
-    subject: 'Chemistry Tutor',
-    tags: ['3 Years', '5.0★', 'Flexible'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/3.png',
-  },
-  {
-    id: 4,
-    name: 'John K.',
-    subject: 'Biology Expert',
-    tags: ['6 Years', '4.7★', 'Weekends'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/4.png',
-  },
-  {
-    id: 5,
-    name: 'Lisa W.',
-    subject: 'English Literature',
-    tags: ['4 Years', '4.9★', 'Morning'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/5.png',
-  },
-  {
-    id: 6,
-    name: 'Tom H.',
-    subject: 'Computer Science',
-    tags: ['7 Years', '4.8★', 'Flexible'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/6.png',
-  },
-  {
-    id: 7,
-    name: 'Emma D.',
-    subject: 'Economics Tutor',
-    tags: ['5 Years', '4.6★', 'Evenings'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/7.png',
-  },
-  {
-    id: 8,
-    name: 'Ryan M.',
-    subject: 'Add Maths Expert',
-    tags: ['10 Years', '5.0★', 'Available'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/8.png',
-  },
-  {
-    id: 9,
-    name: 'Kate S.',
-    subject: 'Physics & Maths',
-    tags: ['4 Years', '4.9★', 'Morning'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/9.png',
-  },
-  {
-    id: 10,
-    name: 'Dan B.',
-    subject: 'Geography Expert',
-    tags: ['6 Years', '4.7★', 'Flexible'],
-    image: 'https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/white-portrait/10.png',
-  },
-];
-
-const MATCH_AFTER_STEPS = 4; // Match after rotating through 4 tutors
-const MATCHED_HOLD_DURATION = 8000; // Hold matched state for 8 seconds
-const STEP_INTERVAL = 4500; // 4.5s per tutor rotation step
-
 export function Hero() {
   const t = useTranslations();
 
-  // ─── Animation state machine ───
-  const [phase, setPhase] = useState<'matching' | 'matched'>('matching');
-  const [, setStep] = useState(0);
-
-  // The tutor that gets "matched" after MATCH_AFTER_STEPS rotations
-  // const count = TUTORS.length;
-  // const matchedIndex = (count - (step % count)) % count;
-  // const matchedTutor = TUTORS[matchedIndex];
-
-  // Phase 1: step the dial every STEP_INTERVAL
-  useEffect(() => {
-    if (phase !== 'matching') return;
-
-    const timer = setInterval(() => {
-      setStep((s) => {
-        const next = s + 1;
-        // After MATCH_AFTER_STEPS rotations, trigger Phase 2
-        if (next >= MATCH_AFTER_STEPS) {
-          setTimeout(() => setPhase('matched'), 1300); // wait for last rotation to finish
-        }
-        return next;
-      });
-    }, STEP_INTERVAL);
-
-    return () => clearInterval(timer);
-  }, [phase]);
-
-  // Phase 2: hold matched state, then reset
-  useEffect(() => {
-    if (phase !== 'matched') return;
-
-    const timer = setTimeout(() => {
-      setPhase('matching');
-      setStep(0);
-    }, MATCHED_HOLD_DURATION);
-
-    return () => clearTimeout(timer);
-  }, [phase]);
-
-  // const rotation = 180 + step * (360 / count);
-
   return (
-    <section className="relative overflow-hidden bg-surface">
-      <div className="pt-[calc(40px+8rem)] xl:pt-[calc(48px+8rem)] pb-0">
-        <Container className="relative z-10 w-full h-full">
-          <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-8 items-stretch h-full">
-            {/* Left Column - Content */}
-            <div className="flex flex-col justify-center z-10 max-w-2xl mx-auto lg:mx-0 text-center lg:text-start pb-16 lg:pb-24">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-h1 text-content mb-6 "
-              >
-                <HighlightText words="need">{t('hero.titleLine1')}</HighlightText>{' '}
-                <br className="hidden lg:block" />
-                <HighlightText words="deserve">{t('hero.titleLine2')}</HighlightText>
-              </motion.h1>
+    <section className="relative overflow-hidden bg-surface min-h-[85vh] lg:min-h-[800px] flex items-center justify-center">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/video-poster.png"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      >
+        <source src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/hellotutor-hero.mp4" type="video/mp4" />
+      </video>
+      
+      {/* 40% Black Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none" />
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-body-base text-content-secondary mb-8 max-w-2xl mx-auto lg:mx-0"
-              >
-                {t('hero.subtitle')}
-              </motion.p>
+      {/* Content */}
+      <Container className="relative z-10 w-full">
+        <div className="flex flex-col items-start justify-center text-start max-w-4xl pt-24 pb-16 lg:pt-32 lg:pb-24">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-h1 text-white mb-6 drop-shadow-sm"
+          >
+            <HighlightText words="need" className="text-white drop-shadow-sm">{t('hero.titleLine1')}</HighlightText>{' '}
+            <br className="hidden md:block" />
+            <HighlightText words="deserve" className="text-white drop-shadow-sm">{t('hero.titleLine2')}</HighlightText>
+          </motion.h1>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 mb-4"
-              >
-                <Button
-                  href={siteConfig.whatsappUrl}
-                  variant="primary"
-                  size="lg"
-                  className="w-full sm:w-auto"
-                  hoverChildren={siteConfig.whatsappFormatted}
-                  hoverStartSlot={<WhatsAppIcon className="w-5 h-5" />}
-                >
-                  <WhatsAppIcon className="w-5 h-5" />
-                  {t('common.bookConsultation')}
-                </Button>
-                <Button
-                  href="/how-it-works"
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto"
-                >
-                  {t('common.howItWorks')}
-                </Button>
-              </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-body-base text-white/90 mb-10 max-w-2xl font-medium drop-shadow-md"
+          >
+            {t('hero.subtitle')}
+          </motion.p>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-body-xs text-content-tertiary mb-12"
-              >
-                {t('hero.noCommitment')}
-              </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-6 w-full sm:w-auto"
+          >
+            <Button
+              href={siteConfig.whatsappUrl}
+              variant="primary"
+              size="lg"
+              className="w-full sm:w-auto shadow-lg"
+              hoverChildren={siteConfig.whatsappFormatted}
+              hoverStartSlot={<WhatsAppIcon className="w-5 h-5" />}
+            >
+              <WhatsAppIcon className="w-5 h-5" />
+              {t('common.bookConsultation')}
+            </Button>
+            <Button
+              href="/how-it-works"
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 backdrop-blur-sm shadow-lg"
+            >
+              {t('common.howItWorks')}
+            </Button>
+          </motion.div>
 
-              {/* Stats Strip */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-start text-start pt-4"
-              >
-                <div className="flex-1">
-                  <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight flex items-baseline">
-                    <AnimatedNumber value={t('hero.stat1Value')} duration={2} delay={0.6} />
-                    <span className="text-3xl font-extralight text-content ms-1 font-sans">+</span>
-                  </div>
-                  <div className="text-body-sm text-content-secondary">{t('hero.stat1Label')}</div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight">
-                    <AnimatedNumber value={t('hero.stat2Value')} duration={2} delay={0.8} />
-                  </div>
-                  <div className="text-body-sm text-content-secondary">{t('hero.stat2Label')}</div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-h3 lg:text-h2 text-content mb-1 tracking-tight flex items-end gap-2">
-                    <AnimatedNumber value={t('hero.stat3Value')} duration={2} delay={1} />
-                    <svg className="w-6 h-6 mb-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  </div>
-                  <div className="text-body-sm text-content-secondary">{t('hero.stat3Label')}</div>
-                </div>
-              </motion.div>
-
-              {/* Trust Badges */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex flex-col items-center lg:items-start mt-12 lg:mt-16"
-              >
-                <TrustBadge />
-              </motion.div>
-            </div>
-
-            {/* Right Column — Visual + Dial */}
-            <div className="relative z-0 mt-8 lg:mt-0 min-w-0 lg:overflow-visible flex items-center justify-center">
-              {/* Animation Temporarily Hidden
-              <HeroVisual
-                phase={phase}
-                matchedTutor={{
-                  name: matchedTutor.name,
-                  subject: matchedTutor.subject,
-                  tags: matchedTutor.tags,
-                  image: matchedTutor.image,
-                }}
-              />
-              <AnimatePresence>
-                {phase === 'matching' && (
-                  <motion.div
-                    key="dial-container-desktop"
-                    initial={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="absolute inset-0 overflow-visible hidden lg:block pointer-events-none"
-                  >
-                    <TutorDial
-                      step={step}
-                      rotation={rotation}
-                      matchedIndex={matchedIndex}
-                      variant="desktop"
-                    />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              */}
-              <Image
-                src="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/her-home.png"
-                alt="Hero Image"
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover rounded-3xl"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={60}
-                priority
-              />
-            </div>
-          </div>
-        </Container>
-      </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-body-xs text-white/80 font-medium drop-shadow-md"
+          >
+            {t('hero.noCommitment')}
+          </motion.p>
+        </div>
+      </Container>
     </section>
   );
 }
-

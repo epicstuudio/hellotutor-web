@@ -623,7 +623,7 @@ export function ContactForm() {
  type="button"
  onClick={() => togglePreferred(opt.key)}
  className={cn(
- 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all cursor-pointer',
+ 'inline-flex items-center gap-2 px-4 py-2.5 rounded-md border text-sm font-medium transition-all cursor-pointer',
  isSelected
  ? 'bg-surface-action border-surface-action text-content'
  : 'bg-white border-edge text-content-secondary hover:border-edge-focus hover:text-content',
@@ -758,7 +758,7 @@ function ContactWays() {
  >
  <div
  className={cn(
- 'w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110',
+ 'w-12 h-12 rounded-md flex items-center justify-center shrink-0 transition-transform group-hover:scale-110',
  way.color,
  )}
  >
