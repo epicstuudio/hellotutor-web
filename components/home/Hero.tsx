@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { HighlightText } from '@/components/ui/HighlightText';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { useEffect, useRef } from 'react';
 import { siteConfig } from '@/config/site';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -20,15 +21,31 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function Hero() {
   const t = useTranslations();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Force video playback on mount to handle mobile autoplay restrictions
+  useEffect(() => {
+    if (videoRef.current) {
+      // Ensure the muted property is explicitly set on the DOM element 
+      // (sometimes required by iOS Safari even with the muted attribute)
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((e) => {
+        console.error("Video autoplay failed:", e);
+      });
+    }
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-surface min-h-[85vh] lg:min-h-[800px] flex items-center justify-center">
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         poster="https://pub-c1e8cebadf004f2fb0c59e13ab317896.r2.dev/web/home/video-poster.png"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       >
